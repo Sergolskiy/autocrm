@@ -1,0 +1,58 @@
+.header{
+
+}
+
+.header__name{
+  font-weight: 700;
+  color: #21232f;
+  font-size: 22px;
+}
+
+.header__edit{
+  font-weight: 700;
+  color: #79829f;
+  display: inline-block;
+  margin-left: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.header__search{
+  position: relative;
+}
+
+.header__search input{
+  width: 300px;
+}
+
+.header__search-btn{
+  background: url("../../assets/img/icon/zoom.svg") center center no-repeat;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.header__settings{
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.header__settings path{
+  fill: #7b85a1;
+}
+
+
+.header__notification{
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.header__notification path{
+  fill: #7b85a1;
+}

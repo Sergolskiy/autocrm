@@ -1,6 +1,10 @@
 import React, {Component} from 'react'
 import Header from "../../containers/Header/Header";
 import Footer from "../../containers/Footer/Footer";
+import SidebarLeft  from '../../components/SideBar/SideBarLeft/SideBarLeft'
+
+
+import Container from '@material-ui/core/Container';
 // import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 
 
@@ -9,16 +13,24 @@ class Layout extends Component{
 
     return (
       <React.Fragment>
-        <Header/>
 
-        <main className={'main'}>
+        <SidebarLeft/>
 
-          {/*<Breadcrumbs/>*/}
+        <div className="main-wrap">
+          <Header/>
 
-          {this.props.children}
-        </main>
+          <main className={'main'}>
 
-        <Footer/>
+            {/*<Breadcrumbs/>*/}
+            <Container maxWidth="xl" >
+              {this.props.children}
+            </Container>
+          </main>
+
+          <Footer/>
+        </div>
+
+
       </React.Fragment>
     )
   }
