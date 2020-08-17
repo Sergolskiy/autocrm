@@ -1,0 +1,54 @@
+.view-result{
+    margin: 20px 0;
+    display: flex;
+}
+
+.view-result__inner{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.view-result__col{
+    display: flex;
+    align-items: center;
+}
+
+.view-result__items-txt{
+    color: #727c9a;
+}
+
+.view-result__subtitle{
+
+}
+
+.view-result__link{
+    margin-left: 25px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: #d0d8ee;
+}
+
+.view-result__link-ico{
+    margin-right: 10px;
+}
+
+.view-result__link svg path,
+.view-result__link svg rect{
+    fill: #d0d8ee;
+}
+
+.view-result__link.active{
+    color: #3143d9;
+}
+
+.view-result__link.active svg path,
+.view-result__link.active svg rect{
+    fill: #3143d9;
+}
+
+
+/*projects card start*/
+
+/*projects card end*/
