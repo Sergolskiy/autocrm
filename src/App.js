@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import '../node_modules/normalize.css/normalize.css'
+import '../node_modules/bootstrap/dist/css/bootstrap-grid.min.css'
 import {connect} from 'react-redux'
 import Layout from "./hoc/Layout/Layout";
 import {Route, Switch} from 'react-router-dom'

@@ -208,74 +208,79 @@ class Projects extends Component {
 
           <div className="projects-card">
             <div className="projects-card__content">
-              <div className="projects-card__i">
-                <div className="projects-card__i-content">
-                  <div className="projects-card__i-status">
-                    Статус
-                  </div>
-                  <div className="projects-card__i-name">
-                    Создание лендинга "New Arrivals"
-                  </div>
-                  <div className="projects-card__i-row">
-                    <div className="projects-card__i-row-i">
-                      Апр 13
-                    </div>
-                    <div className="projects-card__i-row">
-                      <ClipImg className={'projects-card__i-row-ico'} width={'15px'} height={'15px'}/>
-                      7
-                    </div>
-                    <div className="projects-card__i-row">
-                      <CommentImg className={'projects-card__i-row-ico'} width={'15px'} height={'15px'}/>
-                      25
-                    </div>
-                    <div className="projects-card__i-row-photo">
-                      <a href="" className="projects-card__i-row-i">
-                        <img src={Man} alt="img"/>
-                      </a>
-                      <a href="" className="projects-card__i-row-i">
-                        <img src={Man} alt="img"/>
-                      </a>
-                      <a href="" className="projects-card__i-row-i">
-                        <img src={Man} alt="img"/>
-                      </a>
-                      <a href="" className="projects-card__i-row-i">
-                        <img src={Man} alt="img"/>
-                      </a>
-                    </div>
-                  </div>
-                  <div className="projects-card__i-subtask">
-                    <span className="projects-card__i-subtask-link">Показать подзадачи</span>
-                    <div className="projects-card__i-subtask-list">
-                      <span className="projects-card__i-subtask-item">
-                        <div className="projects-card__i-status">
-                          Готово
+              <div className="row">
+                <div className="col-md-4">
+                  <div className="projects-card__i">
+                    <div className="projects-card__i-content">
+                      <div className="projects-card__i-status yellow">
+                        Статус
+                      </div>
+                      <div className="projects-card__i-name">
+                        Создание лендинга "New Arrivals".  Lorem Ipsum начал как омлет, бессмысленные Латинской происходит
+                      </div>
+                      <div className="projects-card__i-row">
+                        <div className="projects-card__i-row-i">
+                          Апр 13
                         </div>
-                        <div className="projects-card__i-name">
-                          Создание лендинга "New Arrivals"
+                        <div className="projects-card__i-row-i">
+                          <ClipImg className={'projects-card__i-row-ico'} width={'15px'} height={'15px'}/>
+                          7
                         </div>
-                        <div className="projects-card__i-row">
-                          <div className="projects-card__i-row-i">
-                            Май 13
-                          </div>
+                        <div className="projects-card__i-row-i">
+                          <CommentImg className={'projects-card__i-row-ico'} width={'15px'} height={'15px'}/>
+                          25
                         </div>
-                      </span>
-                      <span className="projects-card__i-subtask-item">
-                        <div className="projects-card__i-status">
-                          Выполняется
+                        <div className="projects-card__i-row-photo">
+                          <span className="projects-card__i-row-photo-i">
+                            <img src={Man} alt="img"/>
+                          </span>
+                          <span className="projects-card__i-row-photo-i">
+                            <img src={Man} alt="img"/>
+                          </span>
+                          <span className="projects-card__i-row-photo-i">
+                            <img src={Man} alt="img"/>
+                          </span>
+                          <span className="projects-card__i-row-photo-i projects-card__i-row-photo-i--txt">
+                            +3
+                          </span>
                         </div>
-                        <div className="projects-card__i-name">
-                          Создание веб-сайта под ключ "New Arrivals Key"
+                      </div>
+                      <div className="projects-card__i-subtask">
+                        <span className="projects-card__i-subtask-link">Показать подзадачи</span>
+                        <div className="projects-card__i-subtask-list">
+                          <span className="projects-card__i-subtask-item">
+                            <div className="projects-card__i-status green">
+                              Готово
+                            </div>
+                            <div className="projects-card__i-name">
+                              Создание лендинга "New Arrivals"
+                            </div>
+                            <div className="projects-card__i-row">
+                              <div className="projects-card__i-row-i">
+                                Май 13
+                              </div>
+                            </div>
+                          </span>
+                          <span className="projects-card__i-subtask-item">
+                            <div className="projects-card__i-status yellow">
+                              Выполняется
+                            </div>
+                            <div className="projects-card__i-name">
+                              Создание веб-сайта под ключ "New Arrivals Key"
+                            </div>
+                            <div className="projects-card__i-row">
+                              <div className="projects-card__i-row-i">
+                                Май 13
+                              </div>
+                            </div>
+                          </span>
                         </div>
-                        <div className="projects-card__i-row">
-                          <div className="projects-card__i-row-i">
-                            Май 13
-                          </div>
-                        </div>
-                      </span>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
 
