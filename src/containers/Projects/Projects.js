@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {NavLink} from 'react-router-dom'
 import Man from "../../assets/img/man.jpg";
-import FormControl from "../ProjectItem/ProjectItem";
+import FormControl from '@material-ui/core/FormControl';
 
 
 import Button from '@material-ui/core/Button';
