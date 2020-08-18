@@ -39,9 +39,6 @@ class Projects extends Component {
     return (
 
       <div>
-        <NavLink to="/project/1" className="aside__nav-link">
-          Project 1
-        </NavLink>
         <div className={'projects-page'}>
 
 
