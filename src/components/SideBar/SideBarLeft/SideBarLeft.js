@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import './SideBarLeft.css';
 import Man from '../../../assets/img/man.jpg'
+import Logo from '../../../assets/img/new-logo-min.png'
 import {NavLink} from 'react-router-dom'
 
 class SideBarLeft extends Component {
@@ -13,10 +14,7 @@ class SideBarLeft extends Component {
           <div className="aside__inner">
             <div className="aside__top">
               <NavLink to="/">
-                All
-                <span>
-                  Done
-                </span>
+                <img src={Logo} alt="logo"/>
               </NavLink>
             </div>
             <div className="aside__user">
@@ -45,9 +43,13 @@ class SideBarLeft extends Component {
                 </div>
               </div>
             </div>
-
             <nav className="aside__nav">
               <ul className="aside__nav-items">
+                <li className="aside__nav-item">
+                  <NavLink to="/" exact={'/'} className="aside__nav-link">
+                    Дашборт
+                  </NavLink>
+                </li>
                 <li className="aside__nav-item">
                   <NavLink to="/projects" className="aside__nav-link">
                     Projects
@@ -55,17 +57,32 @@ class SideBarLeft extends Component {
                 </li>
                 <li className="aside__nav-item">
                   <NavLink to="/a" className="aside__nav-link">
-                    Calendar
+                    Клиенты
                   </NavLink>
                 </li>
                 <li className="aside__nav-item">
                   <NavLink to="/s" className="aside__nav-link">
-                    Estimates
+                    Накладные
                   </NavLink>
                 </li>
                 <li className="aside__nav-item">
                   <NavLink to="/d" className="aside__nav-link">
-                    Reports
+                    Товары
+                  </NavLink>
+                </li>
+                <li className="aside__nav-item">
+                  <NavLink to="/d" className="aside__nav-link">
+                    Запись
+                  </NavLink>
+                </li>
+                <li className="aside__nav-item">
+                  <NavLink to="/d" className="aside__nav-link">
+                    Отчеты
+                  </NavLink>
+                </li>
+                <li className="aside__nav-item">
+                  <NavLink to="/d" className="aside__nav-link">
+                    Настройки
                   </NavLink>
                 </li>
               </ul>
