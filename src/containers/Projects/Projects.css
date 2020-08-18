@@ -28,6 +28,8 @@
     align-items: center;
     font-weight: bold;
     color: #d0d8ee;
+    cursor: pointer;
+    transition: .3s;
 }
 
 .view-result__link-ico{
@@ -39,10 +41,13 @@
     fill: #d0d8ee;
 }
 
+.view-result__link:hover,
 .view-result__link.active{
     color: #3143d9;
 }
 
+.view-result__link:hover svg path,
+.view-result__link:hover svg rect,
 .view-result__link.active svg path,
 .view-result__link.active svg rect{
     fill: #3143d9;
