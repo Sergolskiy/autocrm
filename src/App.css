@@ -227,3 +227,11 @@ a{
   padding: 30px;
   border-radius: 2px;
 }
+
+.site-link{
+  font-weight: 700;
+  color: #79829f;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 14px;
+}
