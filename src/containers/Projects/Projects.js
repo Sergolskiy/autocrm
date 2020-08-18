@@ -11,8 +11,8 @@ import Select from '@material-ui/core/Select';
 
 import { ReactComponent as GridImg } from '../../assets/img/icon/grid-grid.svg';
 import { ReactComponent as ListImg } from '../../assets/img/icon/grid-list.svg';
-import { ReactComponent as ClipImg } from '../../assets/img/icon/clip-ico.svg';
-import { ReactComponent as CommentImg } from '../../assets/img/icon/comment-ico.svg';
+import ProjectCard from "../ProjectCard/ProjectCard";
+
 
 
 class Projects extends Component {
@@ -27,9 +27,11 @@ class Projects extends Component {
 
   handleTabs = (index) => {
     this.setState({
-      tabActive: index
+      tabActive: index,
     })
   }
+
+
 
   render() {
 
@@ -209,78 +211,27 @@ class Projects extends Component {
           <div className="projects-card">
             <div className="projects-card__content">
               <div className="row">
+                <ProjectCard/>
+                <ProjectCard/>
+                <ProjectCard/>
+                <ProjectCard/>
+
                 <div className="col-md-4">
-                  <div className="projects-card__i">
+                  <div className="projects-card__i projects-card__i--create">
                     <div className="projects-card__i-content">
-                      <div className="projects-card__i-status yellow">
-                        Статус
-                      </div>
-                      <div className="projects-card__i-name">
-                        Создание лендинга "New Arrivals".  Lorem Ipsum начал как омлет, бессмысленные Латинской происходит
-                      </div>
-                      <div className="projects-card__i-row">
-                        <div className="projects-card__i-row-i">
-                          Апр 13
+                      <div className="projects-card__i-create-task"> {/*navlink*/}
+                        <div className="projects-card__i-create-ico">
+                          +
                         </div>
-                        <div className="projects-card__i-row-i">
-                          <ClipImg className={'projects-card__i-row-ico'} width={'15px'} height={'15px'}/>
-                          7
-                        </div>
-                        <div className="projects-card__i-row-i">
-                          <CommentImg className={'projects-card__i-row-ico'} width={'15px'} height={'15px'}/>
-                          25
-                        </div>
-                        <div className="projects-card__i-row-photo">
-                          <span className="projects-card__i-row-photo-i">
-                            <img src={Man} alt="img"/>
-                          </span>
-                          <span className="projects-card__i-row-photo-i">
-                            <img src={Man} alt="img"/>
-                          </span>
-                          <span className="projects-card__i-row-photo-i">
-                            <img src={Man} alt="img"/>
-                          </span>
-                          <span className="projects-card__i-row-photo-i projects-card__i-row-photo-i--txt">
-                            +3
-                          </span>
-                        </div>
-                      </div>
-                      <div className="projects-card__i-subtask">
-                        <span className="projects-card__i-subtask-link">Показать подзадачи</span>
-                        <div className="projects-card__i-subtask-list">
-                          <span className="projects-card__i-subtask-item">
-                            <div className="projects-card__i-status green">
-                              Готово
-                            </div>
-                            <div className="projects-card__i-name">
-                              Создание лендинга "New Arrivals"
-                            </div>
-                            <div className="projects-card__i-row">
-                              <div className="projects-card__i-row-i">
-                                Май 13
-                              </div>
-                            </div>
-                          </span>
-                          <span className="projects-card__i-subtask-item">
-                            <div className="projects-card__i-status yellow">
-                              Выполняется
-                            </div>
-                            <div className="projects-card__i-name">
-                              Создание веб-сайта под ключ "New Arrivals Key"
-                            </div>
-                            <div className="projects-card__i-row">
-                              <div className="projects-card__i-row-i">
-                                Май 13
-                              </div>
-                            </div>
-                          </span>
+                        <div className="projects-card__i-create-task-txt">
+                          Создать задачу
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
+              </div>
             </div>
           </div>
 
