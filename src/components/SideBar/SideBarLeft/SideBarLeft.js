@@ -6,8 +6,8 @@ import {NavLink} from 'react-router-dom'
 
 class SideBarLeft extends Component {
 
-  render() {
 
+  render() {
     return (
       <aside className={'aside'}>
 
