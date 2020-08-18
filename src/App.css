@@ -210,3 +210,20 @@ a{
 .top-nav__create{
 
 }
+
+
+
+
+.site-back{
+  font-size: 14px;
+  color: #585961;
+  font-weight: 500;
+}
+
+.site-block{
+  margin-top: 30px;
+  background: white;
+  box-shadow: 0 0 24px 5px #00000009;
+  padding: 30px;
+  border-radius: 2px;
+}

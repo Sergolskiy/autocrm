@@ -2,3 +2,170 @@
 .project-page__top-nav {
   /*padding: 20px;*/
 }
+
+
+
+/* PROJECT */
+
+.project{
+
+}
+
+.project__inner{
+
+}
+
+.project__left{
+
+}
+
+.project__back{
+
+}
+
+.project__status-block{
+  display: flex;
+  justify-content: space-between;
+}
+
+.project__status-name{
+
+}
+
+.project__status-title{
+
+}
+
+.project__status-progress{
+  color: #fab70d;
+  font-weight: bold;
+}
+
+.project__create{
+
+}
+
+.project__status-name{
+
+}
+
+.project__status-desc{
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.project__status-desc img{
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.project__date{
+
+}
+
+.project__status-name{
+  margin-bottom: 5px;
+}
+
+
+.project__sub-tasks{
+
+}
+
+.sub-tasks__top{
+
+}
+
+.sub-tasks__title{
+
+}
+
+.sub-tasks__create-btn{
+
+}
+
+.sub-tasks__items{
+
+}
+
+.sub-tasks__item{
+
+}
+
+.sub-tasks__input{
+
+}
+
+.sub-tasks__name{
+
+}
+
+.sub-tasks__status{
+
+}
+
+/* PROJECT END */
+
+
+
+/* PROJECT DETAIL */
+
+.project-detail__title{
+
+}
+
+.project-detail__desc{
+
+}
+
+.project-detail__desc-name{
+
+}
+
+.project-detail__desc-txt{
+
+}
+
+.project-detail__img{
+
+}
+
+.project-detail__img-items{
+
+}
+
+.project-detail__img-i{
+
+}
+
+.project-detail__img-desc{
+
+}
+
+.project-detail__show-link{
+
+}
+
+.project-detail__categories{
+
+}
+
+.project-detail__deadline{
+
+}
+
+.project-detail__assigned{
+
+}
+
+.project-detail__assigned-i{
+
+}
+
+.project-detail__notes{
+
+}
+
+/* END PROJECT DETAIL */
