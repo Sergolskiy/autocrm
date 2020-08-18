@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import './SideBarLeft.css';
 import Man from '../../../assets/img/man.jpg'
+import Logo from '../../../assets/img/new-logo-min.png'
 import {NavLink} from 'react-router-dom'
 
 class SideBarLeft extends Component {
@@ -13,10 +14,7 @@ class SideBarLeft extends Component {
           <div className="aside__inner">
             <div className="aside__top">
               <NavLink to="/">
-                All
-                <span>
-                  Done
-                </span>
+                <img src={Logo} alt="logo"/>
               </NavLink>
             </div>
             <div className="aside__user">

@@ -1,8 +1,9 @@
 .aside{
   min-width: 340px;
-  height: 100vh;
+  min-height: 100vh;
   box-shadow: 0 0 24px 5px #00000009;
   display: flex;
+  background: white;
 }
 
 .aside__inner{
@@ -17,6 +18,10 @@
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 50px;
+}
+
+.aside__top img{
+  max-width: 130px;
 }
 
 .aside__top span{
