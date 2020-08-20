@@ -12,6 +12,7 @@ import localRu from './languages/ru'
 import {BrowserRouter} from "react-router-dom";
 
 
+
 const initialState = {
   intl: {
     locale: 'ru',

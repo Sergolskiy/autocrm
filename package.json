@@ -144,5 +144,7 @@
     "presets": [
       "react-app"
     ]
-  }
+  },
+
+  "homepage": "/"
 }
