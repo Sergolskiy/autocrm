@@ -38,6 +38,7 @@
     margin-bottom: 15px;
     padding-right: 50px;
     transition: .3s;
+    line-height: 24px;
 }
 
 .projects-card__i-name:hover{
