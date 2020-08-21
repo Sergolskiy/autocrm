@@ -30,19 +30,19 @@ class SideBarLeft extends Component {
                 </div>
               </div>
             </div>
-            <div className="aside__time">
-              <div className="aside__time-title">
-                Today
-              </div>
-              <div className="aside__time-block">
-                <div className="aside__time-current">
-                  1:42
-                </div>
-                <div className="aside__time-btn">
+            {/*<div className="aside__time">*/}
+              {/*<div className="aside__time-title">*/}
+                {/*Today*/}
+              {/*</div>*/}
+              {/*<div className="aside__time-block">*/}
+                {/*<div className="aside__time-current">*/}
+                  {/*1:42*/}
+                {/*</div>*/}
+                {/*<div className="aside__time-btn">*/}
 
-                </div>
-              </div>
-            </div>
+                {/*</div>*/}
+              {/*</div>*/}
+            {/*</div>*/}
             <nav className="aside__nav">
               <ul className="aside__nav-items">
                 <li className="aside__nav-item">

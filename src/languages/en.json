@@ -1,4 +1,6 @@
 {
   "app.greeting": "hell!",
-  "app.greeting2": "hell2!"
+  "app.greeting2": "hell2!",
+  "app.search": "Search",
+  "app.logout": "Logout"
 }

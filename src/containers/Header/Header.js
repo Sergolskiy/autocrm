@@ -9,6 +9,8 @@ import TextField from '@material-ui/core/TextField';
 
 import { ReactComponent as SettingsImg } from '../../assets/img/icon/gear.svg';
 import { ReactComponent as NotificationImg } from '../../assets/img/icon/notification.svg';
+import Button from "@material-ui/core/Button";
+import {FormattedMessage} from 'react-intl'
 
 class Header extends Component {
 
@@ -20,29 +22,26 @@ class Header extends Component {
 
     return (
       <header className={'header'}>
-        {/*<LanguagesHead/>*/}
+
         <Container maxWidth="xl" className={'header__inner'}>
           <Grid container
                 direction="row"
                 justify="flex-start"
                 alignItems="center"
           >
-            <Grid item xs={6}>
-              <span className={'header__name'}>
-                St. Pete Landburd
-              </span>
-              <span className={'header__edit'}>Edit</span>
-            </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12}>
               <Grid container
                     direction="row"
                     justify="flex-end"
                     alignItems="center"
                     spacing={2}
               >
+                <Grid item className={'header__lang'}>
+                  <LanguagesHead/>
+                </Grid>
                 <Grid item className={'header__search'}>
                   <TextField
-                    label="Search"
+                    label=<FormattedMessage id="app.search"/>
                     margin="dense"
                     variant="outlined"
                   />
@@ -53,6 +52,11 @@ class Header extends Component {
                 </Grid>
                 <Grid item >
                   <NotificationImg className={'header__notification'}/>
+                </Grid>
+                <Grid item >
+                  <Button variant="contained" color="primary">
+                    <FormattedMessage id="app.logout"/>
+                  </Button>
                 </Grid>
               </Grid>
             </Grid>

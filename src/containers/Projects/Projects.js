@@ -48,11 +48,11 @@ class Projects extends Component {
                 <div className="top-nav__tabs">
                   <div className={"top-nav__tabs-item " + (this.state.tabActive === 0 ? 'active' : '')}
                        onClick={() => this.handleTabs(0)}>
-                    Tabs
+                    Проекты
                   </div>
                   <div className={"top-nav__tabs-item " + (this.state.tabActive === 1 ? 'active' : '')}
                        onClick={() => this.handleTabs(1)}>
-                    Files
+                    Файлы
                   </div>
                   <div className={"top-nav__tabs-item " + (this.state.tabActive === 2 ? 'active' : '')}
                        onClick={() => this.handleTabs(2)}>
@@ -92,75 +92,75 @@ class Projects extends Component {
             </div>
             <div className="top-nav__bottom">
               <div className="top-nav__left">
-                {this.state.tabActive === 0 ?
-                  <div className="top-nav__tabs-content">
-                    <div className="top-nav__tabs-content-item">
-                      <div className="top-nav__tabs-content-name">
-                        Статус
-                      </div>
-                      <FormControl>
-                        <Select
-                          displayEmpty
-                          inputProps={{'aria-label': 'Without label'}}
-                          value={10}
-                        >
-                          <MenuItem value={10}>Any</MenuItem>
-                          <MenuItem value={20}>Twenty</MenuItem>
-                          <MenuItem value={30}>Thirty</MenuItem>
-                        </Select>
-                      </FormControl>
-                    </div>
-                    <div className="top-nav__tabs-content-item">
-                      <div className="top-nav__tabs-content-name">
-                        Категории
-                      </div>
-                      <FormControl>
-                        <Select
-                          displayEmpty
-                          inputProps={{'aria-label': 'Without label'}}
-                          value={10}
-                        >
-                          <MenuItem value={10}>Any</MenuItem>
-                          <MenuItem value={20}>Twenty</MenuItem>
-                          <MenuItem value={30}>Thirty</MenuItem>
-                        </Select>
-                      </FormControl>
-                    </div>
-                    <div className="top-nav__tabs-content-item">
-                      <div className="top-nav__tabs-content-name">
-                        Связано
-                      </div>
-                      <FormControl>
-                        <Select
-                          displayEmpty
-                          inputProps={{'aria-label': 'Without label'}}
-                          value={10}
-                        >
-                          <MenuItem value={10}>Any</MenuItem>
-                          <MenuItem value={20}>Twenty</MenuItem>
-                          <MenuItem value={30}>Thirty</MenuItem>
-                        </Select>
-                      </FormControl>
-                    </div>
-                    <div className="top-nav__tabs-content-item">
-                      <div className="top-nav__tabs-content-name">
-                        Сортировка по
-                      </div>
-                      <FormControl>
-                        <Select
-                          displayEmpty
-                          inputProps={{'aria-label': 'Without label'}}
-                          value={10}
-                        >
-                          <MenuItem value={10}>дате</MenuItem>
-                          <MenuItem value={20}>Twenty</MenuItem>
-                          <MenuItem value={30}>Thirty</MenuItem>
-                        </Select>
-                      </FormControl>
+                {/*{this.state.tabActive === 0 ?*/}
+                  {/*<div className="top-nav__tabs-content">*/}
+                    {/*<div className="top-nav__tabs-content-item">*/}
+                      {/*<div className="top-nav__tabs-content-name">*/}
+                        {/*Статус*/}
+                      {/*</div>*/}
+                      {/*<FormControl>*/}
+                        {/*<Select*/}
+                          {/*displayEmpty*/}
+                          {/*inputProps={{'aria-label': 'Without label'}}*/}
+                          {/*value={10}*/}
+                        {/*>*/}
+                          {/*<MenuItem value={10}>Any</MenuItem>*/}
+                          {/*<MenuItem value={20}>Twenty</MenuItem>*/}
+                          {/*<MenuItem value={30}>Thirty</MenuItem>*/}
+                        {/*</Select>*/}
+                      {/*</FormControl>*/}
+                    {/*</div>*/}
+                    {/*<div className="top-nav__tabs-content-item">*/}
+                      {/*<div className="top-nav__tabs-content-name">*/}
+                        {/*Категории*/}
+                      {/*</div>*/}
+                      {/*<FormControl>*/}
+                        {/*<Select*/}
+                          {/*displayEmpty*/}
+                          {/*inputProps={{'aria-label': 'Without label'}}*/}
+                          {/*value={10}*/}
+                        {/*>*/}
+                          {/*<MenuItem value={10}>Any</MenuItem>*/}
+                          {/*<MenuItem value={20}>Twenty</MenuItem>*/}
+                          {/*<MenuItem value={30}>Thirty</MenuItem>*/}
+                        {/*</Select>*/}
+                      {/*</FormControl>*/}
+                    {/*</div>*/}
+                    {/*<div className="top-nav__tabs-content-item">*/}
+                      {/*<div className="top-nav__tabs-content-name">*/}
+                        {/*Связано*/}
+                      {/*</div>*/}
+                      {/*<FormControl>*/}
+                        {/*<Select*/}
+                          {/*displayEmpty*/}
+                          {/*inputProps={{'aria-label': 'Without label'}}*/}
+                          {/*value={10}*/}
+                        {/*>*/}
+                          {/*<MenuItem value={10}>Any</MenuItem>*/}
+                          {/*<MenuItem value={20}>Twenty</MenuItem>*/}
+                          {/*<MenuItem value={30}>Thirty</MenuItem>*/}
+                        {/*</Select>*/}
+                      {/*</FormControl>*/}
+                    {/*</div>*/}
+                    {/*<div className="top-nav__tabs-content-item">*/}
+                      {/*<div className="top-nav__tabs-content-name">*/}
+                        {/*Сортировка по*/}
+                      {/*</div>*/}
+                      {/*<FormControl>*/}
+                        {/*<Select*/}
+                          {/*displayEmpty*/}
+                          {/*inputProps={{'aria-label': 'Without label'}}*/}
+                          {/*value={10}*/}
+                        {/*>*/}
+                          {/*<MenuItem value={10}>дате</MenuItem>*/}
+                          {/*<MenuItem value={20}>Twenty</MenuItem>*/}
+                          {/*<MenuItem value={30}>Thirty</MenuItem>*/}
+                        {/*</Select>*/}
+                      {/*</FormControl>*/}
 
-                    </div>
-                  </div>
-                  : ''}
+                    {/*</div>*/}
+                  {/*</div>*/}
+                  {/*: ''}*/}
 
               </div>
               <div className="top-nav__right">
@@ -189,19 +189,19 @@ class Projects extends Component {
                   <strong>8</strong> найденых элементов
                 </div>
               </div>
-              <div className="view-result__col">
-                <div className="view-result__subtitle">
-                  Способ отображения
-                </div>
-                <span className="view-result__link active">
-                  <GridImg className={'view-result__link-ico'} width={'20px'} height={'20px'}/>
-                  Карточки
-                </span>
-                <span className="view-result__link">
-                  <ListImg className={'view-result__link-ico'} width={'20px'} height={'20px'}/>
-                  Список
-                </span>
-              </div>
+              {/*<div className="view-result__col">*/}
+                {/*<div className="view-result__subtitle">*/}
+                  {/*Способ отображения*/}
+                {/*</div>*/}
+                {/*<span className="view-result__link active">*/}
+                  {/*<GridImg className={'view-result__link-ico'} width={'20px'} height={'20px'}/>*/}
+                  {/*Карточки*/}
+                {/*</span>*/}
+                {/*<span className="view-result__link">*/}
+                  {/*<ListImg className={'view-result__link-ico'} width={'20px'} height={'20px'}/>*/}
+                  {/*Список*/}
+                {/*</span>*/}
+              {/*</div>*/}
             </div>
           </div>
 

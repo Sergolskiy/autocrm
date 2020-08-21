@@ -32,3 +32,76 @@
   color: black;
   margin-bottom: 5px;
 }
+
+
+
+
+
+
+
+
+
+.dashboard-cards{
+  margin-top: 20px;
+}
+
+.dashboard-cards__inner{
+
+}
+
+.dashboard-cards__item{
+  padding: 25px 20px;
+  background: white;
+  border-radius: 8px;
+  transition: 0.3s;
+  box-shadow: 2px 2px 6px #0000000a;
+  height: 100%;
+}
+
+
+
+.dashboard-cards__item:hover{
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 6px #0000001f;
+}
+
+.dashboard-cards__title{
+  color: #58d2a3;
+  font-weight: 500;
+}
+
+.dashboard-cards__caption{
+  font-size: 14px;
+  color: #bfbfc1;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.dashboard-cards__money{
+  font-size: 34px;
+  font-weight: 500;
+  color: #7b85a1;
+}
+
+.dashboard-cards__count{
+  font-size: 14px;
+  color: #bfbfc1;
+  margin-top: 20px;
+}
+
+.dashboard-cards__count b{
+  color: black;
+  margin-left: 5px;
+  font-size: 16px;
+}
+
+.dashboard-cards__item--blue{
+  background: #207df7;
+}
+
+.dashboard-cards__item--blue .dashboard-cards__caption,
+.dashboard-cards__item--blue .dashboard-cards__money,
+.dashboard-cards__item--blue .dashboard-cards__count,
+.dashboard-cards__item--blue .dashboard-cards__count b{
+  color: white;
+}
