@@ -61,10 +61,17 @@ class Dashboard extends Component {
 
         <div className="dashboard__time ">
           <div className="dashboard__curent-data col-3">
-            <span>
-              <FormattedMessage id="app.currentDate"/>
-            </span>
-            {date}
+
+            <div className="aside__time">
+              <div className="aside__time-title">
+                <FormattedMessage id="app.currentDate"/>
+              </div>
+              <div className="aside__time-block">
+                <div className="aside__time-current">
+                  {date}
+                </div>
+              </div>
+            </div>
           </div>
           <div className="dashboard__current-time col-3">
             {/*<span>*/}
@@ -126,7 +133,7 @@ class Dashboard extends Component {
 
             </div>
             <div className="col-md-2">
-              <div className="dashboard-cards__item dashboard-cards__item--blue">
+              <div className="dashboard-cards__item dashboard-cards__item--orange">
                 <div className="dashboard-cards__title">
                   Сентябрь
                 </div>

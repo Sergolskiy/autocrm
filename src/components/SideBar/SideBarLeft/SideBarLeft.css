@@ -76,8 +76,9 @@
 }
 
 .aside__time-current{
-  font-size: 65px;
+  font-size: 45px;
   color: #7b85a1;
+  font-weight: 600;
 }
 
 .aside__time-btn{
@@ -128,22 +129,22 @@
 
 .aside__nav-link:hover:after{
   background: #3748da;
-  background: #c49871;
+  background: #da9142;
 }
 
 .aside__nav-link:hover{
   color: #3748da;
-  color: #c49871;
+  color: #da9142;
 }
 
 .aside__nav-link.active{
   color: #3748da;
-  color: #c49871;
+  color: #da9142;
 }
 
 .aside__nav-link.active:after{
   background: #3748da;
-  background: #c49871;
+  background: #da9142;
 }
 
 .aside__copyright{
@@ -152,12 +153,18 @@
   color: #7b85a1;
 }
 
+.logo-name{
+  background: #404040;
+  padding: 10px;
+  border-radius: 6px;
+}
 .logo-name .logo{
   color: #d8d48b;
   font-size: 25px;
+
 }
 
 .logo-name .logo-sub{
-  color: #c49871;
+  color: #da9142;
   font-size: 25px;
 }

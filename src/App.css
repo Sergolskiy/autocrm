@@ -120,11 +120,11 @@ a{
 }
 
 .top-nav__tabs-item:hover{
-  color: #c49871;
+  color: #da9142;
 }
 
 .top-nav__tabs-item.active{
-  color: #c49871;
+  color: #da9142;
 }
 
 .top-nav__tabs-item:after{
@@ -142,7 +142,7 @@ a{
 
 .top-nav__tabs-item:hover:after,
 .top-nav__tabs-item.active:after{
-  background: #c49871;
+  background: #da9142;
 }
 
 .top-nav__right{

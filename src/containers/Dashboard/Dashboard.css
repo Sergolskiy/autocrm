@@ -13,7 +13,7 @@
 .dashboard__curent-data{
   background: white;
   box-shadow: 2px 2px 6px #0000001f;
-  height: 125px;
+  height: 150px;
   /*width: 320px;*/
   display: flex;
   align-items: center;
@@ -95,13 +95,17 @@
   font-size: 16px;
 }
 
-.dashboard-cards__item--blue{
-  background: #207df7;
+.dashboard-cards__item--orange .dashboard-cards__title{
+  color: #000000;
 }
 
-.dashboard-cards__item--blue .dashboard-cards__caption,
-.dashboard-cards__item--blue .dashboard-cards__money,
-.dashboard-cards__item--blue .dashboard-cards__count,
-.dashboard-cards__item--blue .dashboard-cards__count b{
+.dashboard-cards__item--orange{
+  background: #cea74f;
+}
+
+.dashboard-cards__item--orange .dashboard-cards__caption,
+.dashboard-cards__item--orange .dashboard-cards__money,
+.dashboard-cards__item--orange .dashboard-cards__count,
+.dashboard-cards__item--orange .dashboard-cards__count b{
   color: white;
 }
