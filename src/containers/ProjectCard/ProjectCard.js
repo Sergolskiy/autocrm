@@ -31,7 +31,7 @@ class ProjectCard extends Component {
         <div className="projects-card__i">
           <div className="projects-card__i-content">
             <div className="projects-card__i-status yellow">
-              Статус
+              Выполняется
             </div>
             <NavLink to="/project/1" className="projects-card__i-name">
               Создание лендинга "New Arrivals".  Lorem Ipsum начал как омлет, бессмысленные Латинской происходит

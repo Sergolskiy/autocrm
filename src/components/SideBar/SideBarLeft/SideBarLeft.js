@@ -3,6 +3,7 @@ import './SideBarLeft.css';
 import Man from '../../../assets/img/man.jpg'
 import Logo from '../../../assets/img/new-logo-min.png'
 import {NavLink} from 'react-router-dom'
+import {FormattedMessage} from "react-intl";
 
 class SideBarLeft extends Component {
 
@@ -48,42 +49,42 @@ class SideBarLeft extends Component {
               <ul className="aside__nav-items">
                 <li className="aside__nav-item">
                   <NavLink to="/" exact={true} className="aside__nav-link">
-                    Дашборт
+                    <FormattedMessage id="app.dashboard"/>
                   </NavLink>
                 </li>
                 <li className="aside__nav-item">
                   <NavLink to="/projects" className="aside__nav-link">
-                    Projects
+                    <FormattedMessage id="app.tasks"/>
                   </NavLink>
                 </li>
                 <li className="aside__nav-item">
                   <NavLink to="/a" className="aside__nav-link">
-                    Клиенты
+                    <FormattedMessage id="app.clients"/>
                   </NavLink>
                 </li>
                 <li className="aside__nav-item">
                   <NavLink to="/s" className="aside__nav-link">
-                    Накладные
+                    <FormattedMessage id="app.overhead"/>
                   </NavLink>
                 </li>
                 <li className="aside__nav-item">
                   <NavLink to="/d" className="aside__nav-link">
-                    Товары
+                    <FormattedMessage id="app.products"/>
                   </NavLink>
                 </li>
                 <li className="aside__nav-item">
                   <NavLink to="/d" className="aside__nav-link">
-                    Запись
+                    <FormattedMessage id="app.recording"/>
                   </NavLink>
                 </li>
                 <li className="aside__nav-item">
                   <NavLink to="/d" className="aside__nav-link">
-                    Отчеты
+                    <FormattedMessage id="app.reports"/>
                   </NavLink>
                 </li>
                 <li className="aside__nav-item">
                   <NavLink to="/d" className="aside__nav-link">
-                    Настройки
+                    <FormattedMessage id="app.settings"/>
                   </NavLink>
                 </li>
               </ul>

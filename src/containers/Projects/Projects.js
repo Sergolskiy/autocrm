@@ -13,6 +13,7 @@ import { ReactComponent as GridImg } from '../../assets/img/icon/grid-grid.svg';
 import { ReactComponent as ListImg } from '../../assets/img/icon/grid-list.svg';
 import ProjectCard from "../ProjectCard/ProjectCard";
 import CreateTaskPopup from "../../components/ModalPopups/CreateTaskPopup/CreateTaskPopup";
+import {FormattedMessage} from "react-intl";
 
 
 
@@ -50,7 +51,7 @@ class Projects extends Component {
 
           <div className="page-title">
            <span className={'header__name'}>
-              Projects
+              <FormattedMessage id="app.tasks"/>
             </span>
           </div>
 
@@ -60,26 +61,26 @@ class Projects extends Component {
                 <div className="top-nav__tabs">
                   <div className={"top-nav__tabs-item " + (this.state.tabActive === 0 ? 'active' : '')}
                        onClick={() => this.handleTabs(0)}>
-                    Проекты
+                    <FormattedMessage id="app.projects"/>
                   </div>
                   <div className={"top-nav__tabs-item " + (this.state.tabActive === 1 ? 'active' : '')}
                        onClick={() => this.handleTabs(1)}>
-                    Файлы
+                    <FormattedMessage id="app.files"/>
                   </div>
                   <div className={"top-nav__tabs-item " + (this.state.tabActive === 2 ? 'active' : '')}
                        onClick={() => this.handleTabs(2)}>
-                    Notes
+                    <FormattedMessage id="app.notes"/>
                   </div>
                   <div className={"top-nav__tabs-item " + (this.state.tabActive === 3 ? 'active' : '')}
                        onClick={() => this.handleTabs(3)}>
-                    Activity
+                    <FormattedMessage id="app.activity"/>
                   </div>
                 </div>
               </div>
               <div className="top-nav__right">
                 <div className="top-nav__team">
                   <div className="top-nav__title">
-                    Команда
+                    <FormattedMessage id="app.team"/>
                   </div>
                   <div className="top-nav__photo">
                     <img src={Man} alt="img"/>
@@ -97,7 +98,7 @@ class Projects extends Component {
                     <img src={Man} alt="img"/>
                   </div>
                   <div className="top-nav__manage">
-                    Управление командой
+                    <FormattedMessage id="app.teamManagement"/>
                   </div>
                 </div>
               </div>
@@ -177,12 +178,12 @@ class Projects extends Component {
               </div>
               <div className="top-nav__right">
                 <NavLink to={'/drafts'} className="top-nav__drafts">
-                  Черновики (4)
+                  <FormattedMessage id="app.drafts"/> (4)
                 </NavLink>
                 <div className="top-nav__create">
 
                   <Button variant="contained" size="large" color="primary" onClick={this.openHandle} >
-                    Создать задачу
+                    <FormattedMessage id="app.createTask"/>
                   </Button>
 
                   { this.state.isOpenPopup ? <CreateTaskPopup closePopup={this.closeHandle} /> : null}
