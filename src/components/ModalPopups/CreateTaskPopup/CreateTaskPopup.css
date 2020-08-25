@@ -1,0 +1,121 @@
+.modal-popup{
+    position: fixed;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s all;
+}
+
+.modal-popup.open{
+    z-index: 1000;
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-popup__overlay{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.modal-popup__window{
+    background: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    padding: 0 30px;
+}
+
+.modal-popup__content{
+    width: 100%;
+}
+
+.modal-popup__header{
+    padding-top: 30px;
+}
+
+.modal-popup__header > span{
+    color: #3748da;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.modal-popup__body{
+    padding: 20px 0;
+}
+
+.modal-popup__footer{
+    padding: 15px 0 20px;
+}
+
+.task-create__name{
+    margin-bottom: 15px;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+}
+
+.task-create__name-input{
+    width: 100%;
+    padding: 15px 0 ;
+}
+
+.task-create__description{
+    margin-bottom: 15px;
+}
+
+.task-create__description textarea{
+    border: none;
+    font-size: 14px;
+    color: black;
+    padding: 15px 0 ;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    resize: none;
+    min-height: 250px;
+}
+
+.task-create__description textarea:focus{
+    outline: none;
+}
+
+.task-create__executor{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.task-create__executor > span{
+    margin-right: 10px;
+}
+
+.task-create__executor-body{
+    display: flex;
+}
+
+.task-create__executor-link{
+    cursor: pointer;
+}
+
+.task-create__executor-link--add{
+
+}
+
+.task-create__btn{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.task-create__drafts{
+    margin-right: 20px!important;
+}
+
+.task-create__save{
+
+}
