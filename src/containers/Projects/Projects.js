@@ -231,11 +231,11 @@ class Projects extends Component {
                 <div className="col-md-4">
                   <div className="projects-card__i projects-card__i--create">
                     <div className="projects-card__i-content">
-                      <div className="projects-card__i-create-task"> {/*navlink*/}
+                      <div className="projects-card__i-create-task" onClick={this.openHandle}>
                         <div className="projects-card__i-create-ico">
                           +
                         </div>
-                        <div className="projects-card__i-create-task-txt">
+                        <div className="projects-card__i-create-task-txt" >
                           Создать задачу
                         </div>
                       </div>

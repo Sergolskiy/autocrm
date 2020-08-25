@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.MuiButton-containedPrimary{
+  background-color: #c49871 !important;
+}
+
+.MuiButton-containedSecondary {
+  background-color: #8e8e8e !important;
+}

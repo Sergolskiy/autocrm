@@ -13,8 +13,9 @@ class SideBarLeft extends Component {
 
           <div className="aside__inner">
             <div className="aside__top">
-              <NavLink to="/">
-                <img src={Logo} alt="logo"/>
+              <NavLink className={'logo-name'} to="/">
+                <span className={'logo'}>New </span>
+                <span className="logo-sub">Life Auto</span>
               </NavLink>
             </div>
             <div className="aside__user">

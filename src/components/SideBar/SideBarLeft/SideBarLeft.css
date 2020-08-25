@@ -128,22 +128,36 @@
 
 .aside__nav-link:hover:after{
   background: #3748da;
+  background: #c49871;
 }
 
 .aside__nav-link:hover{
   color: #3748da;
+  color: #c49871;
 }
 
 .aside__nav-link.active{
   color: #3748da;
+  color: #c49871;
 }
 
 .aside__nav-link.active:after{
   background: #3748da;
+  background: #c49871;
 }
 
 .aside__copyright{
   font-size: 14px;
   margin-top: auto;
   color: #7b85a1;
+}
+
+.logo-name .logo{
+  color: #d8d48b;
+  font-size: 25px;
+}
+
+.logo-name .logo-sub{
+  color: #c49871;
+  font-size: 25px;
 }
