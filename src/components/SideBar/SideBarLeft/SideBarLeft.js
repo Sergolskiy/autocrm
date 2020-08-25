@@ -25,10 +25,10 @@ class SideBarLeft extends Component {
               </div>
               <div className="aside__user-right">
                 <div className="aside__user-name">
-                  Andrew Willington
+                  <FormattedMessage id="app.asideUserName"/>
                 </div>
                 <div className="aside__user-position">
-                  Project Manager
+                  <FormattedMessage id="app.asideUserPosition"/>
                 </div>
               </div>
             </div>

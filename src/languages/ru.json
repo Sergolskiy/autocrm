@@ -20,5 +20,7 @@
   "app.drafts": "Черновики",
   "app.team": "Команда",
   "app.teamManagement": "Управление командой",
-  "app.createTask": "Создать задачу"
+  "app.createTask": "Создать задачу",
+  "app.asideUserName": "Андрей Виллин",
+  "app.asideUserPosition": "Менеджер проекта"
 }
