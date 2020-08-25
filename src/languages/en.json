@@ -20,5 +20,7 @@
   "app.drafts": "Drafts",
   "app.team": "Team",
   "app.teamManagement": "Team management",
-  "app.createTask": "Create task"
+  "app.createTask": "Create task",
+  "app.asideUserName": "Andrey Willin",
+  "app.asideUserPosition": "Project Manager"
 }
