@@ -54,7 +54,7 @@ class Dashboard extends Component {
       <div className="dashboard">
         <div className="page-title">
            <span className={'header__name'}>
-              Dashboard
+             <FormattedMessage id="app.dashboard"/>
             </span>
           {/*<span className={'header__edit'}>Edit</span>*/}
         </div>
@@ -62,7 +62,7 @@ class Dashboard extends Component {
         <div className="dashboard__time ">
           <div className="dashboard__curent-data col-3">
             <span>
-              Current data
+              <FormattedMessage id="app.currentDate"/>
             </span>
             {date}
           </div>
@@ -72,7 +72,7 @@ class Dashboard extends Component {
             {/*</span>*/}
             <div className="aside__time">
               <div className="aside__time-title">
-                Today
+                <FormattedMessage id="app.time"/>
               </div>
               <div className="aside__time-block">
                 <div className="aside__time-current">
