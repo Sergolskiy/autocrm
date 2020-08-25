@@ -39,8 +39,10 @@ class Dashboard extends Component {
   render() {
 
 
-    var today = new Date(),
-      date = today.getDate() + '.' + today.getMonth()+1 + '.' + today.getFullYear();
+    let today = new Date();
+    let mounth = today.getMonth() + 1;
+    mounth = mounth < 10 ? '0' + mounth : mounth;
+    let date = today.getDate() + '.' + mounth + '.' + today.getFullYear();
 
     let nowTime;
 

@@ -20,3 +20,11 @@ code {
 .MuiButton-containedSecondary {
   background-color: #8e8e8e !important;
 }
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline{
+  border-color: rgb(196 152 113) !important;
+}
+
+.MuiInputLabel-root.Mui-focused{
+  color: rgb(196 152 113) !important;;
+}
