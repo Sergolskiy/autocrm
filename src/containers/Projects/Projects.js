@@ -41,6 +41,11 @@ class Projects extends Component {
       <div>
         <div className={'projects-page'}>
 
+          <div className="page-title">
+           <span className={'header__name'}>
+              Projects
+            </span>
+          </div>
 
           <div className="projects-page__top-nav top-nav">
             <div className="top-nav__head">
@@ -164,9 +169,9 @@ class Projects extends Component {
 
               </div>
               <div className="top-nav__right">
-                <div className="top-nav__drafts">
+                <NavLink to={'/drafts'} className="top-nav__drafts">
                   Черновики (4)
-                </div>
+                </NavLink>
                 <div className="top-nav__create">
 
                   <Button variant="contained" size="large" color="primary">

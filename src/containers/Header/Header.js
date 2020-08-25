@@ -11,6 +11,8 @@ import { ReactComponent as SettingsImg } from '../../assets/img/icon/gear.svg';
 import { ReactComponent as NotificationImg } from '../../assets/img/icon/notification.svg';
 import Button from "@material-ui/core/Button";
 import {FormattedMessage} from 'react-intl'
+import {connect} from "react-redux";
+import {auth, logout} from "../../store/action/auth";
 
 class Header extends Component {
 
@@ -54,7 +56,8 @@ class Header extends Component {
                   <NotificationImg className={'header__notification'}/>
                 </Grid>
                 <Grid item >
-                  <Button variant="contained" color="primary">
+                  <Button variant="contained" color="primary"
+                  onClick={this.props.logout}>
                     <FormattedMessage id="app.logout"/>
                   </Button>
                 </Grid>
@@ -67,4 +70,10 @@ class Header extends Component {
   }
 }
 
-export default Header
+function mapDispatchToProps(dispatch) {
+  return {
+    logout: () => dispatch(logout())
+  }
+}
+
+export default connect(null, mapDispatchToProps)(Header)

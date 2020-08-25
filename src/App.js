@@ -9,34 +9,57 @@ import Dashboard from "./containers/Dashboard/Dashboard";
 import Projects from "./containers/Projects/Projects";
 import ProjectItem from "./containers/ProjectItem/ProjectItem";
 import ErrorPage from "./containers/ErrorPage/ErrorPage";
+import Auth from "./containers/Auth/Auth";
+import {autoLogin} from "./store/action/auth";
+import Forgot from "./containers/Auth/Forgot/Forgot";
+import Drafts from "./containers/Drafts/Drafts";
 
-class App extends React.Component{
+class App extends React.Component {
+
+  state = {
+    login: true
+  }
+
+  componentDidMount() {
+    let login = this.props.autoLogin()
+    // this.setState({login: login});
+  }
 
   render() {
-    // console.log(this.props.currentLocale.locale);
+
+    console.log();
 
     let routes = (
+
       <Switch>
         <Route path='/' exact render={() => <Dashboard/>}/>
         <Route exact path="/autocrm">
-          <Redirect to="/" />
+          <Redirect to="/"/>
+        </Route>
+        <Route exact path="/auth">
+          <Redirect to="/"/>
         </Route>
         <Route path='/projects' exact render={() => <Projects/>}/>
+        <Route path='/drafts' exact render={() => <Drafts/>}/>
         <Route path='/project/:id' exact render={(props) => <ProjectItem {...props} />}/>
         <Route render={() => <ErrorPage/>}/>
       </Switch>
     )
 
-    if (this.props.isAuthenticated) {
+    if (!this.props.isAuthenticated) {
       routes = (
         <Switch>
-          <Route path='/' exact render={() => <Dashboard/>}/>
-          <Route exact path="/autocrm">
-            <Redirect to="/" />
-          </Route>
-          <Route path='/projects' exact render={() => <Projects/>}/>
-          <Route path='/project/:id' exact render={(props) => <ProjectItem {...props} />}/>
-          <Route render={() => <ErrorPage/>}/>
+          <Route path='/auth' exact render={() => <Auth/>}/>
+          <Route path='/forgot' exact render={() => <Forgot/>}/>
+          <Redirect to="/auth"/>
+
+          {/*<Route path='/' exact render={() => <Dashboard/>}/>*/}
+          {/*<Route exact path="/autocrm">*/}
+          {/*<Redirect to="/" />*/}
+          {/*</Route>*/}
+          {/*<Route path='/projects' exact render={() => <Projects/>}/>*/}
+          {/*<Route path='/project/:id' exact render={(props) => <ProjectItem {...props} />}/>*/}
+          {/*<Route render={() => <ErrorPage/>}/>*/}
         </Switch>
       )
     }
@@ -44,7 +67,7 @@ class App extends React.Component{
     return (
 
       <div className="site-wrap">
-        <Layout>
+        <Layout isAuthenticated={this.props.isAuthenticated}>
           {routes}
         </Layout>
       </div>
@@ -56,9 +79,15 @@ class App extends React.Component{
 function mapStateToProps(state) {
   return {
     currentLocale: state.intl,
-    isAuthenticated: !!state.auth.token
+    isAuthenticated: state.auth.isAuthenticated
+  }
+}
+
+function mapDispathToProps(dispath) {
+  return {
+    autoLogin: () => dispath(autoLogin())
   }
 }
 
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, mapDispathToProps)(App);

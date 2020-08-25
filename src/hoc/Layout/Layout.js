@@ -14,10 +14,12 @@ class Layout extends Component{
     return (
       <React.Fragment>
 
-        <SidebarLeft/>
+        {this.props.isAuthenticated ? <SidebarLeft/> : null}
+
 
         <div className="main-wrap">
-          <Header/>
+          {this.props.isAuthenticated ? <Header/> : null}
+
 
           <main className={'main'}>
 
@@ -27,7 +29,8 @@ class Layout extends Component{
             </Container>
           </main>
 
-          <Footer/>
+          {this.props.isAuthenticated ? <Footer/> : null}
+
         </div>
 
 

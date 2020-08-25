@@ -1,11 +1,11 @@
 
-.login-page{
+.forgot-page{
   height: 100vh;
   display: flex;
   align-items: center;
   padding-bottom: 60px;
 }
 
-.forgot-block{
+.to-login-block{
   margin-top: 20px;
 }

@@ -1,6 +1,6 @@
 import {combineReducers} from "redux";
 import { intlReducer } from 'react-intl-redux'
-import authReducer from "./auth";
+import authReducer from "./authReducer";
 
 
 export default combineReducers({

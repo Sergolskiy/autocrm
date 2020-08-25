@@ -46,7 +46,7 @@ class SideBarLeft extends Component {
             <nav className="aside__nav">
               <ul className="aside__nav-items">
                 <li className="aside__nav-item">
-                  <NavLink to="/" exact={'/'} className="aside__nav-link">
+                  <NavLink to="/" exact={true} className="aside__nav-link">
                     Дашборт
                   </NavLink>
                 </li>
