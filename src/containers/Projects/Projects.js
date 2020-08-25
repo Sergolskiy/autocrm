@@ -12,13 +12,15 @@ import Select from '@material-ui/core/Select';
 import { ReactComponent as GridImg } from '../../assets/img/icon/grid-grid.svg';
 import { ReactComponent as ListImg } from '../../assets/img/icon/grid-list.svg';
 import ProjectCard from "../ProjectCard/ProjectCard";
+import CreateTaskPopup from "../../components/ModalPopups/CreateTaskPopup/CreateTaskPopup";
 
 
 
 class Projects extends Component {
 
   state = {
-    tabActive: 0
+    tabActive: 0,
+    isOpenPopup: false
   }
 
   componentDidMount() {
@@ -26,11 +28,16 @@ class Projects extends Component {
   }
 
   handleTabs = (index) => {
-    this.setState({
-      tabActive: index,
-    })
+    this.setState({tabActive: index})
   }
 
+  closeHandle = () => {
+    this.setState({isOpenPopup: false})
+  }
+
+  openHandle = () => {
+    this.setState({isOpenPopup: true})
+  }
 
 
   render() {
@@ -169,9 +176,12 @@ class Projects extends Component {
                 </div>
                 <div className="top-nav__create">
 
-                  <Button variant="contained" size="large" color="primary">
+                  <Button variant="contained" size="large" color="primary" onClick={this.openHandle} >
                     Создать задачу
                   </Button>
+
+                  { this.state.isOpenPopup ? <CreateTaskPopup closePopup={this.closeHandle} /> : null}
+
                 </div>
               </div>
 
@@ -231,8 +241,6 @@ class Projects extends Component {
               </div>
             </div>
           </div>
-
-
         </div>
       </div>
 
