@@ -13,6 +13,8 @@ import Button from "@material-ui/core/Button";
 import {FormattedMessage} from 'react-intl'
 import {connect} from "react-redux";
 import {auth, logout} from "../../store/action/auth";
+import Time from "../../components/Time/Time";
+import Date from "../../components/Date/Date";
 
 class Header extends Component {
 
@@ -38,8 +40,11 @@ class Header extends Component {
                     alignItems="center"
                     spacing={2}
               >
+                <Grid item className={'header__date'}>
+                  <Date/>
+                </Grid>
                 <Grid item className={'header__time'}>
-
+                  <Time/>
                 </Grid>
                 <Grid item className={'header__lang'}>
                   <LanguagesHead/>

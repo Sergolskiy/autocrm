@@ -21,6 +21,9 @@
   background: #eee;
   padding: 15px;
   border-radius: 4px;
+
+  box-shadow: 2px 2px 6px 0px #0000000d;
+  background: #fff;
 }
 
 .products__btn button:first-child{

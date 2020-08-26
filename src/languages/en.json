@@ -26,6 +26,14 @@
   "app.actualTask": "Actual tasks",
   "app.taskSet": "Task set",
   "app.deadline": "Deadline",
+  "app.task": "Task",
+  "app.clientName": "Client name",
+  "app.clientPhone": "Client phone",
+  "app.responsible": "Responsible",
+  "app.edit": "Edit",
+  "app.today": "Today",
+  "app.tomorrow": "Tomorrow",
+  "app.selectDate": "Select date",
 
   "app.export": "Export",
   "app.import": "Import",
@@ -38,4 +46,6 @@
   "app.count": "Count",
   "app.carBrand": "Car brand",
   "app.price": "Price"
+
+
 }
