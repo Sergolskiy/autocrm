@@ -38,10 +38,14 @@ class Header extends Component {
                     alignItems="center"
                     spacing={2}
               >
+                <Grid item className={'header__time'}>
+
+                </Grid>
                 <Grid item className={'header__lang'}>
                   <LanguagesHead/>
                 </Grid>
                 <Grid item className={'header__search'}>
+
                   <TextField
                     label=<FormattedMessage id="app.search"/>
                     margin="dense"

@@ -249,7 +249,7 @@ class Projects extends Component {
                           +
                         </div>
                         <div className="projects-card__i-create-task-txt" >
-                          Создать задачу
+                          <FormattedMessage id="app.createTask"/>
                         </div>
                       </div>
                     </div>

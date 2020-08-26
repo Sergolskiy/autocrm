@@ -23,8 +23,9 @@
   "app.createTask": "Create task",
   "app.asideUserName": "Andrey Willin",
   "app.asideUserPosition": "Project Manager",
-
-
+  "app.actualTask": "Actual tasks",
+  "app.taskSet": "Task set",
+  "app.deadline": "Deadline",
 
   "app.export": "Export",
   "app.import": "Import",

@@ -2,6 +2,8 @@ import React, {Component} from 'react'
 import './Dashboard.css'
 import Grid from "../Header/Header";
 import {FormattedMessage} from "react-intl";
+import ProjectCard from "../ProjectCard/ProjectCard";
+import CreateTaskPopup from "../../components/ModalPopups/CreateTaskPopup/CreateTaskPopup";
 
 
 class Dashboard extends Component {
@@ -185,6 +187,23 @@ class Dashboard extends Component {
                 </div>
               </div>
 
+            </div>
+          </div>
+        </div>
+
+        <div className="dashboard__actual-task">
+          <div className="dashboard__actual-task-title">
+            <span className={"header__name"}>
+              <FormattedMessage id="app.actualTask"/>
+            </span>
+          </div>
+          <div className="projects-card">
+            <div className="projects-card__content">
+              <div className="row">
+                <ProjectCard/>
+                <ProjectCard/>
+                <ProjectCard/>
+              </div>
             </div>
           </div>
         </div>

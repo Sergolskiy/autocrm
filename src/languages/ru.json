@@ -23,6 +23,9 @@
   "app.createTask": "Создать задачу",
   "app.asideUserName": "Андрей Виллин",
   "app.asideUserPosition": "Мененджер",
+  "app.actualTask": "Актуальные задачи",
+  "app.taskSet": "Поставлена",
+  "app.deadline": "Крайний срок",
 
   "app.export": "Експорт",
   "app.import": "Импорт",

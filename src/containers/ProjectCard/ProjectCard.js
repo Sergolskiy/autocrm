@@ -5,6 +5,7 @@ import Man from "../../assets/img/man.jpg";
 import './ProjectCard.css';
 import {NavLink} from "react-router-dom";
 import Button from '@material-ui/core/Button';
+import {FormattedMessage} from "react-intl";
 
 
 
@@ -25,6 +26,10 @@ class ProjectCard extends Component {
     })
   }
 
+  settingProductCard = () => {
+    console.log(123)
+  }
+
 
   render() {
 
@@ -32,19 +37,22 @@ class ProjectCard extends Component {
       <div className="col-md-4">
         <div className="projects-card__i">
           <div className="projects-card__i-content">
-            <NavLink to="/project/1" className="projects-card__i-name">
+            {/*<NavLink to="/project/1" className="projects-card__i-name">*/}
+              {/*Создание лендинга "New Arrivals".*/}
+            {/*</NavLink>*/}
+            <span className="projects-card__i-name" onClick={this.settingProductCard}>
               Создание лендинга "New Arrivals".
-            </NavLink>
+            </span>
             <div className="projects-card__i-description">
               Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь.
             </div>
             <div className="projects-card__i-row">
               <div className="projects-card__i-row-time">
                 <div className="projects-card__i-row-time-i">
-                  <span>Поставлена:</span> 04.08.2020 09:30
+                  <span><FormattedMessage id="app.taskSet"/>:</span> 04.08.2020 09:30
                 </div>
                 <div className="projects-card__i-row-time-i">
-                  <span>Крайний срок:</span> 25.08.2020 11:00
+                  <span><FormattedMessage id="app.deadline"/>:</span> 25.08.2020 11:00
                 </div>
               </div>
               {/*<div className="projects-card__i-row-i">*/}

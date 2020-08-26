@@ -109,3 +109,11 @@
 .dashboard-cards__item--orange .dashboard-cards__count b{
   color: white;
 }
+
+.dashboard__actual-task{
+  margin: 20px 0;
+}
+
+.dashboard__actual-task-title{
+  margin-bottom: 30px;
+}
