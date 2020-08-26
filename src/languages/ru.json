@@ -22,5 +22,17 @@
   "app.teamManagement": "Управление командой",
   "app.createTask": "Создать задачу",
   "app.asideUserName": "Андрей Виллин",
-  "app.asideUserPosition": "Менеджер проекта"
+  "app.asideUserPosition": "Мененджер",
+
+  "app.export": "Експорт",
+  "app.import": "Импорт",
+  "app.name": "Имя",
+  "app.lastName": "Фамилия",
+  "app.phone": "Телефон",
+  "app.historyOfService": "История обслуживания",
+  "app.history": "История",
+  "app.article": "Артикуль",
+  "app.count": "Количество",
+  "app.carBrand": "Марка авто",
+  "app.price": "Цена"
 }
