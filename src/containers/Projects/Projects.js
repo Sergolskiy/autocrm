@@ -21,7 +21,16 @@ class Projects extends Component {
 
   state = {
     tabActive: 0,
-    isOpenPopup: false
+    isOpenPopup: false,
+
+    taskData: {
+      nameTask: 'Andrey Willin',
+      descTask: 'Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь.',
+      createTask: '2019-07-24T11:30',
+      employeeTask: 'Andrey Willin',
+      statusTask: 'Выполняется',
+    },
+    isEditTask: false
   }
 
   componentDidMount() {
@@ -38,6 +47,15 @@ class Projects extends Component {
 
   openHandle = () => {
     this.setState({isOpenPopup: true})
+  }
+
+  getInfoTask = (id) => {
+    this.setState({isEditTask: true})
+    this.openHandle();
+  }
+
+  doneTask = () => {
+    alert('done');
   }
 
 
@@ -87,7 +105,15 @@ class Projects extends Component {
                       <FormattedMessage id="app.createTask"/>
                     </Button>
 
-                    { this.state.isOpenPopup ? <CreateTaskPopup closePopup={this.closeHandle} /> : null}
+                    {
+                      !this.state.isEditTask
+                        ?
+                      this.state.isOpenPopup ? <CreateTaskPopup closePopup={this.closeHandle} /> : null
+                        :
+                      this.state.isOpenPopup ? <CreateTaskPopup closePopup={this.closeHandle}
+                                                                dataTask={this.state.taskData} isEdit={this.state.isEditTask} /> : null
+                    }
+
 
                 </div>
                 {/*<div className="top-nav__team">*/}
@@ -236,10 +262,10 @@ class Projects extends Component {
           <div className="projects-card">
             <div className="projects-card__content">
               <div className="row">
-                <ProjectCard/>
-                <ProjectCard/>
-                <ProjectCard/>
-                <ProjectCard/>
+                <ProjectCard infoHandler={this.getInfoTask} doneTaskHandler={this.doneTask} />
+                <ProjectCard infoHandler={this.getInfoTask} doneTaskHandler={this.doneTask} />
+                <ProjectCard infoHandler={this.getInfoTask} doneTaskHandler={this.doneTask} />
+                <ProjectCard infoHandler={this.getInfoTask} doneTaskHandler={this.doneTask} />
 
                 <div className="col-md-4">
                   <div className="projects-card__i projects-card__i--create">

@@ -26,12 +26,18 @@ class ProjectCard extends Component {
     })
   }
 
-  settingProductCard = () => {
-    console.log(123)
+  infoTask = () => {
+    this.props.infoHandler(1)
+  }
+
+  doneTask = () => {
+    this.props.doneTaskHandler(1)
   }
 
 
   render() {
+    // this.state.nameTask, this.state.descTask, this.state.createTask, this.state.employeeTask, this.state.statusTask
+
 
     return (
       <div className="col-md-4">
@@ -40,7 +46,7 @@ class ProjectCard extends Component {
             {/*<NavLink to="/project/1" className="projects-card__i-name">*/}
               {/*Создание лендинга "New Arrivals".*/}
             {/*</NavLink>*/}
-            <span className="projects-card__i-name" onClick={this.settingProductCard}>
+            <span className="projects-card__i-name" onClick={this.infoTask}>
               Создание лендинга "New Arrivals".
             </span>
             <div className="projects-card__i-description">
@@ -83,7 +89,7 @@ class ProjectCard extends Component {
                 Выполняется
               </div>
               <div className="projects-card__i-btn">
-                <Button variant="contained" color="primary" className={"projects-card__i-btn-done"}>Выполнено</Button>
+                <Button variant="contained" color="primary" className={"projects-card__i-btn-done"} onClick={this.doneTask} >Выполнено</Button>
               </div>
             </div>
             {/*<div className={"projects-card__i-subtask " + (this.state.isOpenSubtask ? 'active' : '')} >*/}

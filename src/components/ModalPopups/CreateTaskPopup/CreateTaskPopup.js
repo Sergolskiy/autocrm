@@ -51,21 +51,28 @@ class CreateTaskPopup extends Component {
 
   render() {
 
-
     return (
       <div className={"modal-popup task-create" + (this.state.isOpen ? ' open' : '')} >
         <div className="modal-popup__overlay">
           <OutsideAlerter onClick={this.handleOutsideClick}>
             <div className="modal-popup__window container">
               <div className="modal-popup__header">
-                <span>Новая задача</span>
+                <span>
+                  { this.props.isEdit ? this.props.dataTask.nameTask : 'Новая задача'}
+                </span>
               </div>
               <div className="modal-popup__body">
                 <div className="task-create__name">
-                  <TextField className={"task-create__name-input"} id="standard-basic" label="Введите название задачи" />
+                  { this.props.isEdit ?
+                    <TextField className={"task-create__name-input"} id="standard-basic" label="Введите название задачи" value={this.props.dataTask.nameTask} /> :
+                    <TextField className={"task-create__name-input"} id="standard-basic" label="Введите название задачи"  />
+                  }
+
                 </div>
                 <div className="task-create__description">
-                  <textarea name="" placeholder={"Описание"}></textarea>
+                  <textarea name="" placeholder={"Описание"}>
+                    { this.props.isEdit ? this.props.dataTask.descTask : ''}
+                  </textarea>
                 </div>
                 <div className="task-create__row task-create__executor">
                   <span>Ответственный:</span>
@@ -80,7 +87,7 @@ class CreateTaskPopup extends Component {
                       <MenuItem value="">
                         <em>None</em>
                       </MenuItem>
-                      <MenuItem value={1}>Andrew Willington</MenuItem>
+                      <MenuItem value={1}>{ this.props.isEdit ? this.props.dataTask.employeeTask : 'Andrew Willington'}</MenuItem>
                       <MenuItem value={2}>Twenty</MenuItem>
                       <MenuItem value={3}>Thirty</MenuItem>
                     </Select>
@@ -91,7 +98,8 @@ class CreateTaskPopup extends Component {
                   <TextField
                     id="datetime-local"
                     type="datetime-local"
-                    defaultValue="2017-05-24T10:30"
+                    // defaultValue="2017-05-24T10:30"
+                    defaultValue = { this.props.isEdit ? this.props.dataTask.createTask : '2017-05-24T10:30'}
                     InputLabelProps={{
                       shrink: true,
                     }}
@@ -108,7 +116,7 @@ class CreateTaskPopup extends Component {
                     <MenuItem value="">
                       <em>None</em>
                     </MenuItem>
-                    <MenuItem value={1}>Без срока</MenuItem>
+                    <MenuItem value={1}>{ this.props.isEdit ? this.props.dataTask.statusTask : 'Без срока'}</MenuItem>
                     <MenuItem value={2}>Выполняется</MenuItem>
                     <MenuItem value={3}>Прострочено</MenuItem>
                   </Select>
