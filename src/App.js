@@ -13,6 +13,8 @@ import Auth from "./containers/Auth/Auth";
 import {autoLogin} from "./store/action/auth";
 import Forgot from "./containers/Auth/Forgot/Forgot";
 import Drafts from "./containers/Drafts/Drafts";
+import Clients from "./containers/Clients/Clients";
+import Products from "./containers/Products/Products";
 
 class App extends React.Component {
 
@@ -40,8 +42,10 @@ class App extends React.Component {
           <Redirect to="/"/>
         </Route>
         <Route path='/projects' exact render={() => <Projects/>}/>
-        <Route path='/drafts' exact render={() => <Drafts/>}/>
         <Route path='/project/:id' exact render={(props) => <ProjectItem {...props} />}/>
+        <Route path='/drafts' exact render={() => <Drafts/>}/>
+        <Route path='/clients' exact render={() => <Clients/>}/>
+        <Route path='/products' exact render={() => <Products/>}/>
         <Route render={() => <ErrorPage/>}/>
       </Switch>
     )

@@ -58,7 +58,7 @@ class SideBarLeft extends Component {
                   </NavLink>
                 </li>
                 <li className="aside__nav-item">
-                  <NavLink to="/a" className="aside__nav-link">
+                  <NavLink to="/clients" className="aside__nav-link">
                     <FormattedMessage id="app.clients"/>
                   </NavLink>
                 </li>
@@ -68,7 +68,7 @@ class SideBarLeft extends Component {
                   </NavLink>
                 </li>
                 <li className="aside__nav-item">
-                  <NavLink to="/d" className="aside__nav-link">
+                  <NavLink to="/products" className="aside__nav-link">
                     <FormattedMessage id="app.products"/>
                   </NavLink>
                 </li>

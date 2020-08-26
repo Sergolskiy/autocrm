@@ -1,0 +1,14 @@
+
+.clients-table{
+  padding: 20px;
+  background: white;
+}
+
+.clients-table-row{
+  height: 60px;
+}
+
+.clients-table-head th{
+  font-weight: bold;
+  height: 40px;
+}

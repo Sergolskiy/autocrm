@@ -1,0 +1,28 @@
+
+.products-table{
+  padding: 20px;
+  background: white;
+}
+
+.products-table-row{
+  height: 50px;
+}
+
+.products-table-head th{
+  font-weight: bold;
+  height: 40px;
+}
+
+.products__btn{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+  background: #eee;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.products__btn button:first-child{
+  margin-right: 20px;
+}

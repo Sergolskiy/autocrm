@@ -22,5 +22,19 @@
   "app.teamManagement": "Team management",
   "app.createTask": "Create task",
   "app.asideUserName": "Andrey Willin",
-  "app.asideUserPosition": "Project Manager"
+  "app.asideUserPosition": "Project Manager",
+
+
+
+  "app.export": "Export",
+  "app.import": "Import",
+  "app.name": "Name",
+  "app.lastName": "Last Name",
+  "app.phone": "Phone",
+  "app.historyOfService": "History of service",
+  "app.history": "History",
+  "app.article": "Article",
+  "app.count": "Count",
+  "app.carBrand": "Car brand",
+  "app.price": "Price"
 }
