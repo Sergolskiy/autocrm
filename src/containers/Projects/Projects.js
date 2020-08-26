@@ -24,7 +24,7 @@ class Projects extends Component {
     isOpenPopup: false,
 
     taskData: {
-      nameTask: 'Andrey Willin',
+      nameTask: 'Создание лендинга "New Arrivals".',
       descTask: 'Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь.',
       createTask: '2019-07-24T11:30',
       employeeTask: 'Andrey Willin',
