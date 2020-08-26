@@ -9,12 +9,11 @@ import TextField from "@material-ui/core/TextField";
 import OutsideAlerter from "../../../hoc/OutsideCliker/OutsideCliker";
 
 
-
-
 class CreateTaskPopup extends Component {
 
   state = {
     executor: 1,
+    status: 1,
     isOpen: false,
   }
 
@@ -32,6 +31,11 @@ class CreateTaskPopup extends Component {
       executor: event.target.value,
     })
   }
+  handleChangeStatus = (event) => {
+    this.setState({
+      status: event.target.value,
+    })
+  }
 
   handleOutsideClick = () => {
     this.setState({
@@ -45,8 +49,8 @@ class CreateTaskPopup extends Component {
 
   }
 
-
   render() {
+
 
     return (
       <div className={"modal-popup task-create" + (this.state.isOpen ? ' open' : '')} >
@@ -63,7 +67,7 @@ class CreateTaskPopup extends Component {
                 <div className="task-create__description">
                   <textarea name="" placeholder={"Описание"}></textarea>
                 </div>
-                <div className="task-create__executor">
+                <div className="task-create__row task-create__executor">
                   <span>Ответственный:</span>
                   {/*<FormControl >*/}
                     {/*<InputLabel id="demo-customized-select-label">Age</InputLabel>*/}
@@ -81,6 +85,33 @@ class CreateTaskPopup extends Component {
                       <MenuItem value={3}>Thirty</MenuItem>
                     </Select>
                   {/*</FormControl>*/}
+                </div>
+                <div className="task-create__row task-create__time">
+                  <span>Крайний срок:</span>
+                  <TextField
+                    id="datetime-local"
+                    type="datetime-local"
+                    defaultValue="2017-05-24T10:30"
+                    InputLabelProps={{
+                      shrink: true,
+                    }}
+                  />
+                </div>
+                <div className="task-create__row task-create__status">
+                  <span>Статус:</span>
+                  <Select
+                    labelId="demo-customized-select-label"
+                    id="demo-customized-select2"
+                    value={this.state.status}
+                    onChange={this.handleChangeStatus}
+                  >
+                    <MenuItem value="">
+                      <em>None</em>
+                    </MenuItem>
+                    <MenuItem value={1}>Без срока</MenuItem>
+                    <MenuItem value={2}>Выполняется</MenuItem>
+                    <MenuItem value={3}>Прострочено</MenuItem>
+                  </Select>
                 </div>
                 {/*<div className="task-create__executor">*/}
                   {/*<span>Соисполнитель:</span>*/}

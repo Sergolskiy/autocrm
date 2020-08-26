@@ -19,8 +19,7 @@
 
 .projects-card__i-status{
     font-weight: bold;
-    font-size: 12px;
-    margin-bottom: 10px;
+    font-size: 14px;
 }
 
 .projects-card__i-status.yellow{
@@ -82,7 +81,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    margin-right: -5px;
+    /*margin-right: -5px;*/
     z-index: 4;
 }
 .projects-card__i-row-photo-i:nth-child(2){
@@ -171,4 +170,44 @@
 }
 .projects-card__i-subtask-list .projects-card__i-row{
     margin-bottom: 0;
+}
+
+.projects-card__i-row-time{
+    display: flex;
+    flex-direction: column;
+}
+
+.projects-card__i-row-time-i{
+    color: #b3b8c3;
+    margin-bottom: 7px;
+    font-weight: 500;
+}
+
+.projects-card__i-row-time-i span{
+    min-width: 135px;
+    display: inline-block;
+    color: black;
+}
+
+.projects-card__i-description{
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    color: #7b85a1;
+}
+
+.projects-card__i-btn{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.projects-card__i-btn-done span{
+    font-weight: 500;
+    font-size: 0.7rem;
+}
+
+.projects-card__i-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

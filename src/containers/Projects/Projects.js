@@ -78,33 +78,45 @@ class Projects extends Component {
                 </div>
               </div>
               <div className="top-nav__right">
-                <div className="top-nav__team">
-                  <div className="top-nav__title">
-                    <FormattedMessage id="app.team"/>
-                  </div>
-                  <div className="top-nav__photo">
-                    <img src={Man} alt="img"/>
-                  </div>
-                  <div className="top-nav__photo">
-                    <img src={Man} alt="img"/>
-                  </div>
-                  <div className="top-nav__photo">
-                    <img src={Man} alt="img"/>
-                  </div>
-                  <div className="top-nav__photo">
-                    <img src={Man} alt="img"/>
-                  </div>
-                  <div className="top-nav__photo">
-                    <img src={Man} alt="img"/>
-                  </div>
-                  <div className="top-nav__manage">
-                    <FormattedMessage id="app.teamManagement"/>
-                  </div>
+                  <NavLink to={'/drafts'} className="top-nav__drafts">
+                    <FormattedMessage id="app.drafts"/> (4)
+                  </NavLink>
+                  <div className="top-nav__create">
+
+                    <Button variant="contained" size="large" color="primary" onClick={this.openHandle} >
+                      <FormattedMessage id="app.createTask"/>
+                    </Button>
+
+                    { this.state.isOpenPopup ? <CreateTaskPopup closePopup={this.closeHandle} /> : null}
+
                 </div>
+                {/*<div className="top-nav__team">*/}
+                  {/*<div className="top-nav__title">*/}
+                    {/*<FormattedMessage id="app.team"/>*/}
+                  {/*</div>*/}
+                  {/*<div className="top-nav__photo">*/}
+                    {/*<img src={Man} alt="img"/>*/}
+                  {/*</div>*/}
+                  {/*<div className="top-nav__photo">*/}
+                    {/*<img src={Man} alt="img"/>*/}
+                  {/*</div>*/}
+                  {/*<div className="top-nav__photo">*/}
+                    {/*<img src={Man} alt="img"/>*/}
+                  {/*</div>*/}
+                  {/*<div className="top-nav__photo">*/}
+                    {/*<img src={Man} alt="img"/>*/}
+                  {/*</div>*/}
+                  {/*<div className="top-nav__photo">*/}
+                    {/*<img src={Man} alt="img"/>*/}
+                  {/*</div>*/}
+                  {/*<div className="top-nav__manage">*/}
+                    {/*<FormattedMessage id="app.teamManagement"/>*/}
+                  {/*</div>*/}
+                {/*</div>*/}
               </div>
             </div>
-            <div className="top-nav__bottom">
-              <div className="top-nav__left">
+            {/*<div className="top-nav__bottom">*/}
+              {/*<div className="top-nav__left">*/}
                 {/*{this.state.tabActive === 0 ?*/}
                   {/*<div className="top-nav__tabs-content">*/}
                     {/*<div className="top-nav__tabs-content-item">*/}
@@ -175,23 +187,23 @@ class Projects extends Component {
                   {/*</div>*/}
                   {/*: ''}*/}
 
-              </div>
-              <div className="top-nav__right">
-                <NavLink to={'/drafts'} className="top-nav__drafts">
-                  <FormattedMessage id="app.drafts"/> (4)
-                </NavLink>
-                <div className="top-nav__create">
+              {/*</div>*/}
+              {/*<div className="top-nav__right">*/}
+                {/*<NavLink to={'/drafts'} className="top-nav__drafts">*/}
+                  {/*<FormattedMessage id="app.drafts"/> (4)*/}
+                {/*</NavLink>*/}
+                {/*<div className="top-nav__create">*/}
 
-                  <Button variant="contained" size="large" color="primary" onClick={this.openHandle} >
-                    <FormattedMessage id="app.createTask"/>
-                  </Button>
+                  {/*<Button variant="contained" size="large" color="primary" onClick={this.openHandle} >*/}
+                    {/*<FormattedMessage id="app.createTask"/>*/}
+                  {/*</Button>*/}
 
-                  { this.state.isOpenPopup ? <CreateTaskPopup closePopup={this.closeHandle} /> : null}
+                  {/*{ this.state.isOpenPopup ? <CreateTaskPopup closePopup={this.closeHandle} /> : null}*/}
 
-                </div>
-              </div>
+                {/*</div>*/}
+              {/*</div>*/}
 
-            </div>
+            {/*</div>*/}
 
           </div>
 

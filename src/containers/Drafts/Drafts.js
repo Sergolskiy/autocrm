@@ -66,36 +66,6 @@ class Drafts extends Component {
                 </div>
               </div>
               <div className="top-nav__right">
-                <div className="top-nav__team">
-                  <div className="top-nav__title">
-                    <FormattedMessage id="app.team"/>
-                  </div>
-                  <div className="top-nav__photo">
-                    <img src={Man} alt="img"/>
-                  </div>
-                  <div className="top-nav__photo">
-                    <img src={Man} alt="img"/>
-                  </div>
-                  <div className="top-nav__photo">
-                    <img src={Man} alt="img"/>
-                  </div>
-                  <div className="top-nav__photo">
-                    <img src={Man} alt="img"/>
-                  </div>
-                  <div className="top-nav__photo">
-                    <img src={Man} alt="img"/>
-                  </div>
-                  <div className="top-nav__manage">
-                    <FormattedMessage id="app.teamManagement"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="top-nav__bottom">
-              <div className="top-nav__left">
-
-              </div>
-              <div className="top-nav__right">
                 <NavLink to={'/projects'} className="top-nav__drafts">
                   <FormattedMessage id="app.tasks"/> (12)
                 </NavLink>
@@ -105,9 +75,48 @@ class Drafts extends Component {
                     <FormattedMessage id="app.createTask"/>
                   </Button>
                 </div>
+                {/*<div className="top-nav__team">*/}
+                  {/*<div className="top-nav__title">*/}
+                    {/*<FormattedMessage id="app.team"/>*/}
+                  {/*</div>*/}
+                  {/*<div className="top-nav__photo">*/}
+                    {/*<img src={Man} alt="img"/>*/}
+                  {/*</div>*/}
+                  {/*<div className="top-nav__photo">*/}
+                    {/*<img src={Man} alt="img"/>*/}
+                  {/*</div>*/}
+                  {/*<div className="top-nav__photo">*/}
+                    {/*<img src={Man} alt="img"/>*/}
+                  {/*</div>*/}
+                  {/*<div className="top-nav__photo">*/}
+                    {/*<img src={Man} alt="img"/>*/}
+                  {/*</div>*/}
+                  {/*<div className="top-nav__photo">*/}
+                    {/*<img src={Man} alt="img"/>*/}
+                  {/*</div>*/}
+                  {/*<div className="top-nav__manage">*/}
+                    {/*<FormattedMessage id="app.teamManagement"/>*/}
+                  {/*</div>*/}
+                {/*</div>*/}
               </div>
-
             </div>
+            {/*<div className="top-nav__bottom">*/}
+              {/*<div className="top-nav__left">*/}
+
+              {/*</div>*/}
+              {/*<div className="top-nav__right">*/}
+                {/*<NavLink to={'/projects'} className="top-nav__drafts">*/}
+                  {/*<FormattedMessage id="app.tasks"/> (12)*/}
+                {/*</NavLink>*/}
+                {/*<div className="top-nav__create">*/}
+
+                  {/*<Button variant="contained" size="large" color="primary">*/}
+                    {/*<FormattedMessage id="app.createTask"/>*/}
+                  {/*</Button>*/}
+                {/*</div>*/}
+              {/*</div>*/}
+
+            {/*</div>*/}
 
           </div>
 
@@ -127,8 +136,6 @@ class Drafts extends Component {
           <div className="projects-card">
             <div className="projects-card__content">
               <div className="row">
-                <ProjectCard/>
-                <ProjectCard/>
                 <ProjectCard/>
                 <ProjectCard/>
 

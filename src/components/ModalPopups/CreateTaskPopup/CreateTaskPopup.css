@@ -43,6 +43,7 @@
 
 .modal-popup__header > span{
     color: #3748da;
+    color: #da9142;
     font-size: 18px;
     font-weight: 600;
 }
@@ -78,33 +79,24 @@
     width: 100%;
     border-bottom: 1px solid #eee;
     resize: none;
-    min-height: 250px;
+    min-height: 200px;
 }
 
 .task-create__description textarea:focus{
     outline: none;
 }
 
-.task-create__executor{
+.task-create__row{
     margin-bottom: 15px;
     display: flex;
     align-items: center;
 }
+.task-create__executor{
 
-.task-create__executor > span{
+}
+
+.task-create__row > span {
     margin-right: 10px;
-}
-
-.task-create__executor-body{
-    display: flex;
-}
-
-.task-create__executor-link{
-    cursor: pointer;
-}
-
-.task-create__executor-link--add{
-
 }
 
 .task-create__btn{

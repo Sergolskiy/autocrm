@@ -148,6 +148,8 @@ a{
 .top-nav__right{
   display: flex;
   align-items: center;
+
+  margin-bottom: 10px;
 }
 
 .top-nav__team{
