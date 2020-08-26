@@ -38,6 +38,7 @@
     padding-right: 50px;
     transition: .3s;
     line-height: 24px;
+    cursor: pointer;
 }
 
 .projects-card__i-name:hover{

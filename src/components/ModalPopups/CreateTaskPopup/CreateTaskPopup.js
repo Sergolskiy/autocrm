@@ -70,8 +70,8 @@ class CreateTaskPopup extends Component {
 
                 </div>
                 <div className="task-create__description">
-                  <textarea name="" placeholder={"Описание"}>
-                    { this.props.isEdit ? this.props.dataTask.descTask : ''}
+                  <textarea name="" placeholder={"Описание"} defaultValue={ this.props.isEdit ? this.props.dataTask.descTask : ''}>
+
                   </textarea>
                 </div>
                 <div className="task-create__row task-create__executor">
@@ -130,12 +130,23 @@ class CreateTaskPopup extends Component {
               </div>
               <div className="modal-popup__footer">
                 <div className="task-create__btn">
-                  <Button variant="contained" color="secondary" className={"task-create__drafts"}>
-                    В черновики
-                  </Button>
-                  <Button variant="contained" color="primary" className={"task-create__save"}>
-                    Сохранить
-                  </Button>
+                  { this.props.isEdit ?
+                    <div>
+                      <Button variant="contained" color="primary" className={"task-create__save"}>
+                        Редактировать
+                      </Button>
+                    </div>
+                   :
+                    <div>
+                      <Button variant="contained" color="secondary" className={"task-create__drafts"}>
+                        В черновики
+                      </Button>
+                      <Button variant="contained" color="primary" className={"task-create__save"}>
+                        Сохранить
+                      </Button>
+                    </div>
+                  }
+
                 </div>
               </div>
             </div>

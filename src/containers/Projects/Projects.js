@@ -46,14 +46,18 @@ class Projects extends Component {
   }
 
   openHandle = () => {
-    this.setState({isOpenPopup: true})
+    this.setState({isEditTask: false})
+    this.openPopup()
   }
 
   getInfoTask = (id) => {
     this.setState({isEditTask: true})
-    this.openHandle();
+    this.openPopup()
   }
 
+  openPopup = () => {
+    this.setState({isOpenPopup: true})
+  }
   doneTask = () => {
     alert('done');
   }
@@ -108,7 +112,7 @@ class Projects extends Component {
                     {
                       !this.state.isEditTask
                         ?
-                      this.state.isOpenPopup ? <CreateTaskPopup closePopup={this.closeHandle} /> : null
+                      this.state.isOpenPopup ? <CreateTaskPopup closePopup={this.closeHandle} isEdit={this.state.isEditTask} /> : null
                         :
                       this.state.isOpenPopup ? <CreateTaskPopup closePopup={this.closeHandle}
                                                                 dataTask={this.state.taskData} isEdit={this.state.isEditTask} /> : null
