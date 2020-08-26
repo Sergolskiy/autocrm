@@ -15,6 +15,7 @@ import Forgot from "./containers/Auth/Forgot/Forgot";
 import Drafts from "./containers/Drafts/Drafts";
 import Clients from "./containers/Clients/Clients";
 import Products from "./containers/Products/Products";
+import Recording from "./containers/Recording/Recording";
 
 class App extends React.Component {
 
@@ -46,6 +47,7 @@ class App extends React.Component {
         <Route path='/drafts' exact render={() => <Drafts/>}/>
         <Route path='/clients' exact render={() => <Clients/>}/>
         <Route path='/products' exact render={() => <Products/>}/>
+        <Route path='/recording' exact render={() => <Recording/>}/>
         <Route render={() => <ErrorPage/>}/>
       </Switch>
     )

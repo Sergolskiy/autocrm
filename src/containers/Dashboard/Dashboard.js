@@ -4,6 +4,7 @@ import Grid from "../Header/Header";
 import {FormattedMessage} from "react-intl";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import CreateTaskPopup from "../../components/ModalPopups/CreateTaskPopup/CreateTaskPopup";
+import Time from "../../components/Time/Time";
 
 
 class Dashboard extends Component {
@@ -61,37 +62,39 @@ class Dashboard extends Component {
           {/*<span className={'header__edit'}>Edit</span>*/}
         </div>
 
-        <div className="dashboard__time ">
-          <div className="dashboard__curent-data col-3">
+        {/*<div className="dashboard__time ">*/}
+          {/*<div className="dashboard__curent-data col-3">*/}
 
-            <div className="aside__time">
-              <div className="aside__time-title">
-                <FormattedMessage id="app.currentDate"/>
-              </div>
-              <div className="aside__time-block">
-                <div className="aside__time-current">
-                  {date}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="dashboard__current-time col-3">
-            {/*<span>*/}
-              {/*Current time*/}
-            {/*</span>*/}
-            <div className="aside__time">
-              <div className="aside__time-title">
-                <FormattedMessage id="app.time"/>
-              </div>
-              <div className="aside__time-block">
-                <div className="aside__time-current">
-                  {this.state.currentCount}
-                </div>
-              </div>
-            </div>
+            {/*<div className="aside__time">*/}
+              {/*<div className="aside__time-title">*/}
+                {/*<FormattedMessage id="app.currentDate"/>*/}
+              {/*</div>*/}
+              {/*<div className="aside__time-block">*/}
+                {/*<div className="aside__time-current">*/}
+                  {/*{date}*/}
+                {/*</div>*/}
+              {/*</div>*/}
+            {/*</div>*/}
+          {/*</div>*/}
+          {/*<div className="dashboard__current-time col-3">*/}
+            {/*/!*<span>*!/*/}
+              {/*/!*Current time*!/*/}
+            {/*/!*</span>*!/*/}
+            {/*<div className="aside__time">*/}
+              {/*<div className="aside__time-title">*/}
+                {/*<FormattedMessage id="app.time"/>*/}
+              {/*</div>*/}
+              {/*<div className="aside__time-block">*/}
+                {/*/!*<div className="aside__time-current">*!/*/}
+                  {/*/!*{this.state.currentCount}*!/*/}
+                {/*/!*</div>*!/*/}
+                {/*<Time/>*/}
+              {/*</div>*/}
+              {/**/}
+            {/*</div>*/}
 
-          </div>
-        </div>
+          {/*</div>*/}
+        {/*</div>*/}
 
         <div className="dashboard-cards">
           <div className="dashboard-cards__inner row">
