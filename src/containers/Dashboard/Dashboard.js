@@ -16,6 +16,8 @@ import TableContainer from "@material-ui/core/TableContainer";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import '../Recording/Recording.css'
+import SnackbarContent from "@material-ui/core/SnackbarContent";
+import Snackbar from "@material-ui/core/Snackbar";
 
 
 class Dashboard extends Component {
@@ -23,6 +25,7 @@ class Dashboard extends Component {
   state = {
     intervalId: false,
     currentCount: 0,
+    openSnack: false
   }
 
   componentDidMount() {
@@ -50,6 +53,14 @@ class Dashboard extends Component {
 
   }
 
+  handleCloseSnack = () => {
+    this.setState({ openSnack: false });
+  }
+
+  handleOpenSnack = () => {
+    this.setState({ openSnack: true });
+  }
+
   render() {
 
 
@@ -64,14 +75,52 @@ class Dashboard extends Component {
       nowTime = today.getHours() + ':' + today.getMinutes() + today.getSeconds()
     }, 1000)
 
+    const action = (
+      <div className={'task-snack__create'}>
+        <div className={'task-snack__create-title'}>
+          <span>Создана задача: </span>
+          <span>Новая задача</span>
+        </div>
+        <div className={'task-snack__create-txt'}>
+          <span>Описание: </span>
+          <span>
+            sdfsdfsdfsdfsd sdfsdfsdf fsdfsdf sdfsd fsdfsdfsdfsd fsdfsd
+          </span>
+        </div>
+        <Button color="primary" size="small" className={'task-snack__create-btn'}>
+          Подробнее
+        </Button>
+      </div>
+    );
+    let vertical = 'top';
+    let horizontal = 'right';
+
     return (
       <div className="dashboard">
+
+
+
         <div className="page-title">
            <span className={'header__name'}>
              <FormattedMessage id="app.dashboard"/>
             </span>
           {/*<span className={'header__edit'}>Edit</span>*/}
         </div>
+
+        <div className="task-snack">
+          <Snackbar
+            anchorOrigin={{vertical, horizontal }}
+            open={this.state.openSnack}
+            onClose={this.handleCloseSnack}
+            key={vertical + horizontal}
+            action={action}
+          />
+        </div>
+
+
+        <Button color="secondary" size="small" onClick={this.handleOpenSnack}>
+          open
+        </Button>
 
         {/*<div className="dashboard__time ">*/}
           {/*<div className="dashboard__curent-data col-3">*/}

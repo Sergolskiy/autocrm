@@ -114,3 +114,30 @@ code {
 }
 
 
+.task-snack .MuiSnackbarContent-root{
+  background-color: rgb(64 64 64);
+}
+
+.task-snack .MuiSnackbarContent-action{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  max-width: 300px;
+}
+
+.task-snack__create-btn{
+  color: red !important;
+}
+
+
+.settings .Mui-selected .MuiTab-wrapper{
+  color: #d8d48b;
+}
+
+.settings .PrivateTabIndicator-colorSecondary-7{
+  background-color: #da9142;
+}
+
+.settings .MuiAppBar-colorPrimary{
+  background-color: #404040;
+}

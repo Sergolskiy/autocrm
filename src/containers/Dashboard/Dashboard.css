@@ -118,3 +118,33 @@
   margin-bottom: 30px;
 }
 
+.task-snack{
+
+}
+
+.task-snack__create-title {
+  padding-top: 10px;
+  font-weight: 500;
+}
+
+.task-snack__create-title span:first-child{
+  color: #da9142;
+  font-size: 16px;
+}
+.task-snack__create-title span:last-child{
+  color: #d8d48b;
+  font-size: 18px;
+}
+
+.task-snack__create-txt{
+  margin-top: 10px;
+  font-weight: 500;
+  padding-bottom: 15px;
+}
+
+.task-snack__create-txt span:first-child{
+  color: #da9142;
+}
+.task-snack__create-txt span:last-child{
+  color: white;
+}
