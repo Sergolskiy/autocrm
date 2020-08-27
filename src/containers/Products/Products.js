@@ -7,10 +7,27 @@ import TableHead from "@material-ui/core/TableHead";
 import Table from "@material-ui/core/Table";
 import TableContainer from "@material-ui/core/TableContainer";
 import Button from "@material-ui/core/Button";
+import AddProductPopup from "../../components/ModalPopups/AddProductPopup/AddProductPopup";
 
 import './Products.css'
+import PopupWrapper from "../../hoc/PopupWrapper/PopupWrapper";
 
 class Products extends Component {
+
+  state = {
+    isOpen: false,
+  }
+
+  addProductHandle = () => {
+    this.setState({
+      isOpen: true
+    })
+  }
+  closePopupAddProduct = () => {
+    this.setState({
+      isOpen: false
+    })
+  }
 
   render() {
 
@@ -29,6 +46,17 @@ class Products extends Component {
           <Button variant="contained" color="secondary">
             <FormattedMessage id="app.export"/>
           </Button>
+          <Button variant="contained" className="yellow-btn" onClick={this.addProductHandle}>
+            <FormattedMessage id="app.addProduct"/>
+          </Button>
+          {/*{this.state.isOpenAddProduct ?  <AddProductPopup/> : ''}*/}
+
+          {this.state.isOpen ?
+            <PopupWrapper classPopup={'add-product'} closePopup={this.closePopupAddProduct}>
+              <AddProductPopup />
+            </PopupWrapper>
+            : ''}
+
         </div>
 
         <TableContainer className={'products-table'}>

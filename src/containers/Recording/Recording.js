@@ -23,6 +23,7 @@ class Clients extends Component {
             </span>
         </div>
         <div className="recording-head">
+
           <div className="recording__filter">
             <span><FormattedMessage id="app.selectDate"/></span>
             <TextField

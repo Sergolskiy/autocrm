@@ -34,6 +34,7 @@
   "app.today": "Today",
   "app.tomorrow": "Tomorrow",
   "app.selectDate": "Select date",
+  "app.addProduct": "Add product",
 
   "app.export": "Export",
   "app.import": "Import",

@@ -13,10 +13,10 @@ class Time extends Component {
   componentDidMount() {
     let that = this;
     let today = new Date();
-    let nowTime = today.getHours() + ':' + (today.getMinutes() < 10 ? today.getMinutes() + 1 : today.getMinutes());
+    let nowTime = today.getHours() + ':' + (today.getMinutes() < 10 ? "0" + today.getMinutes() : today.getMinutes());
     that.setState({ currentCount: nowTime });
     let intervalId = setInterval(function () {
-      let nowTime = today.getHours() + ':' + (today.getMinutes() < 10 ? today.getMinutes() + 1 : today.getMinutes());
+      let nowTime = today.getHours() + ':' + (today.getMinutes() < 10 ? "0" + today.getMinutes() : today.getMinutes());
       that.setState({ currentCount: nowTime });
     }, 1000);
     // store intervalId in the state so it can be accessed later:
@@ -37,7 +37,7 @@ class Time extends Component {
     let nowTime;
 
     setInterval(function () {
-      nowTime = today.getHours() + ':' + (today.getMinutes() < 10 ? today.getMinutes() + 1 : today.getMinutes()) + today.getSeconds()
+      nowTime = today.getHours() + ':' + (today.getMinutes() < 10 ? "0" + today.getMinutes() : today.getMinutes()) + today.getSeconds()
     }, 1000)
 
     return (

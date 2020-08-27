@@ -14,6 +14,8 @@ import { ReactComponent as ListImg } from '../../assets/img/icon/grid-list.svg';
 import ProjectCard from "../ProjectCard/ProjectCard";
 import CreateTaskPopup from "../../components/ModalPopups/CreateTaskPopup/CreateTaskPopup";
 import {FormattedMessage} from "react-intl";
+import AddProductPopup from "../Products/Products";
+import PopupWrapper from "../../hoc/PopupWrapper/PopupWrapper";
 
 
 
@@ -112,11 +114,19 @@ class Projects extends Component {
                     {
                       !this.state.isEditTask
                         ?
-                      this.state.isOpenPopup ? <CreateTaskPopup closePopup={this.closeHandle} isEdit={this.state.isEditTask} /> : null
+                      this.state.isOpenPopup ?
+                          <PopupWrapper classPopup={'task-create'} closePopup={this.closeHandle}>
+                            <CreateTaskPopup isEdit={this.state.isEditTask}/>
+                          </PopupWrapper>
+                          : null
                         :
-                      this.state.isOpenPopup ? <CreateTaskPopup closePopup={this.closeHandle}
-                                                                dataTask={this.state.taskData} isEdit={this.state.isEditTask} /> : null
+                        this.state.isOpenPopup ?
+                          <PopupWrapper classPopup={'task-create'} closePopup={this.closeHandle}>
+                            <CreateTaskPopup isEdit={this.state.isEditTask} dataTask={this.state.taskData}/>
+                          </PopupWrapper>
+                          : null
                     }
+                    {/*<CreateTaskPopup closePopup={this.closeHandle} dataTask={this.state.taskData} isEdit={this.state.isEditTask} />*/}
 
 
                 </div>
