@@ -48,5 +48,12 @@
   "app.carBrand": "Марка авто",
   "app.price": "Цена",
 
-  "app.bills": "Счета"
+  "app.bills": "Счета",
+  "app.id": "id",
+  "app.date": "Дата",
+  "app.vendorCode": "Артикул",
+  "app.status": "Статус",
+  "app.amount": "Сумма",
+  "app.total": "Итого"
+
 }
