@@ -7,6 +7,17 @@ import Tab from "@material-ui/core/Tab";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import PropTypes from 'prop-types';
+import Man from "../../assets/img/man.jpg";
+import Button from "@material-ui/core/Button";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import TextField from "@material-ui/core/TextField";
+import PopupWrapper from "../Products/Products";
+import TableContainer from "@material-ui/core/TableContainer";
+import Table from "@material-ui/core/Table";
+import TableHead from "@material-ui/core/TableHead";
+import TableRow from "@material-ui/core/TableRow";
+import TableCell from "@material-ui/core/TableCell";
+import TableBody from "@material-ui/core/TableBody";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -48,10 +59,24 @@ class Settings extends Component {
   state = {
     value: 0,
     setValue: 0,
+    setSuccess: false,
+    setLoading: false
   }
 
   handleChange = (event, newValue) => {
     this.setState({value: newValue})
+  };
+
+  handleButtonClick = () => {
+    if (!this.state.setLoading) {
+      this.setState({setSuccess: false})
+      this.setState({setLoading: true})
+      let that = this;
+      setTimeout(() => {
+        that.setState({setSuccess: true})
+        that.setState({setLoading: false})
+      }, 2000);
+    }
   };
 
   render() {
@@ -69,19 +94,336 @@ class Settings extends Component {
           <div>
             <AppBar position="static">
               <Tabs value={this.state.value} onChange={this.handleChange} aria-label="simple tabs example">
-                <Tab label="Item One" {...a11yProps(0)} />
-                <Tab label="Item Two" {...a11yProps(1)} />
-                <Tab label="Item Three" {...a11yProps(2)} />
+                <Tab label="Основные" {...a11yProps(0)} />
+                <Tab label="Мастера" {...a11yProps(1)} />
+                <Tab label="Администраторы" {...a11yProps(2)} />
               </Tabs>
             </AppBar>
             <TabPanel value={this.state.value} index={0}>
-              Item One
+              <div className="settings-main">
+                <div className="settings-main__photo">
+                  <img src={Man} alt=""/>
+                  <div className={'wrapper-progress-btn'}>
+                    <Button
+                      color="secondary" size="small"
+                      disabled={this.state.setLoading}
+                      className={'progress-btn settings-main__btn'}
+                      onClick={this.handleButtonClick}
+                    >
+                      Изменить
+                    </Button>
+                    {this.state.setLoading && <CircularProgress size={24} className={'progress-btn-prog'} />}
+                  </div>
+
+                </div>
+                <div className="settings-main__name settings-main__row">
+                  <span className={'settings-main-label'}>
+                    Имя
+                  </span>
+                  <span>
+                    <TextField id="standard-basic"  variant="outlined" value={'Андрей'}/>
+                  </span>
+                  <div className={'wrapper-progress-btn'}>
+                    <Button
+                      color="secondary" size="small"
+                      disabled={this.state.setLoading}
+                      className={'progress-btn settings-main__btn'}
+                      onClick={this.handleButtonClick}
+                    >
+                      Изменить
+                    </Button>
+                    {this.state.setLoading && <CircularProgress size={24} className={'progress-btn-prog'} />}
+                  </div>
+                </div>
+                <div className="settings-main__name settings-main__row">
+                  <span className={'settings-main-label'}>
+                    Фамилия
+                  </span>
+                  <span>
+                    <TextField id="standard-basic"  variant="outlined" value={'Виллин'}/>
+                  </span>
+                  <div className={'wrapper-progress-btn'}>
+                    <Button
+                      color="secondary" size="small"
+                      disabled={this.state.setLoading}
+                      className={'progress-btn settings-main__btn'}
+                      onClick={this.handleButtonClick}
+                    >
+                      Изменить
+                    </Button>
+                    {this.state.setLoading && <CircularProgress size={24} className={'progress-btn-prog'} />}
+                  </div>
+                </div>
+                <div className="settings-main__phone settings-main__row">
+                  <span className={'settings-main-label'}>
+                    Телефон
+                  </span>
+                  <span>
+                    <TextField id="standard-basic"  variant="outlined" value={'098 655 45 22'}/>
+                  </span>
+                  <div className={'wrapper-progress-btn'}>
+                    <Button
+                      color="secondary" size="small"
+                      disabled={this.state.setLoading}
+                      className={'progress-btn settings-main__btn'}
+                      onClick={this.handleButtonClick}
+                    >
+                      Изменить
+                    </Button>
+                    {this.state.setLoading && <CircularProgress size={24} className={'progress-btn-prog'} />}
+                  </div>
+                </div>
+                <div className="settings-main__login settings-main__row">
+                  <span className={'settings-main-label'}>
+                    Логин
+                  </span>
+                  <span>
+                    <TextField id="standard-basic"  variant="outlined" value={'Андрей'}/>
+                  </span>
+                  <div className={'wrapper-progress-btn'}>
+                    <Button
+                      color="secondary" size="small"
+                      disabled={this.state.setLoading}
+                      className={'progress-btn settings-main__btn'}
+                      onClick={this.handleButtonClick}
+                    >
+                      Изменить
+                    </Button>
+                    {this.state.setLoading && <CircularProgress size={24} className={'progress-btn-prog'} />}
+                  </div>
+                </div>
+                <div className="settings-main__pass settings-main__row">
+                  <span className={'settings-main-label'}>
+                    Пароль
+                  </span>
+                  <span>
+                    <TextField id="standard-basic"  variant="outlined" value={'*******'}/>
+                  </span>
+                  <div className={'wrapper-progress-btn'}>
+                    <Button
+                      color="secondary" size="small"
+                      disabled={this.state.setLoading}
+                      className={'progress-btn settings-main__btn'}
+                      onClick={this.handleButtonClick}
+                    >
+                      Изменить
+                    </Button>
+                    {this.state.setLoading && <CircularProgress size={24} className={'progress-btn-prog'} />}
+                  </div>
+                </div>
+              </div>
             </TabPanel>
+
+
             <TabPanel value={this.state.value} index={1}>
-              Item Two
+              <div className="settings-title-tab">Мастера</div>
+
+              <div className="products__btn">
+                <Button variant="contained" color="primary">
+                  Добавить мастера
+                </Button>
+
+              </div>
+
+              <TableContainer className={'products-table'}>
+                <Table size="small" aria-label="a dense table">
+                  <TableHead>
+                    <TableRow className={'products-table-head'}>
+                      <TableCell>Id</TableCell>
+                      <TableCell align="left"><FormattedMessage id="app.name"/></TableCell>
+                      <TableCell align="left"><FormattedMessage id="app.lastName"/></TableCell>
+                      <TableCell align="left"><FormattedMessage id="app.phone"/></TableCell>
+                      <TableCell align="right">
+
+                      </TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    <TableRow className={'products-table-row'}>
+                      <TableCell align="left">1</TableCell>
+                      <TableCell align="left">Андрей </TableCell>
+                      <TableCell align="left">Виллин</TableCell>
+                      <TableCell align="left">098 655 45 22</TableCell>
+                      <TableCell align="right">
+                        <Button
+                          color="primary" size="small"
+                        >
+                          Изменить
+                        </Button>
+                        <Button
+                          color="secondary" size="small"
+                        >
+                          Удалить
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+                    <TableRow className={'products-table-row'}>
+                      <TableCell align="left">1</TableCell>
+                      <TableCell align="left">Андрей </TableCell>
+                      <TableCell align="left">Виллин</TableCell>
+                      <TableCell align="left">098 655 45 22</TableCell>
+                      <TableCell align="right">
+                        <Button
+                          color="primary" size="small"
+                        >
+                          Изменить
+                        </Button>
+                        <Button
+                          color="secondary" size="small"
+                        >
+                          Удалить
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+                    <TableRow className={'products-table-row'}>
+                      <TableCell align="left">1</TableCell>
+                      <TableCell align="left">Андрей </TableCell>
+                      <TableCell align="left">Виллин</TableCell>
+                      <TableCell align="left">098 655 45 22</TableCell>
+                      <TableCell align="right">
+                        <Button
+                          color="primary" size="small"
+                        >
+                          Изменить
+                        </Button>
+                        <Button
+                          color="secondary" size="small"
+                        >
+                          Удалить
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+                    <TableRow className={'products-table-row'}>
+                      <TableCell align="left">1</TableCell>
+                      <TableCell align="left">Андрей </TableCell>
+                      <TableCell align="left">Виллин</TableCell>
+                      <TableCell align="left">098 655 45 22</TableCell>
+                      <TableCell align="right">
+                        <Button
+                          color="primary" size="small"
+                        >
+                          Изменить
+                        </Button>
+                        <Button
+                          color="secondary" size="small"
+                        >
+                          Удалить
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+
+                  </TableBody>
+                </Table>
+              </TableContainer>
+
             </TabPanel>
+
+
+
             <TabPanel value={this.state.value} index={2}>
-              Item Three
+
+
+              <div className="settings-title-tab">Администраторы</div>
+
+              <div className="products__btn">
+                <Button variant="contained" color="primary">
+                  Добавить администратора
+                </Button>
+
+              </div>
+
+              <TableContainer className={'products-table'}>
+                <Table size="small" aria-label="a dense table">
+                  <TableHead>
+                    <TableRow className={'products-table-head'}>
+                      <TableCell>Id</TableCell>
+                      <TableCell align="left"><FormattedMessage id="app.name"/></TableCell>
+                      <TableCell align="left"><FormattedMessage id="app.lastName"/></TableCell>
+                      <TableCell align="left"><FormattedMessage id="app.phone"/></TableCell>
+                      <TableCell align="right">
+
+                      </TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    <TableRow className={'products-table-row'}>
+                      <TableCell align="left">1</TableCell>
+                      <TableCell align="left">Андрей </TableCell>
+                      <TableCell align="left">Виллин</TableCell>
+                      <TableCell align="left">098 655 45 22</TableCell>
+                      <TableCell align="right">
+                        <Button
+                          color="primary" size="small"
+                        >
+                          Изменить
+                        </Button>
+                        <Button
+                          color="secondary" size="small"
+                        >
+                          Удалить
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+                    <TableRow className={'products-table-row'}>
+                      <TableCell align="left">1</TableCell>
+                      <TableCell align="left">Андрей </TableCell>
+                      <TableCell align="left">Виллин</TableCell>
+                      <TableCell align="left">098 655 45 22</TableCell>
+                      <TableCell align="right">
+                        <Button
+                          color="primary" size="small"
+                        >
+                          Изменить
+                        </Button>
+                        <Button
+                          color="secondary" size="small"
+                        >
+                          Удалить
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+                    <TableRow className={'products-table-row'}>
+                      <TableCell align="left">1</TableCell>
+                      <TableCell align="left">Андрей </TableCell>
+                      <TableCell align="left">Виллин</TableCell>
+                      <TableCell align="left">098 655 45 22</TableCell>
+                      <TableCell align="right">
+                        <Button
+                          color="primary" size="small"
+                        >
+                          Изменить
+                        </Button>
+                        <Button
+                          color="secondary" size="small"
+                        >
+                          Удалить
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+                    <TableRow className={'products-table-row'}>
+                      <TableCell align="left">1</TableCell>
+                      <TableCell align="left">Андрей </TableCell>
+                      <TableCell align="left">Виллин</TableCell>
+                      <TableCell align="left">098 655 45 22</TableCell>
+                      <TableCell align="right">
+                        <Button
+                          color="primary" size="small"
+                        >
+                          Изменить
+                        </Button>
+                        <Button
+                          color="secondary" size="small"
+                        >
+                          Удалить
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+
+                  </TableBody>
+                </Table>
+              </TableContainer>
+
+
             </TabPanel>
           </div>
         </div>

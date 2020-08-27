@@ -30,7 +30,7 @@ code {
 }
 
 .yellow-btn{
-  background-color: #d8d48b !important;
+  background-color: #fbe04d !important;
 }
 
 .yellow-btn .MuiButton-label{
@@ -108,9 +108,19 @@ code {
   position: relative;
 }
 
+.modal-popup__input--time{
+  display: flex !important;
+  margin-top: 16px !important;
+  margin-bottom: 8px !important;
+}
+
 .modal-popup__btn{
   display: flex;
   justify-content: flex-end;
+}
+
+.modal-popup__btn-i{
+  margin-left: 20px !important;
 }
 
 
@@ -131,10 +141,10 @@ code {
 
 
 .settings .Mui-selected .MuiTab-wrapper{
-  color: #d8d48b;
+  color: #fbe04d;
 }
 
-.settings .PrivateTabIndicator-colorSecondary-7{
+.settings .MuiTabs-indicator{
   background-color: #da9142;
 }
 

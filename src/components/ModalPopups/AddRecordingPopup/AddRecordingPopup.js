@@ -33,7 +33,7 @@ class AddRecordingPopup extends Component {
               <div className="modal-popup__row">
                 <TextField
                   id="standard-multiline-flexible"
-                  label="Название продукта"
+                  label="Задача"
                   className={"modal-popup__input"}
                   fullWidth
                   margin="normal"
@@ -44,10 +44,10 @@ class AddRecordingPopup extends Component {
               <div className="modal-popup__row">
                 <TextField
                   id="standard-multiline-flexible"
-                  label="Количество"
+                  label="Имя клиента"
                   className={"modal-popup__input"}
-                  margin="normal"
                   fullWidth
+                  margin="normal"
                 />
               </div>
             </div>
@@ -55,10 +55,35 @@ class AddRecordingPopup extends Component {
               <div className="modal-popup__row">
                 <TextField
                   id="standard-multiline-flexible"
-                  label="Цена"
+                  label="Телефон клиента"
                   className={"modal-popup__input"}
-                  margin="normal"
                   fullWidth
+                  margin="normal"
+                />
+              </div>
+            </div>
+            <div className="col-6">
+              <div className="modal-popup__row">
+                <TextField
+                  id="standard-multiline-flexible"
+                  label="Ответственный"
+                  className={"modal-popup__input"}
+                  fullWidth
+                  margin="normal"
+                />
+              </div>
+            </div>
+            <div className="col-6">
+              <div className="modal-popup__row">
+                <TextField
+                  id="datetime-local"
+                  type="datetime-local"
+                  label="Крайний срок"
+                  // defaultValue="2017-05-24T10:30"
+                  className={"modal-popup__input modal-popup__input--time"}
+                  InputLabelProps={{
+                    shrink: true,
+                  }}
                 />
               </div>
             </div>

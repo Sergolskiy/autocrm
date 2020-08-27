@@ -4,3 +4,89 @@
   background: white;
   padding: 30px;
 }
+
+.settings-main{
+  max-width: 400px;
+}
+
+.settings-main__photo img {
+  width: 100px;
+
+}
+
+.settings-main__row{
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e19142;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.settings-main__row:last-child{
+  border-bottom: 0;
+}
+
+.settings-main__row button:nth-child(2),
+.settings-main__row span:nth-child(2){
+  margin-left: auto !important;
+}
+
+.settings-main__row span:nth-child(2) .MuiFormControl-root{
+  width: 100px;
+}
+
+.settings-main__row span:nth-child(2) .MuiInputLabel-outlined {
+  z-index: 1;
+  transform: translate(10px, 10px) scale(1);
+  pointer-events: none;
+}
+
+.settings-main__row span:nth-child(2) .MuiInputBase-input {
+  font-size: 14px;
+}
+
+.settings-main__row span:nth-child(2) .MuiInputLabel-outlined.MuiInputLabel-shrink {
+  transform: translate(14px, -6px) scale(0.75);
+}
+
+.settings-main__row span:nth-child(2) .MuiOutlinedInput-input {
+  padding: 7.5px 14px;
+}
+
+.settings-main__btn{
+  font-size: 12px !important;
+  margin-left: 10px !important;
+}
+
+.settings-main-label{
+
+}
+
+.wrapper-progress-btn{
+  position: relative;
+  display: inline-block;
+}
+
+.progress-btn{
+  background-color: #4caf50;
+}
+
+.progress-btn-prog {
+  color: #4caf50;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -12px;
+  margin-left: -12px;
+}
+
+.settings-title-tab{
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.settings .products__btn{
+  margin: 0;
+  background: #f8f8fa;
+}

@@ -35,3 +35,7 @@
     color: #7b85a1;
     font-weight: 600;
 }
+
+.recording__add-btn{
+    margin-left: 20px !important;
+}
