@@ -10,8 +10,26 @@ import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 
 import './Recording.css'
+import PopupWrapper from "../../hoc/PopupWrapper/PopupWrapper";
+import AddRecordingPopup from "../../components/ModalPopups/AddRecordingPopup/AddRecordingPopup";
 
-class Clients extends Component {
+class Recording extends Component {
+
+  state = {
+    isOpen: false,
+  }
+
+
+  addRecordingHandle = () => {
+    this.setState({
+      isOpen: true
+    })
+  }
+  closePopupAddRecording = () => {
+    this.setState({
+      isOpen: false
+    })
+  }
 
   render() {
 
@@ -34,6 +52,16 @@ class Clients extends Component {
               }}
             />
           </div>
+          <Button variant="contained" className="yellow-btn recording__add-btn" onClick={this.addRecordingHandle}>
+            {/*<FormattedMessage id="app.addProduct"/>*/}
+            Добавить запись
+          </Button>
+
+          {this.state.isOpen ?
+            <PopupWrapper classPopup={'add-recording'} closePopup={this.closePopupAddRecording}>
+              <AddRecordingPopup />
+            </PopupWrapper>
+            : ''}
         </div>
         <div className="page-section">
           <div className="page-section__name">
@@ -396,4 +424,4 @@ class Clients extends Component {
   }
 }
 
-export default Clients
+export default Recording

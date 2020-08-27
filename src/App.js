@@ -16,6 +16,7 @@ import Drafts from "./containers/Drafts/Drafts";
 import Clients from "./containers/Clients/Clients";
 import Products from "./containers/Products/Products";
 import Recording from "./containers/Recording/Recording";
+import Bills from "./containers/Bills/Bills";
 
 class App extends React.Component {
 
@@ -48,6 +49,7 @@ class App extends React.Component {
         <Route path='/clients' exact render={() => <Clients/>}/>
         <Route path='/products' exact render={() => <Products/>}/>
         <Route path='/recording' exact render={() => <Recording/>}/>
+        <Route path='/bills' exact render={() => <Bills/>}/>
         <Route render={() => <ErrorPage/>}/>
       </Switch>
     )

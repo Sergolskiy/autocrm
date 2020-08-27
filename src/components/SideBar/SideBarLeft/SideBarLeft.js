@@ -4,6 +4,7 @@ import Man from '../../../assets/img/man.jpg'
 import Logo from '../../../assets/img/new-logo-min.png'
 import {NavLink} from 'react-router-dom'
 import {FormattedMessage} from "react-intl";
+import Bills from "../../../containers/Bills/Bills";
 
 class SideBarLeft extends Component {
 
@@ -75,6 +76,11 @@ class SideBarLeft extends Component {
                 <li className="aside__nav-item">
                   <NavLink to="/recording" className="aside__nav-link">
                     <FormattedMessage id="app.recording"/>
+                  </NavLink>
+                </li>
+                <li className="aside__nav-item">
+                  <NavLink to="/bills" className="aside__nav-link">
+                    <FormattedMessage id="app.bills"/>
                   </NavLink>
                 </li>
                 <li className="aside__nav-item">
