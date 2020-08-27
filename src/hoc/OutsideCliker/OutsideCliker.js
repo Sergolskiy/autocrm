@@ -31,10 +31,9 @@ export default class OutsideAlerter extends Component {
    * Alert if clicked on outside of element
    */
   handleClickOutside(event) {
-    console.log();
     // if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
+
     if (event.target.classList[0] === 'modal-popup__overlay') {
-      // this.props.onClick();
       this.props.onClick();
     }
   }

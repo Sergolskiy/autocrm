@@ -108,6 +108,12 @@ code {
   position: relative;
 }
 
+.modal-popup__input--select{
+  display: flex !important;
+  margin-top: 32px !important;
+  margin-bottom: 8px !important;
+}
+
 .modal-popup__input--time{
   display: flex !important;
   margin-top: 16px !important;

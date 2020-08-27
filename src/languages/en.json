@@ -48,5 +48,11 @@
   "app.carBrand": "Car brand",
   "app.price": "Price",
 
-  "app.bills": "Bills"
+  "app.bills": "Bills",
+  "app.id": "id",
+  "app.date": "Date",
+  "app.vendorCode": "Vendor code",
+  "app.status": "Status",
+  "app.amount": "Amount",
+  "app.total": "Total"
 }
