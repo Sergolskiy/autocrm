@@ -77,7 +77,7 @@ class Waybills extends Component {
           </div>
 
           <Button variant="contained" className="yellow-btn recording__add-btn" onClick={this.addBillsItemHandle}>
-            Добавить запись
+            <FormattedMessage id="app.addNote"/>
           </Button>
 
           {this.state.isOpen ?

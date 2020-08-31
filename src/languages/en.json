@@ -25,6 +25,7 @@
   "app.notes": "Notes",
   "app.activity":"Activity",
   "app.drafts": "Drafts",
+  "app.toDrafts": "To drafts",
   "app.team": "Team",
   "app.teamManagement": "Team management",
   "app.createTask": "Create task",
@@ -39,6 +40,7 @@
   "app.currentBalance": "Current balance",
   "app.yesterday": "Yesterday",
   "app.overallBalance": "Overall balance",
+  "app.forLastMonth": "For the last month",
   "app.balanceThisMonth": "Balance for this month",
   "app.invoiceStatistics": "Invoice statistics",
 
@@ -121,6 +123,9 @@
   "app.save": "Save",
 
 
-  "app.addInvoice": "Add invoice"
+  "app.addInvoice": "Add invoice",
+  "app.productsName": "The product's name",
+  "app.newTask": "New task",
+  "app.enterTaskName": "Enter task name"
 
 }

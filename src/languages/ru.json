@@ -25,6 +25,7 @@
   "app.notes": "Заметки",
   "app.activity":"Активность",
   "app.drafts": "Черновики",
+  "app.toDrafts": "В черновики",
   "app.team": "Команда",
   "app.teamManagement": "Управление командой",
   "app.createTask": "Создать задачу",
@@ -39,7 +40,7 @@
   "app.currentBalance": "Теперешний баланс",
   "app.yesterday": "Вчера",
   "app.overallBalance": "Общай баланс",
-  "app.forLastMonth": "For the last month",
+  "app.forLastMonth": "За последний месяц",
   "app.balanceThisMonth": "Баланс за этот месяц",
   "app.invoiceStatistics": "Статистика инвойсов",
 
@@ -120,5 +121,11 @@
   "app.close": "Закрыть",
   "app.save": "Сохранить",
 
-  "app.addInvoice": "Добавить инвойс"
+
+  "app.addInvoice": "Добавить инвойс",
+  "app.productsName": "Название продукта",
+  "app.newTask": "Новая задача",
+  "app.enterTaskName": "Введите название задачи"
+
+
 }

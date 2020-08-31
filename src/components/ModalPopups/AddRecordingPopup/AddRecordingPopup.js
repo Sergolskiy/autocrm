@@ -6,6 +6,7 @@ import Button from '@material-ui/core/Button';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import TextField from "@material-ui/core/TextField";
+import {FormattedMessage} from "react-intl";
 
 
 class AddRecordingPopup extends Component {
@@ -24,7 +25,7 @@ class AddRecordingPopup extends Component {
       <div className="modal-popup__window">
         <div className="modal-popup__header">
                 <span>
-                 Добавить запись
+                 <FormattedMessage id="app.addNote"/>
                 </span>
         </div>
         <div className="modal-popup__body">
@@ -33,7 +34,7 @@ class AddRecordingPopup extends Component {
               <div className="modal-popup__row">
                 <TextField
                   id="standard-multiline-flexible"
-                  label="Задача"
+                  label=<FormattedMessage id="app.task"/>
                   className={"modal-popup__input"}
                   fullWidth
                   margin="normal"
@@ -44,7 +45,7 @@ class AddRecordingPopup extends Component {
               <div className="modal-popup__row">
                 <TextField
                   id="standard-multiline-flexible"
-                  label="Имя клиента"
+                  label=<FormattedMessage id="app.clientName"/>
                   className={"modal-popup__input"}
                   fullWidth
                   margin="normal"
@@ -55,7 +56,7 @@ class AddRecordingPopup extends Component {
               <div className="modal-popup__row">
                 <TextField
                   id="standard-multiline-flexible"
-                  label="Телефон клиента"
+                  label=<FormattedMessage id="app.clientPhone"/>
                   className={"modal-popup__input"}
                   fullWidth
                   margin="normal"
@@ -66,7 +67,7 @@ class AddRecordingPopup extends Component {
               <div className="modal-popup__row">
                 <TextField
                   id="standard-multiline-flexible"
-                  label="Ответственный"
+                  label=<FormattedMessage id="app.responsible"/>
                   className={"modal-popup__input"}
                   fullWidth
                   margin="normal"
@@ -78,7 +79,7 @@ class AddRecordingPopup extends Component {
                 <TextField
                   id="datetime-local"
                   type="datetime-local"
-                  label="Крайний срок"
+                  label=<FormattedMessage id="app.deadline"/>
                   // defaultValue="2017-05-24T10:30"
                   className={"modal-popup__input modal-popup__input--time"}
                   InputLabelProps={{
@@ -92,10 +93,10 @@ class AddRecordingPopup extends Component {
         <div className="modal-popup__footer">
           <div className="modal-popup__btn">
             <Button variant="contained" color="secondary" className={"modal-popup__btn-i"} onClick={this.handleClose}>
-              Закрыть
+              <FormattedMessage id="app.close"/>
             </Button>
             <Button variant="contained" color="primary" className={"modal-popup__btn-i"}>
-              Сохранить
+              <FormattedMessage id="app.save"/>
             </Button>
           </div>
         </div>

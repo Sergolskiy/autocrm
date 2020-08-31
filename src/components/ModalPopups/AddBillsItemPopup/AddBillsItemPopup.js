@@ -7,6 +7,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import TextField from "@material-ui/core/TextField";
 import TableCell from "../../../containers/Bills/Bills";
+import {FormattedMessage} from "react-intl";
 
 
 class AddBillsItemPopup extends Component {
@@ -25,7 +26,7 @@ class AddBillsItemPopup extends Component {
       <div className="modal-popup__window">
         <div className="modal-popup__header">
                 <span>
-                 Добавить запись
+                 <FormattedMessage id="app.addNote"/>
                 </span>
         </div>
         <div className="modal-popup__body">
@@ -35,7 +36,7 @@ class AddBillsItemPopup extends Component {
                 <TextField
                   id="datetime-local"
                   type="datetime-local"
-                  label="Дата"
+                  label=<FormattedMessage id="app.date"/>
                   className={"modal-popup__input modal-popup__input--time"}
                   InputLabelProps={{
                     shrink: true,
@@ -47,7 +48,7 @@ class AddBillsItemPopup extends Component {
               <div className="modal-popup__row">
                 <TextField
                   id="standard-multiline-flexible"
-                  label="Имя клиента"
+                  label=<FormattedMessage id="app.clientName"/>
                   className={"modal-popup__input"}
                   fullWidth
                   margin="normal"
@@ -58,7 +59,7 @@ class AddBillsItemPopup extends Component {
               <div className="modal-popup__row">
                 <TextField
                   id="standard-multiline-flexible"
-                  label="Артикул"
+                  label=<FormattedMessage id="app.vendorCode"/>
                   className={"modal-popup__input"}
                   fullWidth
                   margin="normal"
@@ -87,10 +88,10 @@ class AddBillsItemPopup extends Component {
         <div className="modal-popup__footer">
           <div className="modal-popup__btn">
             <Button variant="contained" color="secondary" className={"modal-popup__btn-i"} onClick={this.handleClose}>
-              Закрыть
+              <FormattedMessage id="app.close"/>
             </Button>
             <Button variant="contained" color="primary" className={"modal-popup__btn-i"}>
-              Сохранить
+              <FormattedMessage id="app.save"/>
             </Button>
           </div>
         </div>

@@ -7,6 +7,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import TextField from "@material-ui/core/TextField";
 import OutsideAlerter from "../../../hoc/OutsideCliker/OutsideCliker";
+import {FormattedMessage, injectIntl} from "react-intl";
 
 
 class CreateTaskPopup extends Component {
@@ -55,32 +56,39 @@ class CreateTaskPopup extends Component {
 
 
   render() {
+    const placeholderDesc = this.props.intl.formatMessage({
+      id: 'app.description',
+    });
 
     return (
 
       <div className="modal-popup__window container">
         <div className="modal-popup__header">
                 <span>
-                  {this.props.isEdit ? this.props.dataTask.nameTask : 'Новая задача'}
+                  {this.props.isEdit ? this.props.dataTask.nameTask : <FormattedMessage id="app.newTask"/>}
                 </span>
         </div>
         <div className="modal-popup__body">
           <div className="task-create__name">
             {this.props.isEdit ?
-              <TextField className={"task-create__name-input"} id="standard-basic" label="Введите название задачи"
+              <TextField className={"task-create__name-input"} id="standard-basic"
+                         label={<FormattedMessage id="app.enterTaskName"/>}
                          value={this.props.dataTask.nameTask}/> :
-              <TextField className={"task-create__name-input"} id="standard-basic" label="Введите название задачи"/>
+              <TextField className={"task-create__name-input"} id="standard-basic"
+                         label={<FormattedMessage id="app.enterTaskName"/>}/>
             }
 
           </div>
           <div className="task-create__description">
-                  <textarea name="" placeholder={"Описание"}
+                  <textarea name="" placeholder={placeholderDesc}
                             defaultValue={this.props.isEdit ? this.props.dataTask.descTask : ''}>
 
                   </textarea>
           </div>
           <div className="task-create__row task-create__executor">
-            <span>Ответственный:</span>
+            <span>
+              <FormattedMessage id="app.responsible"/>
+            </span>
             {/*<FormControl >*/}
             {/*<InputLabel id="demo-customized-select-label">Age</InputLabel>*/}
             <Select
@@ -100,7 +108,7 @@ class CreateTaskPopup extends Component {
             {/*</FormControl>*/}
           </div>
           <div className="task-create__row task-create__time">
-            <span>Крайний срок:</span>
+            <span><FormattedMessage id="app.deadline"/>}:</span>
             <TextField
               id="datetime-local"
               type="datetime-local"
@@ -112,7 +120,7 @@ class CreateTaskPopup extends Component {
             />
           </div>
           <div className="task-create__row task-create__status">
-            <span>Статус:</span>
+            <span><FormattedMessage id="app.status"/>}:</span>
             <Select
               labelId="demo-customized-select-label"
               id="demo-customized-select2"
@@ -139,16 +147,16 @@ class CreateTaskPopup extends Component {
             {this.props.isEdit ?
               <div>
                 <Button variant="contained" color="primary" className={"task-create__save"} onClick={this.handleClose}>
-                  Редактировать
+                  <FormattedMessage id="app.edit"/>
                 </Button>
               </div>
               :
               <div>
                 <Button variant="contained" color="secondary" className={"task-create__drafts"}>
-                  В черновики
+                  <FormattedMessage id="app.toDrafts"/>
                 </Button>
                 <Button variant="contained" color="primary" className={"task-create__save"} onClick={this.handleClose}>
-                  Сохранить
+                  <FormattedMessage id="app.save"/>
                 </Button>
               </div>
             }
@@ -160,4 +168,4 @@ class CreateTaskPopup extends Component {
   }
 }
 
-export default CreateTaskPopup
+export default injectIntl(CreateTaskPopup)

@@ -6,6 +6,7 @@ import Button from '@material-ui/core/Button';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import TextField from "@material-ui/core/TextField";
+import {FormattedMessage} from "react-intl";
 
 
 class AddProductPopup extends Component {
@@ -24,7 +25,7 @@ class AddProductPopup extends Component {
       <div className="modal-popup__window">
         <div className="modal-popup__header">
                 <span>
-                 Добавить продукт
+                <FormattedMessage id="app.addProduct"/>
                 </span>
         </div>
         <div className="modal-popup__body">
@@ -33,7 +34,7 @@ class AddProductPopup extends Component {
               <div className="modal-popup__row">
                 <TextField
                   id="standard-multiline-flexible"
-                  label="Название продукта"
+                  label=<FormattedMessage id="app.productsName"/>
                   className={"modal-popup__input"}
                   fullWidth
                   margin="normal"
@@ -44,7 +45,7 @@ class AddProductPopup extends Component {
               <div className="modal-popup__row">
                 <TextField
                   id="standard-multiline-flexible"
-                  label="Количество"
+                  label=<FormattedMessage id="app.count"/>
                   className={"modal-popup__input"}
                   margin="normal"
                   fullWidth
@@ -55,7 +56,7 @@ class AddProductPopup extends Component {
               <div className="modal-popup__row">
                 <TextField
                   id="standard-multiline-flexible"
-                  label="Цена"
+                  label=<FormattedMessage id="app.price"/>
                   className={"modal-popup__input"}
                   margin="normal"
                   fullWidth
@@ -67,10 +68,10 @@ class AddProductPopup extends Component {
         <div className="modal-popup__footer">
           <div className="modal-popup__btn">
             <Button variant="contained" color="secondary" className={"modal-popup__btn-i"} onClick={this.handleClose}>
-              Закрыть
+              <FormattedMessage id="app.close"/>
             </Button>
             <Button variant="contained" color="primary" className={"modal-popup__btn-i"}>
-              Сохранить
+              <FormattedMessage id="app.save"/>
             </Button>
           </div>
         </div>
