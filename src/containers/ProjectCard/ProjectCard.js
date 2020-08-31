@@ -86,10 +86,10 @@ class ProjectCard extends Component {
             </div>
             <div className="projects-card__i-footer">
               <div className="projects-card__i-status yellow">
-                Выполняется
+                <FormattedMessage id="app.inProgress"/>
               </div>
               <div className="projects-card__i-btn">
-                <Button variant="contained" color="primary" className={"projects-card__i-btn-done"} onClick={this.doneTask} >Выполнено</Button>
+                <Button variant="contained" color="primary" className={"projects-card__i-btn-done"} onClick={this.doneTask} ><FormattedMessage id="app.performed"/></Button>
               </div>
             </div>
             {/*<div className={"projects-card__i-subtask " + (this.state.isOpenSubtask ? 'active' : '')} >*/}

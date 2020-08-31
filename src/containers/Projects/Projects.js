@@ -254,7 +254,7 @@ class Projects extends Component {
             <div className="view-result__inner">
               <div className="view-result__col">
                 <div className="view-result__items-txt">
-                  <strong>8</strong> найденых элементов
+                  <strong>8</strong> <FormattedMessage id="app.foundItems"/>
                 </div>
               </div>
               {/*<div className="view-result__col">*/}

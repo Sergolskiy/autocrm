@@ -35,6 +35,7 @@
   "app.deadline": "Крайний срок",
   "app.task": "Задача",
 
+
   "app.currentBalance": "Теперешний баланс",
   "app.yesterday": "Вчера",
   "app.overallBalance": "Общай баланс",
@@ -47,6 +48,7 @@
   "app.clientPhone": "Телефон клиента",
   "app.responsible": "Отвественный",
   "app.edit": "Редактировать",
+  "app.change": "Изменить",
   "app.today": "Сегодня",
   "app.tomorrow": "Завтра",
   "app.selectDate": "Выберите дату",
@@ -80,11 +82,27 @@
   "app.orderExecutionDate": "Дата исполнения заказа",
 
 
+  "app.addNote": "Добавить запись",
+  "app.foundItems": "найденых элементов",
+  "app.pageNotFound": "Страница не найдена",
+  "app.goToMainPage": "Перейти на главную",
+  "app.inProgress": "В ходе выполнения",
+  "app.performed": "Выполнено",
+  "app.createdBy": "Создано",
+  "app.creationDate": "Дата создания",
+  "app.addMaster": "Добавить мастера",
+  "app.addAdmin": "Добавить администратора",
+  "app.masters": "Мастера",
+  "app.admins": "Администраторы",
+  "app.main": "Основные",
+
+
   "app.emailAddress": "Электронная почта",
   "app.password": "Пароль",
   "app.forgotPassword": "Забыли пароль?",
   "app.resetPassword": "Сброс пароля",
   "app.reset": "Сброс",
   "app.login": "авторизация",
+  "app.loginName": "Логин",
   "app.signIn": "Войти в систему"
 }

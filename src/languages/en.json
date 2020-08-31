@@ -47,6 +47,7 @@
   "app.clientPhone": "Client phone",
   "app.responsible": "Responsible",
   "app.edit": "Edit",
+  "app.change": "Change",
   "app.today": "Today",
   "app.tomorrow": "Tomorrow",
   "app.selectDate": "Select date",
@@ -79,12 +80,30 @@
   "app.orderDate": "Order date",
   "app.orderExecutionDate": "Order execution date",
 
+
+  "app.addNote": "Add a note",
+  "app.foundItems": "found items",
+  "app.pageNotFound": "Page not found",
+  "app.goToMainPage": "Go to Main page",
+  "app.status": "Status",
+  "app.inProgress": "In Progress",
+  "app.performed": "Performed",
+  "app.createdBy": "Created by",
+  "app.creationDate": "Creation Date",
+  "app.addMaster": "Add Master",
+  "app.addAdmin": "Add Admin",
+  "app.masters": "Masters",
+  "app.admins": "Admins",
+  "app.main": "Main",
+
+
   "app.emailAddress": "Email Address",
   "app.password": "Password",
   "app.forgotPassword": "Forgot password?",
   "app.resetPassword": "Reset password",
   "app.reset": "Reset",
   "app.login": "login",
+  "app.loginName": "login",
   "app.signIn": "Sign in"
 
 }

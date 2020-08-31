@@ -121,9 +121,9 @@ class Settings extends Component {
           <div>
             <AppBar position="static">
               <Tabs value={this.state.value} onChange={this.handleChange} aria-label="simple tabs example">
-                <Tab label="Основные" {...a11yProps(0)} />
-                <Tab label="Мастера" {...a11yProps(1)} />
-                <Tab label="Администраторы" {...a11yProps(2)} />
+                <Tab label={<FormattedMessage id="app.main"/>} {...a11yProps(0)} />
+                <Tab label={<FormattedMessage id="app.masters"/>} {...a11yProps(1)} />
+                <Tab label={<FormattedMessage id="app.admins"/>} {...a11yProps(2)} />
               </Tabs>
             </AppBar>
             <TabPanel value={this.state.value} index={0}>
@@ -137,7 +137,7 @@ class Settings extends Component {
                       className={'progress-btn settings-main__btn'}
                       onClick={this.handleButtonClick}
                     >
-                      Изменить
+                      <FormattedMessage id="app.change"/>
                     </Button>
                     {this.state.setLoading && <CircularProgress size={24} className={'progress-btn-prog'} />}
                   </div>
@@ -145,7 +145,7 @@ class Settings extends Component {
                 </div>
                 <div className="settings-main__name settings-main__row">
                   <span className={'settings-main-label'}>
-                    Имя
+                      <FormattedMessage id="app.name"/>
                   </span>
                   <span>
                     <TextField id="standard-basic"  variant="outlined" value={'Андрей'}/>
@@ -157,14 +157,14 @@ class Settings extends Component {
                       className={'progress-btn settings-main__btn'}
                       onClick={this.handleButtonClick}
                     >
-                      Изменить
+                      <FormattedMessage id="app.change"/>
                     </Button>
                     {this.state.setLoading && <CircularProgress size={24} className={'progress-btn-prog'} />}
                   </div>
                 </div>
                 <div className="settings-main__name settings-main__row">
                   <span className={'settings-main-label'}>
-                    Фамилия
+                      <FormattedMessage id="app.lastName"/>
                   </span>
                   <span>
                     <TextField id="standard-basic"  variant="outlined" value={'Виллин'}/>
@@ -176,14 +176,14 @@ class Settings extends Component {
                       className={'progress-btn settings-main__btn'}
                       onClick={this.handleButtonClick}
                     >
-                      Изменить
+                      <FormattedMessage id="app.change"/>
                     </Button>
                     {this.state.setLoading && <CircularProgress size={24} className={'progress-btn-prog'} />}
                   </div>
                 </div>
                 <div className="settings-main__phone settings-main__row">
                   <span className={'settings-main-label'}>
-                    Телефон
+                      <FormattedMessage id="app.phone"/>
                   </span>
                   <span>
                     <TextField id="standard-basic"  variant="outlined" value={'098 655 45 22'}/>
@@ -195,14 +195,14 @@ class Settings extends Component {
                       className={'progress-btn settings-main__btn'}
                       onClick={this.handleButtonClick}
                     >
-                      Изменить
+                      <FormattedMessage id="app.change"/>
                     </Button>
                     {this.state.setLoading && <CircularProgress size={24} className={'progress-btn-prog'} />}
                   </div>
                 </div>
                 <div className="settings-main__login settings-main__row">
                   <span className={'settings-main-label'}>
-                    Логин
+                      <FormattedMessage id="app.loginName"/>
                   </span>
                   <span>
                     <TextField id="standard-basic"  variant="outlined" value={'Андрей'}/>
@@ -214,14 +214,14 @@ class Settings extends Component {
                       className={'progress-btn settings-main__btn'}
                       onClick={this.handleButtonClick}
                     >
-                      Изменить
+                      <FormattedMessage id="app.change"/>
                     </Button>
                     {this.state.setLoading && <CircularProgress size={24} className={'progress-btn-prog'} />}
                   </div>
                 </div>
                 <div className="settings-main__pass settings-main__row">
                   <span className={'settings-main-label'}>
-                    Пароль
+                      <FormattedMessage id="app.password"/>
                   </span>
                   <span>
                     <TextField id="standard-basic"  variant="outlined" value={'*******'}/>
@@ -233,7 +233,7 @@ class Settings extends Component {
                       className={'progress-btn settings-main__btn'}
                       onClick={this.handleButtonClick}
                     >
-                      Изменить
+                      <FormattedMessage id="app.change"/>
                     </Button>
                     {this.state.setLoading && <CircularProgress size={24} className={'progress-btn-prog'} />}
                   </div>
@@ -243,11 +243,11 @@ class Settings extends Component {
 
 
             <TabPanel value={this.state.value} index={1}>
-              <div className="settings-title-tab">Мастера</div>
+              <div className="settings-title-tab"><FormattedMessage id="app.masters"/></div>
 
               <div className="site-filter__btn">
                 <Button variant="contained" color="primary" onClick={this.addMasterPopup}>
-                  Добавить мастера
+                  <FormattedMessage id="app.addMaster"/>
                 </Button>
 
                 {this.state.isOpen ?
@@ -283,12 +283,12 @@ class Settings extends Component {
                         <Button
                           color="primary" size="small"
                         >
-                          Изменить
+                          <FormattedMessage id="app.edit"/>
                         </Button>
                         <Button
                           color="secondary" size="small"
                         >
-                          Удалить
+                          <FormattedMessage id="app.remove"/>
                         </Button>
                       </TableCell>
                     </TableRow>
@@ -301,12 +301,12 @@ class Settings extends Component {
                         <Button
                           color="primary" size="small"
                         >
-                          Изменить
+                          <FormattedMessage id="app.edit"/>
                         </Button>
                         <Button
                           color="secondary" size="small"
                         >
-                          Удалить
+                          <FormattedMessage id="app.remove"/>
                         </Button>
                       </TableCell>
                     </TableRow>
@@ -319,12 +319,12 @@ class Settings extends Component {
                         <Button
                           color="primary" size="small"
                         >
-                          Изменить
+                          <FormattedMessage id="app.edit"/>
                         </Button>
                         <Button
                           color="secondary" size="small"
                         >
-                          Удалить
+                          <FormattedMessage id="app.remove"/>
                         </Button>
                       </TableCell>
                     </TableRow>
@@ -337,12 +337,12 @@ class Settings extends Component {
                         <Button
                           color="primary" size="small"
                         >
-                          Изменить
+                          <FormattedMessage id="app.edit"/>
                         </Button>
                         <Button
                           color="secondary" size="small"
                         >
-                          Удалить
+                          <FormattedMessage id="app.remove"/>
                         </Button>
                       </TableCell>
                     </TableRow>
@@ -394,7 +394,43 @@ class Settings extends Component {
                         <Button
                           color="primary" size="small"
                         >
-                          Изменить
+                          <FormattedMessage id="app.edit"/>
+                        </Button>
+                        <Button
+                          color="secondary" size="small"
+                        >
+                          <FormattedMessage id="app.remove"/>
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+                    <TableRow className={'products-table-row'}>
+                      <TableCell align="left">1</TableCell>
+                      <TableCell align="left">Андрей </TableCell>
+                      <TableCell align="left">Виллин</TableCell>
+                      <TableCell align="left">098 655 45 22</TableCell>
+                      <TableCell align="right">
+                        <Button
+                          color="primary" size="small"
+                        >
+                          <FormattedMessage id="app.edit"/>
+                        </Button>
+                        <Button
+                          color="secondary" size="small"
+                        >
+                          <FormattedMessage id="app.remove"/>
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+                    <TableRow className={'products-table-row'}>
+                      <TableCell align="left">1</TableCell>
+                      <TableCell align="left">Андрей </TableCell>
+                      <TableCell align="left">Виллин</TableCell>
+                      <TableCell align="left">098 655 45 22</TableCell>
+                      <TableCell align="right">
+                        <Button
+                          color="primary" size="small"
+                        >
+                          <FormattedMessage id="app.edit"/>
                         </Button>
                         <Button
                           color="secondary" size="small"
@@ -412,43 +448,7 @@ class Settings extends Component {
                         <Button
                           color="primary" size="small"
                         >
-                          Изменить
-                        </Button>
-                        <Button
-                          color="secondary" size="small"
-                        >
-                          Удалить
-                        </Button>
-                      </TableCell>
-                    </TableRow>
-                    <TableRow className={'products-table-row'}>
-                      <TableCell align="left">1</TableCell>
-                      <TableCell align="left">Андрей </TableCell>
-                      <TableCell align="left">Виллин</TableCell>
-                      <TableCell align="left">098 655 45 22</TableCell>
-                      <TableCell align="right">
-                        <Button
-                          color="primary" size="small"
-                        >
-                          Изменить
-                        </Button>
-                        <Button
-                          color="secondary" size="small"
-                        >
-                          Удалить
-                        </Button>
-                      </TableCell>
-                    </TableRow>
-                    <TableRow className={'products-table-row'}>
-                      <TableCell align="left">1</TableCell>
-                      <TableCell align="left">Андрей </TableCell>
-                      <TableCell align="left">Виллин</TableCell>
-                      <TableCell align="left">098 655 45 22</TableCell>
-                      <TableCell align="right">
-                        <Button
-                          color="primary" size="small"
-                        >
-                          Изменить
+                          <FormattedMessage id="app.edit"/>
                         </Button>
                         <Button
                           color="secondary" size="small"

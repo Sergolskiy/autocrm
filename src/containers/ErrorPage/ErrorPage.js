@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {FormattedMessage} from "react-intl";
 
 
 class ErrorPage extends Component {
@@ -7,8 +8,8 @@ class ErrorPage extends Component {
 
     return (
       <div className="wrapper-404">
-        <span className="p-404">Страница не найдена <span> 404</span></span>
-        <a href="/" className="back-to-main">Перейти на главную</a>
+        <span className="p-404"> <FormattedMessage id="app.pageNotFound"/> <span> 404</span></span>
+        <a href="/" className="back-to-main"><FormattedMessage id="app.goToMainPage"/></a>
       </div>
     )
   }

@@ -127,7 +127,7 @@ class Drafts extends Component {
             <div className="view-result__inner">
               <div className="view-result__col">
                 <div className="view-result__items-txt">
-                  <strong>8</strong> найденых элементов
+                  <strong>8</strong> <FormattedMessage id="app.foundItems"/>
                 </div>
               </div>
             </div>
@@ -147,7 +147,7 @@ class Drafts extends Component {
                           +
                         </div>
                         <div className="projects-card__i-create-task-txt">
-                          Создать задачу
+                          <FormattedMessage id="app.createTask"/>
                         </div>
                       </div>
                     </div>

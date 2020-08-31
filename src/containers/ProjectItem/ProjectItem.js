@@ -10,6 +10,7 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 
 import Man from "../../assets/img/man.jpg";
+import {FormattedMessage} from "react-intl";
 
 class ProjectItem extends Component {
 
@@ -42,15 +43,15 @@ class ProjectItem extends Component {
               <div className="project__status-block">
                 <div className="project__create">
                   <div className="project__status-name">
-                    Status
+                    <FormattedMessage id="app.status"/>
                   </div>
                   <div className="project__status-progress">
-                    In Progress
+                    <FormattedMessage id="app.inProgress"/>
                   </div>
                 </div>
                 <div className="project__create">
                   <div className="project__status-name">
-                    Created by
+                    <FormattedMessage id="app.createdBy"/>
                   </div>
                   <div className="project__status-desc">
                     <img src={Man} alt="img"/>
@@ -59,7 +60,7 @@ class ProjectItem extends Component {
                 </div>
                 <div className="project__date">
                   <div className="project__status-name">
-                    Creation Date
+                    <FormattedMessage id="app.creationDate"/>
                   </div>
                   <div className="project__status-desc">
                     Feb 14
