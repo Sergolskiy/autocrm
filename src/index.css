@@ -178,3 +178,17 @@ code {
 .settings .MuiAppBar-colorPrimary{
   background-color: #404040;
 }
+
+.filter-client-wrap{
+  margin-left: 20px;
+}
+
+.filter-client-select .MuiAutocomplete-inputRoot {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.filter-client-select .MuiInputLabel-outlined {
+  transform: translate(14px, 12px) scale(1);
+}
+

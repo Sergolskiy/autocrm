@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {FormattedMessage} from "react-intl";
-import {NavLink} from "react-router-dom";
+import {NavLink, withRouter} from "react-router-dom";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import PopupWrapper from "../../hoc/PopupWrapper/PopupWrapper";
@@ -12,6 +12,9 @@ import TableRow from "@material-ui/core/TableRow";
 import TableCell from "@material-ui/core/TableCell";
 import TableBody from "@material-ui/core/TableBody";
 import WaybillsPopup from "../../components/ModalPopups/WaybillsPopup/WaybillsPopup";
+import Autocomplete from '@material-ui/lab/Autocomplete';
+import './Waybills.css'
+
 
 
 class Waybills extends Component {
@@ -32,8 +35,14 @@ class Waybills extends Component {
     })
   }
 
-
   render() {
+    // console.log(this.props.match.params.id);
+    const top100Films = [
+      { title: 'Олег Побережный' },
+      { title: 'The Godfather'},
+      { title: 'The Godfather: Part II'},
+      { title: 'The Dark Knight' },
+    ];
 
     return (
       <div className="waybills">
@@ -45,6 +54,7 @@ class Waybills extends Component {
 
         <div className="recording-head">
 
+
           <div className="recording__filter">
             <span><FormattedMessage id="app.selectDate"/></span>
             <TextField
@@ -55,6 +65,18 @@ class Waybills extends Component {
               }}
             />
           </div>
+
+          <div className="filter-client-wrap">
+            <Autocomplete
+              className="filter-client-select"
+              id="filter-client"
+              options={top100Films}
+              getOptionLabel={(option) => option.title}
+              style={{ width: 300 }}
+              renderInput={(params) => <TextField {...params} label={<FormattedMessage id="app.search"/> } variant="outlined"/>}
+            />
+          </div>
+
           <Button variant="contained" className="yellow-btn recording__add-btn" onClick={this.addBillsItemHandle}>
             Добавить запись
           </Button>
@@ -126,4 +148,4 @@ class Waybills extends Component {
   }
 }
 
-export default Waybills
+export default withRouter(Waybills)

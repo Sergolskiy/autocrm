@@ -7,16 +7,23 @@ import TableHead from "@material-ui/core/TableHead";
 import Table from "@material-ui/core/Table";
 import TableContainer from "@material-ui/core/TableContainer";
 import Button from "@material-ui/core/Button";
+import { useHistory } from 'react-router-dom';
 
 import './Clients.css'
 import TextField from "@material-ui/core/TextField";
 import PopupWrapper from "../../hoc/PopupWrapper/PopupWrapper";
 import AddRecordingPopup from "../../components/ModalPopups/AddRecordingPopup/AddRecordingPopup";
+import {NavLink} from "react-router-dom";
 
 class Clients extends Component {
 
   state = {
     isOpen: false,
+    clientInfo: {
+      clientName: 'Олег',
+      clientLastName: 'Побережный',
+    },
+    isHistoryClient: false
   }
 
 
@@ -29,6 +36,11 @@ class Clients extends Component {
     this.setState({
       isOpen: false
     })
+  }
+
+  handleHistoryClient = (value) =>{
+    console.log(this.state.clientInfo);
+    this.setState({ clientInfo: value })
   }
 
 
@@ -69,14 +81,20 @@ class Clients extends Component {
             </TableHead>
             <TableBody>
               <TableRow className={'site-table-row'}>
-                <TableCell align="left">Олег</TableCell>
-                <TableCell align="left">Побережный</TableCell>
+                <TableCell align="left">
+                  {this.state.clientName}
+                </TableCell>
+                <TableCell align="left">
+                  {this.state.clientLastName}
+                </TableCell>
                 <TableCell align="left">VW passat</TableCell>
                 <TableCell align="left">123456789</TableCell>
                 <TableCell align="right">
-                  <Button variant="contained" color="primary" size="small">
-                    <FormattedMessage id="app.history"/>
-                  </Button>
+                  <NavLink to={'/waybills/' + '1'} >
+                    <Button variant="contained" color="primary" size="small">
+                      <FormattedMessage id="app.history"/>
+                    </Button>
+                  </NavLink>
                 </TableCell>
               </TableRow>
               <TableRow className={'site-table-row'}>
@@ -85,9 +103,11 @@ class Clients extends Component {
                 <TableCell align="left">VW passat</TableCell>
                 <TableCell align="left">123456789</TableCell>
                 <TableCell align="right">
-                  <Button variant="contained" color="primary" size="small">
-                    <FormattedMessage id="app.history"/>
-                  </Button>
+                  <NavLink to="/waybills">
+                    <Button variant="contained" color="primary" size="small">
+                      <FormattedMessage id="app.history"/>
+                    </Button>
+                  </NavLink>
                 </TableCell>
               </TableRow>
               <TableRow className={'site-table-row'}>
@@ -96,9 +116,11 @@ class Clients extends Component {
                 <TableCell align="left">VW passat</TableCell>
                 <TableCell align="left">123456789</TableCell>
                 <TableCell align="right">
-                  <Button variant="contained" color="primary" size="small">
-                    <FormattedMessage id="app.history"/>
-                  </Button>
+                  <NavLink to="/waybills">
+                    <Button variant="contained" color="primary" size="small">
+                      <FormattedMessage id="app.history"/>
+                    </Button>
+                  </NavLink>
                 </TableCell>
               </TableRow>
               <TableRow className={'site-table-row'}>
@@ -107,9 +129,11 @@ class Clients extends Component {
                 <TableCell align="left">VW passat</TableCell>
                 <TableCell align="left">123456789</TableCell>
                 <TableCell align="right">
-                  <Button variant="contained" color="primary" size="small">
-                    <FormattedMessage id="app.history"/>
-                  </Button>
+                  <NavLink to="/waybills">
+                    <Button variant="contained" color="primary" size="small">
+                      <FormattedMessage id="app.history"/>
+                    </Button>
+                  </NavLink>
                 </TableCell>
               </TableRow>
               <TableRow className={'site-table-row'}>
@@ -118,9 +142,11 @@ class Clients extends Component {
                 <TableCell align="left">VW passat</TableCell>
                 <TableCell align="left">123456789</TableCell>
                 <TableCell align="right">
-                  <Button variant="contained" color="primary" size="small">
-                    <FormattedMessage id="app.history"/>
-                  </Button>
+                  <NavLink to="/waybills">
+                    <Button variant="contained" color="primary" size="small">
+                      <FormattedMessage id="app.history"/>
+                    </Button>
+                  </NavLink>
                 </TableCell>
               </TableRow>
               <TableRow className={'site-table-row'}>
@@ -129,9 +155,11 @@ class Clients extends Component {
                 <TableCell align="left">VW passat</TableCell>
                 <TableCell align="left">123456789</TableCell>
                 <TableCell align="right">
-                  <Button variant="contained" color="primary" size="small">
-                    <FormattedMessage id="app.history"/>
-                  </Button>
+                  <NavLink to="/waybills">
+                    <Button variant="contained" color="primary" size="small">
+                      <FormattedMessage id="app.history"/>
+                    </Button>
+                  </NavLink>
                 </TableCell>
               </TableRow>
             </TableBody>

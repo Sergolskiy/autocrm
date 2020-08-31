@@ -54,6 +54,7 @@ class App extends React.Component {
         <Route path='/Settings' exact render={() => <Settings/>}/>
         <Route path='/bills' exact render={() => <Bills/>}/>
         <Route path='/waybills' exact render={() => <Waybills/>}/>
+        <Route path='/waybills/:id' exact render={() => <Waybills/>}/>
         <Route render={() => <ErrorPage/>}/>
       </Switch>
     )
