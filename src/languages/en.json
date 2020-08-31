@@ -79,12 +79,30 @@
   "app.orderDate": "Order date",
   "app.orderExecutionDate": "Order execution date",
 
+
   "app.emailAddress": "Email Address",
   "app.password": "Password",
   "app.forgotPassword": "Forgot password?",
   "app.resetPassword": "Reset password",
   "app.reset": "Reset",
   "app.login": "login",
-  "app.signIn": "Sign in"
+  "app.signIn": "Sign in",
+
+
+  "app.newWaybill": "New waybill",
+  "app.yearOfIssue": "Year of issue",
+  "app.stateRegisterNumber": "State Register Number",
+  "app.bodyType": "Body type",
+  "app.engine": "Engine",
+  "app.shasi": "Shasi",
+  "app.addressTelephone": "Address, telephone",
+  "app.description": "Description",
+  "app.completedWorksAndServices": "Completed works and services",
+  "app.usedSpareParts": "Used spare parts",
+  "app.close": "Close",
+  "app.save": "Save",
+
+
+  "app.addInvoice": "Add invoice"
 
 }

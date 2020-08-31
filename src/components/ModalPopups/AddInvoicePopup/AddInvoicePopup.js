@@ -6,6 +6,7 @@ import Button from '@material-ui/core/Button';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import TextField from "@material-ui/core/TextField";
+import {FormattedMessage} from "react-intl";
 
 class AddInvoicePopup extends Component {
 
@@ -23,7 +24,7 @@ class AddInvoicePopup extends Component {
       <div className="modal-popup__window">
         <div className="modal-popup__header">
                 <span>
-                 Добавить инвойс
+                 <FormattedMessage id="app.addInvoice"/>
                 </span>
         </div>
         <div className="modal-popup__body">
@@ -33,7 +34,7 @@ class AddInvoicePopup extends Component {
                 <TextField
                   id="datetime-local"
                   type="datetime-local"
-                  label="Дата"
+                  label=<FormattedMessage id="app.date"/>
                   className={"modal-popup__input modal-popup__input--time"}
                   InputLabelProps={{
                     shrink: true,
@@ -45,7 +46,7 @@ class AddInvoicePopup extends Component {
               <div className="modal-popup__row">
                 <TextField
                   id="standard-multiline-flexible"
-                  label="Имя клиента"
+                  label=<FormattedMessage id="app.clientName"/>
                   className={"modal-popup__input"}
                   fullWidth
                   margin="normal"
@@ -56,7 +57,7 @@ class AddInvoicePopup extends Component {
               <div className="modal-popup__row">
                 <TextField
                   id="standard-multiline-flexible"
-                  label="Артикул"
+                  label=<FormattedMessage id="app.vendorCode"/>
                   className={"modal-popup__input"}
                   fullWidth
                   margin="normal"
@@ -88,7 +89,7 @@ class AddInvoicePopup extends Component {
               <div className="modal-popup__row">
                 <TextField
                   id="standard-multiline-flexible"
-                  label="Сумма"
+                  label=<FormattedMessage id="app.amount"/>
                   className={"modal-popup__input"}
                   fullWidth
                   margin="normal"
@@ -100,10 +101,10 @@ class AddInvoicePopup extends Component {
         <div className="modal-popup__footer">
           <div className="modal-popup__btn">
             <Button variant="contained" color="secondary" className={"modal-popup__btn-i"} onClick={this.handleClose}>
-              Закрыть
+              <FormattedMessage id="app.close"/>
             </Button>
             <Button variant="contained" color="primary" className={"modal-popup__btn-i"}>
-              Сохранить
+              <FormattedMessage id="app.save"/>
             </Button>
           </div>
         </div>
