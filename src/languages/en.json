@@ -3,6 +3,8 @@
   "app.greeting2": "hell2!",
   "app.search": "Search",
   "app.logout": "Logout",
+
+
   "app.dashboard": "Dashboard",
   "app.tasks": "Tasks",
   "app.clients":  "Clients",
@@ -12,8 +14,12 @@
   "app.reports":  "Reports",
   "app.invoice":  "Invoice",
   "app.settings": "Settings",
+
+
   "app.currentDate":  "Current data",
   "app.time": "Time",
+
+
   "app.projects": "Projects",
   "app.files":"Files",
   "app.notes": "Notes",
@@ -28,6 +34,15 @@
   "app.taskSet": "Task set",
   "app.deadline": "Deadline",
   "app.task": "Task",
+
+
+  "app.currentBalance": "Current balance",
+  "app.yesterday": "Yesterday",
+  "app.overallBalance": "Overall balance",
+  "app.balanceThisMonth": "Balance for this month",
+  "app.invoiceStatistics": "Invoice statistics",
+
+
   "app.clientName": "Client name",
   "app.clientPhone": "Client phone",
   "app.responsible": "Responsible",
@@ -36,7 +51,6 @@
   "app.tomorrow": "Tomorrow",
   "app.selectDate": "Select date",
   "app.addProduct": "Add product",
-
   "app.export": "Export",
   "app.import": "Import",
   "app.name": "Name",
@@ -48,7 +62,6 @@
   "app.count": "Count",
   "app.carBrand": "Car brand",
   "app.price": "Price",
-
   "app.bills": "Bills",
   "app.id": "id",
   "app.date": "Date",
@@ -56,13 +69,22 @@
   "app.status": "Status",
   "app.amount": "Amount",
   "app.total": "Total",
-
   "app.detail": "Detail",
+
+
   "app.workName": "Work name",
   "app.sparePartsName": "Spare parts name",
   "app.add": "Add",
   "app.remove": "Remove",
-
   "app.orderDate": "Order date",
-  "app.orderExecutionDate": "Order execution date"
+  "app.orderExecutionDate": "Order execution date",
+
+  "app.emailAddress": "Email Address",
+  "app.password": "Password",
+  "app.forgotPassword": "Forgot password?",
+  "app.resetPassword": "Reset password",
+  "app.reset": "Reset",
+  "app.login": "login",
+  "app.signIn": "Sign in"
+
 }

@@ -14,6 +14,7 @@ import Container from '@material-ui/core/Container';
 import {connect} from "react-redux";
 import {auth} from "../../store/action/auth";
 import {NavLink} from "react-router-dom";
+import {FormattedMessage} from "react-intl";
 
 class Auth extends Component {
 
@@ -63,7 +64,7 @@ class Auth extends Component {
           <CssBaseline />
           <div >
             <Typography component="h1" variant="h5">
-              Sign in
+              <FormattedMessage id="app.signIn"/>
             </Typography>
             <form  noValidate onSubmit={this.handleLogin}>
               <TextField
@@ -72,7 +73,7 @@ class Auth extends Component {
                 required
                 fullWidth
                 id="email"
-                label="Email Address"
+                label={<FormattedMessage id="app.emailAddress"/>}
                 name="email"
                 autoComplete="email"
                 autoFocus
@@ -84,7 +85,7 @@ class Auth extends Component {
                 required
                 fullWidth
                 name="password"
-                label="Password"
+                label={<FormattedMessage id="app.password"/>}
                 type="password"
                 id="password"
                 autoComplete="current-password"
@@ -100,13 +101,13 @@ class Auth extends Component {
                 variant="contained"
                 color="primary"
               >
-                Sign In
+                <FormattedMessage id="app.signIn"/>
               </Button>
               <Grid container className={'forgot-block'}>
                 <Grid item xs>
                   <div href="#" variant="body2">
                     <NavLink to="/forgot">
-                      Forgot password?
+                      <FormattedMessage id="app.forgotPassword"/>
                     </NavLink>
                   </div>
 

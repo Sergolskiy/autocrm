@@ -41,8 +41,8 @@ class Recording extends Component {
             </span>
         </div>
 
-        <div className="recording-head">
-          <div className="recording__filter">
+        <div className="filter-head">
+          <div className="site-filter">
             <span><FormattedMessage id="app.selectDate"/></span>
             <TextField
               type="date"
