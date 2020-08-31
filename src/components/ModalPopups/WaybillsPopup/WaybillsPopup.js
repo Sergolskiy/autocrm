@@ -7,7 +7,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import TextField from "@material-ui/core/TextField";
 import OutsideAlerter from "../../../hoc/OutsideCliker/OutsideCliker";
-import {FormattedMessage} from "react-intl";
+import {FormattedMessage, injectIntl } from "react-intl";
 
 
 class WaybillsPopup extends Component {
@@ -30,13 +30,15 @@ class WaybillsPopup extends Component {
 
 
   render() {
-
+    const placeholderDesc = this.props.intl.formatMessage({
+      id: 'app.description',
+    });
     return (
 
       <div className="modal-popup__window container">
         <div className="modal-popup__header">
                 <span>
-                  {this.props.isEdit ? this.props.dataTask.nameTask : 'Новая накладная'}
+                  {this.props.isEdit ? this.props.dataTask.nameTask : <FormattedMessage id="app.newWaybill"/> }
                 </span>
         </div>
         <div className="modal-popup__body">
@@ -223,12 +225,12 @@ class WaybillsPopup extends Component {
                     <div className="row mb15">
                       <div className={'col-6'}>
                         <TextField className={"task-create__name-input"} id="standard-basic"
-                                   label={"Год выпуска"}/>
+                                   label={ <FormattedMessage id="app.yearOfIssue"/>}/>
                       </div>
 
                       <div className={'col-6'}>
                         <TextField className={"task-create__name-input"} id="standard-basic"
-                                   label={"Гос. реестр Номер"}/>
+                                   label={<FormattedMessage id="app.stateRegisterNumber"/>}/>
 
                       </div>
                     </div>
@@ -237,12 +239,12 @@ class WaybillsPopup extends Component {
                     <div className="row mb15" >
                       <div className={'col-6'}>
                         <TextField className={"task-create__name-input"} id="standard-basic"
-                                   label={"Тип кузова"}/>
+                                   label={<FormattedMessage id="app.bodyType"/>}/>
                       </div>
 
                       <div className={'col-6'}>
                         <TextField className={"task-create__name-input"} id="standard-basic"
-                                   label={"Двигатель"}/>
+                                   label={<FormattedMessage id="app.engine"/>}/>
 
                       </div>
                     </div>
@@ -250,12 +252,12 @@ class WaybillsPopup extends Component {
                     <div className="row mb15">
                       <div className={'col-6'}>
                         <TextField className={"task-create__name-input"} id="standard-basic"
-                                   label={"Шаси"}/>
+                                   label={<FormattedMessage id="app.shasi"/>}/>
                       </div>
 
                       <div className={'col-6'}>
                         <TextField className={"task-create__name-input"} id="standard-basic"
-                                   label={"Адрес, телефон"}/>
+                                   label={<FormattedMessage id="app.addressTelephone"/>}/>
 
                       </div>
                     </div>
@@ -263,10 +265,10 @@ class WaybillsPopup extends Component {
                   <div className="col-6">
                     <div className="row">
                       <div className="col-12">
-                    <textarea name="" placeholder={"Описание"} className={'waybills-popup__desc'}
+                    <textarea name="" placeholder={placeholderDesc} className={'waybills-popup__desc'}
                               defaultValue={''}>
-
                     </textarea>
+
                       </div>
                     </div>
                   </div>
@@ -279,7 +281,7 @@ class WaybillsPopup extends Component {
                 <div className="row">
                   <div className={'waybills-popup__works col-12'}>
                     <div className="waybills-popup__work-title">
-                      Исполненые работы и услуги
+                      <FormattedMessage id="app.completedWorksAndServices"/>
                       <Button variant="contained" color="primary" size="small">
                         <FormattedMessage id="app.add"/>
                       </Button>
@@ -317,7 +319,7 @@ class WaybillsPopup extends Component {
                 <div className="row">
                   <div className={'waybills-popup__spare-parts col-12'}>
                     <div className="waybills-popup__spare-parts-title">
-                      Использованые запчасти
+                      <FormattedMessage id="app.usedSpareParts"/>
                       <Button variant="contained" color="primary" size="small">
                         <FormattedMessage id="app.add"/>
                       </Button>
@@ -375,10 +377,10 @@ class WaybillsPopup extends Component {
           <div className="modal-popup__footer">
             <div className="modal-popup__btn">
               <Button variant="contained" color="secondary" className={"modal-popup__btn-i"} onClick={this.handleClose}>
-                Закрыть
+                <FormattedMessage id="app.close"/>
               </Button>
               <Button variant="contained" color="primary" className={"modal-popup__btn-i"}>
-                Сохранить
+                <FormattedMessage id="app.save"/>
               </Button>
             </div>
           </div>
@@ -389,4 +391,4 @@ class WaybillsPopup extends Component {
   }
 }
 
-export default WaybillsPopup
+export default injectIntl(WaybillsPopup)
