@@ -79,7 +79,7 @@ class Bills extends Component {
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  <TableRow className={'clients-table-row'}>
+                  <TableRow className={'site-table-row'}>
                     <TableCell align="left">1</TableCell>
                     <TableCell align="left">31.08.2020</TableCell>
                     <TableCell align="left">5554812</TableCell>
@@ -100,7 +100,7 @@ class Bills extends Component {
                     </TableCell>
                     <TableCell align="right">541.50 UAH</TableCell>
                   </TableRow>
-                  <TableRow className={'clients-table-row'}>
+                  <TableRow className={'site-table-row'}>
                     <TableCell align="left">2</TableCell>
                     <TableCell align="left">31.08.2020</TableCell>
                     <TableCell align="left">5554816</TableCell>
@@ -121,7 +121,7 @@ class Bills extends Component {
                     </TableCell>
                     <TableCell align="right">541.50 UAH</TableCell>
                   </TableRow>
-                  <TableRow className={'clients-table-row'}>
+                  <TableRow className={'site-table-row'}>
                     <TableCell colSpan={5} align="left"><strong><FormattedMessage id="app.total"/></strong></TableCell>
                     <TableCell align="right"><strong>1083.50 UAH</strong></TableCell>
                   </TableRow>

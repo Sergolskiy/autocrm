@@ -291,7 +291,7 @@ class Dashboard extends Component {
                     </TableRow>
                   </TableHead>
                   <TableBody>
-                    <TableRow className={'clients-table-row'}>
+                    <TableRow className={'site-table-row'}>
                       <TableCell align="left">9:00</TableCell>
                       <TableCell align="left">Название задачи</TableCell>
                       <TableCell align="left">Олег Побережный</TableCell>
@@ -303,7 +303,7 @@ class Dashboard extends Component {
                         </Button>
                       </TableCell>
                     </TableRow>
-                    <TableRow className={'clients-table-row'}>
+                    <TableRow className={'site-table-row'}>
                       <TableCell align="left">11:00</TableCell>
                       <TableCell align="left">Название задачи</TableCell>
                       <TableCell align="left">Олег Побережный</TableCell>
@@ -315,7 +315,7 @@ class Dashboard extends Component {
                         </Button>
                       </TableCell>
                     </TableRow>
-                    <TableRow className={'clients-table-row'}>
+                    <TableRow className={'site-table-row'}>
                       <TableCell align="left">12:30</TableCell>
                       <TableCell align="left">Название задачи</TableCell>
                       <TableCell align="left">Олег Побережный</TableCell>
@@ -327,7 +327,7 @@ class Dashboard extends Component {
                         </Button>
                       </TableCell>
                     </TableRow>
-                    <TableRow className={'clients-table-row'}>
+                    <TableRow className={'site-table-row'}>
                       <TableCell align="left">16:00</TableCell>
                       <TableCell align="left">Название задачи</TableCell>
                       <TableCell align="left">Олег Побережный</TableCell>

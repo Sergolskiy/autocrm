@@ -54,6 +54,18 @@
   "app.vendorCode": "Артикул",
   "app.status": "Статус",
   "app.amount": "Сумма",
-  "app.total": "Итого"
+  "app.total": "Итого",
+
+  "app.detail": "Подробнее",
+  "app.workName": "Название работы",
+  "app.sparePartsName": "Название запчасти",
+  "app.add": "Добавить",
+  "app.remove": "Удалить",
+
+
+
+  "app.orderDate": "Дата заказа",
+  "app.orderExecutionDate": "Дата исполнения заказа"
+
 
 }

@@ -33,7 +33,7 @@ export default class OutsideAlerter extends Component {
   handleClickOutside(event) {
     // if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
 
-    if (event.target.classList[0] === 'modal-popup__overlay') {
+    if (event.target.classList !== undefined && (event.target.classList[0] === 'modal-popup__overlay')) {
       this.props.onClick();
     }
   }
@@ -42,7 +42,7 @@ export default class OutsideAlerter extends Component {
 
   render() {
     // console.log(this.props);
-    return <div ref={this.setWrapperRef} onClick={this.handleClickOutside}>{this.props.children}</div>;
+    return <div className={'modal-popup__overlay-inner'} ref={this.setWrapperRef} onClick={this.handleClickOutside}>{this.props.children}</div>;
   }
 }
 

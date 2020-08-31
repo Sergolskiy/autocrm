@@ -54,5 +54,14 @@
   "app.vendorCode": "Vendor code",
   "app.status": "Status",
   "app.amount": "Amount",
-  "app.total": "Total"
+  "app.total": "Total",
+
+  "app.detail": "Detail",
+  "app.workName": "Work name",
+  "app.sparePartsName": "Spare parts name",
+  "app.add": "Add",
+  "app.remove": "Remove",
+
+  "app.orderDate": "Order date",
+  "app.orderExecutionDate": "Order execution date"
 }

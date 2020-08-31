@@ -11,13 +11,15 @@ import Man from "../../assets/img/man.jpg";
 import Button from "@material-ui/core/Button";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import TextField from "@material-ui/core/TextField";
-import PopupWrapper from "../Products/Products";
+import PopupWrapper from "../../hoc/PopupWrapper/PopupWrapper";
 import TableContainer from "@material-ui/core/TableContainer";
 import Table from "@material-ui/core/Table";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import TableCell from "@material-ui/core/TableCell";
 import TableBody from "@material-ui/core/TableBody";
+import AddMasterPopup from "../../components/ModalPopups/AddMasterPopup/AddMasterPopup";
+import AddAdminPopup from "../../components/ModalPopups/AddAdminPopup/AddAdminPopup";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -56,11 +58,36 @@ function a11yProps(index) {
 class Settings extends Component {
 
 
+
   state = {
     value: 0,
     setValue: 0,
     setSuccess: false,
+    isOpen: false,
+    isOpenAdminPopup: false,
     setLoading: false
+  }
+
+  addAdminPopup = () => {
+    this.setState({
+      isOpenAdminPopup: true
+    })
+  }
+
+  addMasterPopup = () => {
+    this.setState({
+      isOpen: true
+    })
+  }
+  closePopupAddMaster = () => {
+    this.setState({
+      isOpen: false
+    })
+  }
+  closePopupAddAdmin = () => {
+    this.setState({
+      isOpenAdminPopup: false
+    })
   }
 
   handleChange = (event, newValue) => {
@@ -219,9 +246,17 @@ class Settings extends Component {
               <div className="settings-title-tab">Мастера</div>
 
               <div className="products__btn">
-                <Button variant="contained" color="primary">
+                <Button variant="contained" color="primary" onClick={this.addMasterPopup}>
                   Добавить мастера
                 </Button>
+
+                {this.state.isOpen ?
+                  <PopupWrapper classPopup={'add-master'} closePopup={this.closePopupAddMaster}>
+                    <AddMasterPopup/>
+                  </PopupWrapper>
+                  : ''}
+
+
 
               </div>
 
@@ -258,7 +293,7 @@ class Settings extends Component {
                       </TableCell>
                     </TableRow>
                     <TableRow className={'products-table-row'}>
-                      <TableCell align="left">1</TableCell>
+                      <TableCell align="left">2</TableCell>
                       <TableCell align="left">Андрей </TableCell>
                       <TableCell align="left">Виллин</TableCell>
                       <TableCell align="left">098 655 45 22</TableCell>
@@ -276,7 +311,7 @@ class Settings extends Component {
                       </TableCell>
                     </TableRow>
                     <TableRow className={'products-table-row'}>
-                      <TableCell align="left">1</TableCell>
+                      <TableCell align="left">3</TableCell>
                       <TableCell align="left">Андрей </TableCell>
                       <TableCell align="left">Виллин</TableCell>
                       <TableCell align="left">098 655 45 22</TableCell>
@@ -294,7 +329,7 @@ class Settings extends Component {
                       </TableCell>
                     </TableRow>
                     <TableRow className={'products-table-row'}>
-                      <TableCell align="left">1</TableCell>
+                      <TableCell align="left">4</TableCell>
                       <TableCell align="left">Андрей </TableCell>
                       <TableCell align="left">Виллин</TableCell>
                       <TableCell align="left">098 655 45 22</TableCell>
@@ -326,10 +361,14 @@ class Settings extends Component {
               <div className="settings-title-tab">Администраторы</div>
 
               <div className="products__btn">
-                <Button variant="contained" color="primary">
+                <Button variant="contained" color="primary" onClick={this.addAdminPopup}>
                   Добавить администратора
                 </Button>
-
+                {this.state.isOpenAdminPopup ?
+                  <PopupWrapper classPopup={'add-master'} closePopup={this.closePopupAddAdmin}>
+                    <AddAdminPopup/>
+                  </PopupWrapper>
+                  : ''}
               </div>
 
               <TableContainer className={'products-table'}>

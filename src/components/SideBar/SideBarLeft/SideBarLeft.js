@@ -64,7 +64,7 @@ class SideBarLeft extends Component {
                   </NavLink>
                 </li>
                 <li className="aside__nav-item">
-                  <NavLink to="/s" className="aside__nav-link">
+                  <NavLink to="/waybills" className="aside__nav-link">
                     <FormattedMessage id="app.overhead"/>
                   </NavLink>
                 </li>

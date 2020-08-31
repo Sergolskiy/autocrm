@@ -9,8 +9,28 @@ import TableContainer from "@material-ui/core/TableContainer";
 import Button from "@material-ui/core/Button";
 
 import './Clients.css'
+import TextField from "@material-ui/core/TextField";
+import PopupWrapper from "../../hoc/PopupWrapper/PopupWrapper";
+import AddRecordingPopup from "../../components/ModalPopups/AddRecordingPopup/AddRecordingPopup";
 
 class Clients extends Component {
+
+  state = {
+    isOpen: false,
+  }
+
+
+  addRecordingHandle = () => {
+    this.setState({
+      isOpen: true
+    })
+  }
+  closePopupAddRecording = () => {
+    this.setState({
+      isOpen: false
+    })
+  }
+
 
   render() {
 
@@ -21,6 +41,20 @@ class Clients extends Component {
               <FormattedMessage id="app.clients"/>
             </span>
         </div>
+
+        <div className="recording-head">
+          <Button variant="contained" className="yellow-btn recording__add-btn" onClick={this.addRecordingHandle}>
+            {/*<FormattedMessage id="app.addProduct"/>*/}
+            Добавить запись
+          </Button>
+        </div>
+
+
+        {this.state.isOpen ?
+          <PopupWrapper classPopup={'add-recording'} closePopup={this.closePopupAddRecording}>
+            <AddRecordingPopup/>
+          </PopupWrapper>
+          : ''}
 
         <TableContainer className={'clients-table'}>
           <Table size="small" aria-label="a dense table">
@@ -34,7 +68,7 @@ class Clients extends Component {
               </TableRow>
             </TableHead>
             <TableBody>
-              <TableRow className={'clients-table-row'}>
+              <TableRow className={'site-table-row'}>
                 <TableCell align="left">Олег</TableCell>
                 <TableCell align="left">Побережный</TableCell>
                 <TableCell align="left">VW passat</TableCell>
@@ -45,7 +79,7 @@ class Clients extends Component {
                   </Button>
                 </TableCell>
               </TableRow>
-              <TableRow className={'clients-table-row'}>
+              <TableRow className={'site-table-row'}>
                 <TableCell align="left">Олег</TableCell>
                 <TableCell align="left">Побережный</TableCell>
                 <TableCell align="left">VW passat</TableCell>
@@ -56,7 +90,7 @@ class Clients extends Component {
                   </Button>
                 </TableCell>
               </TableRow>
-              <TableRow className={'clients-table-row'}>
+              <TableRow className={'site-table-row'}>
                 <TableCell align="left">Олег</TableCell>
                 <TableCell align="left">Побережный</TableCell>
                 <TableCell align="left">VW passat</TableCell>
@@ -67,7 +101,7 @@ class Clients extends Component {
                   </Button>
                 </TableCell>
               </TableRow>
-              <TableRow className={'clients-table-row'}>
+              <TableRow className={'site-table-row'}>
                 <TableCell align="left">Олег</TableCell>
                 <TableCell align="left">Побережный</TableCell>
                 <TableCell align="left">VW passat</TableCell>
@@ -78,7 +112,7 @@ class Clients extends Component {
                   </Button>
                 </TableCell>
               </TableRow>
-              <TableRow className={'clients-table-row'}>
+              <TableRow className={'site-table-row'}>
                 <TableCell align="left">Олег</TableCell>
                 <TableCell align="left">Побережный</TableCell>
                 <TableCell align="left">VW passat</TableCell>
@@ -89,7 +123,7 @@ class Clients extends Component {
                   </Button>
                 </TableCell>
               </TableRow>
-              <TableRow className={'clients-table-row'}>
+              <TableRow className={'site-table-row'}>
                 <TableCell align="left">Олег</TableCell>
                 <TableCell align="left">Побережный</TableCell>
                 <TableCell align="left">VW passat</TableCell>
