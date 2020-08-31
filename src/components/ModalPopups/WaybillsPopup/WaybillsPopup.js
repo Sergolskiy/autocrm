@@ -207,7 +207,7 @@ class WaybillsPopup extends Component {
                     </div>
 
 
-                    <div className="row">
+                    <div className="row mb15">
                       <div className={'col-6'}>
                         <TextField className={"task-create__name-input"} id="standard-basic"
                                    label={<FormattedMessage id="app.clientName"/>}/>
@@ -216,6 +216,46 @@ class WaybillsPopup extends Component {
                       <div className={'col-6'}>
                         <TextField className={"task-create__name-input"} id="standard-basic"
                                    label={<FormattedMessage id="app.carBrand"/>}/>
+
+                      </div>
+                    </div>
+
+                    <div className="row mb15">
+                      <div className={'col-6'}>
+                        <TextField className={"task-create__name-input"} id="standard-basic"
+                                   label={"Год выпуска"}/>
+                      </div>
+
+                      <div className={'col-6'}>
+                        <TextField className={"task-create__name-input"} id="standard-basic"
+                                   label={"Гос. реестр Номер"}/>
+
+                      </div>
+                    </div>
+
+
+                    <div className="row mb15" >
+                      <div className={'col-6'}>
+                        <TextField className={"task-create__name-input"} id="standard-basic"
+                                   label={"Тип кузова"}/>
+                      </div>
+
+                      <div className={'col-6'}>
+                        <TextField className={"task-create__name-input"} id="standard-basic"
+                                   label={"Двигатель"}/>
+
+                      </div>
+                    </div>
+
+                    <div className="row mb15">
+                      <div className={'col-6'}>
+                        <TextField className={"task-create__name-input"} id="standard-basic"
+                                   label={"Шаси"}/>
+                      </div>
+
+                      <div className={'col-6'}>
+                        <TextField className={"task-create__name-input"} id="standard-basic"
+                                   label={"Адрес, телефон"}/>
 
                       </div>
                     </div>

@@ -13,7 +13,7 @@ import Select from '@material-ui/core/Select';
 
 import './Invoice.css'
 import PopupWrapper from "../../hoc/PopupWrapper/PopupWrapper";
-import AddBillsItemPopup from "../../components/ModalPopups/AddBillsItemPopup/AddBillsItemPopup";
+import AddInvoicePopup from "../../components/ModalPopups/AddInvoicePopup/AddInvoicePopup";
 
 class Invoice extends Component {
 
@@ -22,12 +22,12 @@ class Invoice extends Component {
   }
 
 
-  addBillsItemHandle = () => {
+  addInvoicePopupHandle = () => {
     this.setState({
       isOpen: true
     })
   }
-  closePopupAddBillsItem = () => {
+  closePopupAddInvoicePopup = () => {
     this.setState({
       isOpen: false
     })
@@ -54,13 +54,13 @@ class Invoice extends Component {
               }}
             />
           </div>
-          <Button variant="contained" className="yellow-btn recording__add-btn" onClick={this.addBillsItemHandle}>
+          <Button variant="contained" className="yellow-btn recording__add-btn" onClick={this.addInvoicePopupHandle}>
             Добавить запись
           </Button>
 
           {this.state.isOpen ?
-            <PopupWrapper classPopup={'add-bills-item'} closePopup={this.closePopupAddBillsItem}>
-              <AddBillsItemPopup />
+            <PopupWrapper classPopup={'add-invoice-item'} closePopup={this.closePopupAddInvoicePopup}>
+              <AddInvoicePopup />
             </PopupWrapper>
             : ''}
         </div>

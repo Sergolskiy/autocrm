@@ -4,11 +4,16 @@
   padding-bottom: 30px;
 }
 
+.waybills-popup__inner .mb15{
+  margin-bottom: 15px;
+}
+
 .waybills-popup__desc{
   width: 100%;
   margin-top: 15px;
   padding: 10px;
-  height: 105px;
+  /*height: 105px;*/
+  height: 295px;
 }
 
 .waybills-popup__works{

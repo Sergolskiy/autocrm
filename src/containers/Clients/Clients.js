@@ -38,11 +38,6 @@ class Clients extends Component {
     })
   }
 
-  handleHistoryClient = (value) =>{
-    console.log(this.state.clientInfo);
-    this.setState({ clientInfo: value })
-  }
-
 
   render() {
 
@@ -82,10 +77,10 @@ class Clients extends Component {
             <TableBody>
               <TableRow className={'site-table-row'}>
                 <TableCell align="left">
-                  {this.state.clientName}
+                  {this.state.clientInfo.clientName}
                 </TableCell>
                 <TableCell align="left">
-                  {this.state.clientLastName}
+                  {this.state.clientInfo.clientLastName}
                 </TableCell>
                 <TableCell align="left">VW passat</TableCell>
                 <TableCell align="left">123456789</TableCell>
