@@ -177,7 +177,7 @@ class Dashboard extends Component {
                 </div>
               </div>
             </div>
-            <div className="col-md-2">
+            <div className="col-md-3">
               <div className="dashboard-cards__item">
                 <div className="dashboard-cards__title">
                   Вчера
@@ -197,7 +197,7 @@ class Dashboard extends Component {
               </div>
 
             </div>
-            <div className="col-md-2">
+            <div className="col-md-3">
               <div className="dashboard-cards__item dashboard-cards__item--orange">
                 <div className="dashboard-cards__title">
                   Сентябрь
@@ -217,7 +217,7 @@ class Dashboard extends Component {
               </div>
 
             </div>
-            <div className="col-md-2">
+            <div className="col-md-3">
               <div className="dashboard-cards__item">
                 <div className="dashboard-cards__title">
                   Октябрь
@@ -237,7 +237,7 @@ class Dashboard extends Component {
               </div>
 
             </div>
-            <div className="col-md-2">
+            <div className="col-md-3">
               <div className="dashboard-cards__item">
                 <div className="dashboard-cards__title">
                   Поточный баланс
@@ -261,8 +261,8 @@ class Dashboard extends Component {
             </span>
         </div>
         <div>
-          <div className="recording-head">
-            <div className="recording__filter">
+          <div className="filter-head">
+            <div className="site-filter">
               <span><FormattedMessage id="app.selectDate"/></span>
               <TextField
                 type="date"

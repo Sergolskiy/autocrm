@@ -249,3 +249,105 @@ a{
 .site-table-row{
   height: 60px;
 }
+
+.filter-head{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px;
+  border-radius: 4px;
+  box-shadow: 2px 2px 6px 0px #0000000d;
+  background: #fff;
+}
+
+.site-filter{
+  display: flex;
+  align-items: center;
+}
+
+.site-filter > span{
+  margin-right: 15px;
+}
+
+.site-filter__btn{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+  background: #eee;
+  padding: 15px;
+  border-radius: 4px;
+
+  box-shadow: 2px 2px 6px 0px #0000000d;
+  background: #fff;
+}
+
+.site-filter__btn button:first-child{
+  /*margin-right: 20px;*/
+}
+
+.site-filter__btn button{
+  margin-left: 20px;
+}
+
+@media (max-width: 1320px) {
+  .page-title{
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .filter-head{
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .site-filter{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .top-nav{
+    overflow: scroll;
+    padding: 10px 15px 20px;
+  }
+
+  .top-nav__head{
+    padding-right: 20px;
+    min-width: max-content;
+  }
+
+  .top-nav__tabs-item{
+    height: 35px;
+    font-size: 12px;
+  }
+
+  .top-nav__right{
+    margin-bottom: 5px;
+  }
+
+  .top-nav__drafts{
+    font-size: 12px;
+    margin-right: 20px;
+  }
+
+  .top-nav__create button{
+    padding: 5px 9px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .site-filter__btn{
+    align-items: flex-start;
+  }
+
+  .site-filter__btn button {
+    margin-left: 9px;
+    font-size: 9px;
+  }
+
+
+}

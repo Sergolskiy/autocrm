@@ -143,7 +143,7 @@ class Recording extends Component {
             </span>
         </div>
 
-        <div className="recording-head">
+        <div className="filter-head">
           <Autocomplete
             id="combo-box-demo"
             options={top100Films}
@@ -151,7 +151,7 @@ class Recording extends Component {
             style={{ width: 300 }}
             renderInput={(params) => <TextField {...params} label="Combo box" variant="outlined" />}
           />
-          <div className="recording__filter">
+          <div className="site-filter">
             <span><FormattedMessage id="app.selectDate"/></span>
             <TextField
               type="date"

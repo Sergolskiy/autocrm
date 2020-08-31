@@ -11,11 +11,11 @@ import TextField from "@material-ui/core/TextField";
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 
-import './Bills.css'
+import './Invoice.css'
 import PopupWrapper from "../../hoc/PopupWrapper/PopupWrapper";
 import AddBillsItemPopup from "../../components/ModalPopups/AddBillsItemPopup/AddBillsItemPopup";
 
-class Bills extends Component {
+class Invoice extends Component {
 
   state = {
     isOpen: false,
@@ -74,8 +74,9 @@ class Bills extends Component {
                     <TableCell align="left"><FormattedMessage id="app.date"/></TableCell>
                     <TableCell align="left"><FormattedMessage id="app.vendorCode"/></TableCell>
                     <TableCell align="left"><FormattedMessage id="app.clientName"/></TableCell>
-                    <TableCell align="center"><FormattedMessage id="app.status"/></TableCell>
-                    <TableCell align="right"><FormattedMessage id="app.amount"/></TableCell>
+                    <TableCell align="left"><FormattedMessage id="app.status"/></TableCell>
+                    <TableCell align="left"><FormattedMessage id="app.amount"/></TableCell>
+                    <TableCell align="right"></TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
@@ -84,7 +85,7 @@ class Bills extends Component {
                     <TableCell align="left">31.08.2020</TableCell>
                     <TableCell align="left">5554812</TableCell>
                     <TableCell align="left">Олег Побережный</TableCell>
-                    <TableCell align="center">
+                    <TableCell align="left">
                       <Select
                         labelId="demo-customized-select-label"
                         id="demo-customized-select2"
@@ -98,14 +99,19 @@ class Bills extends Component {
                         <MenuItem value={3}>Прострочено</MenuItem>
                       </Select>
                     </TableCell>
-                    <TableCell align="right">541.50 UAH</TableCell>
+                    <TableCell align="left">541.50 UAH</TableCell>
+                    <TableCell align="right">
+                      <Button variant="contained" color="primary" size="small">
+                        <FormattedMessage id="app.edit"/>
+                      </Button>
+                    </TableCell>
                   </TableRow>
                   <TableRow className={'site-table-row'}>
                     <TableCell align="left">2</TableCell>
                     <TableCell align="left">31.08.2020</TableCell>
                     <TableCell align="left">5554816</TableCell>
                     <TableCell align="left">Олег Побережный</TableCell>
-                    <TableCell align="center">
+                    <TableCell align="left">
                       <Select
                         labelId="demo-customized-select-label"
                         id="demo-customized-select2"
@@ -119,10 +125,15 @@ class Bills extends Component {
                         <MenuItem value={3}>Прострочено</MenuItem>
                       </Select>
                     </TableCell>
-                    <TableCell align="right">541.50 UAH</TableCell>
+                    <TableCell align="left">541.50 UAH</TableCell>
+                    <TableCell align="right">
+                      <Button variant="contained" color="primary" size="small">
+                        <FormattedMessage id="app.edit"/>
+                      </Button>
+                    </TableCell>
                   </TableRow>
                   <TableRow className={'site-table-row'}>
-                    <TableCell colSpan={5} align="left"><strong><FormattedMessage id="app.total"/></strong></TableCell>
+                    <TableCell colSpan={6} align="left"><strong><FormattedMessage id="app.total"/></strong></TableCell>
                     <TableCell align="right"><strong>1083.50 UAH</strong></TableCell>
                   </TableRow>
                 </TableBody>
@@ -135,4 +146,4 @@ class Bills extends Component {
   }
 }
 
-export default Bills
+export default Invoice

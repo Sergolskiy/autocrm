@@ -13,23 +13,4 @@
   height: 40px;
 }
 
-.products__btn{
-  margin-top: 20px;
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: flex-end;
-  background: #eee;
-  padding: 15px;
-  border-radius: 4px;
 
-  box-shadow: 2px 2px 6px 0px #0000000d;
-  background: #fff;
-}
-
-.products__btn button:first-child{
-  /*margin-right: 20px;*/
-}
-
-.products__btn button{
-  margin-left: 20px;
-}

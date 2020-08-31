@@ -49,6 +49,10 @@
 
 }
 
+.dashboard-cards__inner> div{
+  margin-bottom: 20px;
+}
+
 .dashboard-cards__item{
   padding: 25px 20px;
   background: white;

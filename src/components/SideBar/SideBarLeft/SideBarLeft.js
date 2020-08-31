@@ -84,8 +84,8 @@ class SideBarLeft extends Component {
                   </NavLink>
                 </li>
                 <li className="aside__nav-item">
-                  <NavLink to="/d" className="aside__nav-link">
-                    <FormattedMessage id="app.reports"/>
+                  <NavLink to="/invoice" className="aside__nav-link">
+                    <FormattedMessage id="app.invoice"/>
                   </NavLink>
                 </li>
                 <li className="aside__nav-item">

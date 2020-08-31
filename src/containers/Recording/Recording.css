@@ -2,25 +2,7 @@
 
 }
 
-.recording-head{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: flex-end;
-    padding: 15px;
-    border-radius: 4px;
-    box-shadow: 2px 2px 6px 0px #0000000d;
-    background: #fff;
-}
 
-.recording__filter{
-    display: flex;
-    align-items: center;
-}
-
-.recording__filter > span{
-    margin-right: 15px;
-}
 
 .page-section{
     background: white;

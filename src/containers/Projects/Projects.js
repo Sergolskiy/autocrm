@@ -87,18 +87,18 @@ class Projects extends Component {
                        onClick={() => this.handleTabs(0)}>
                     <FormattedMessage id="app.projects"/>
                   </div>
-                  <div className={"top-nav__tabs-item " + (this.state.tabActive === 1 ? 'active' : '')}
-                       onClick={() => this.handleTabs(1)}>
-                    <FormattedMessage id="app.files"/>
-                  </div>
-                  <div className={"top-nav__tabs-item " + (this.state.tabActive === 2 ? 'active' : '')}
-                       onClick={() => this.handleTabs(2)}>
-                    <FormattedMessage id="app.notes"/>
-                  </div>
-                  <div className={"top-nav__tabs-item " + (this.state.tabActive === 3 ? 'active' : '')}
-                       onClick={() => this.handleTabs(3)}>
-                    <FormattedMessage id="app.activity"/>
-                  </div>
+                  {/*<div className={"top-nav__tabs-item " + (this.state.tabActive === 1 ? 'active' : '')}*/}
+                       {/*onClick={() => this.handleTabs(1)}>*/}
+                    {/*<FormattedMessage id="app.files"/>*/}
+                  {/*</div>*/}
+                  {/*<div className={"top-nav__tabs-item " + (this.state.tabActive === 2 ? 'active' : '')}*/}
+                       {/*onClick={() => this.handleTabs(2)}>*/}
+                    {/*<FormattedMessage id="app.notes"/>*/}
+                  {/*</div>*/}
+                  {/*<div className={"top-nav__tabs-item " + (this.state.tabActive === 3 ? 'active' : '')}*/}
+                       {/*onClick={() => this.handleTabs(3)}>*/}
+                    {/*<FormattedMessage id="app.activity"/>*/}
+                  {/*</div>*/}
                 </div>
               </div>
               <div className="top-nav__right">

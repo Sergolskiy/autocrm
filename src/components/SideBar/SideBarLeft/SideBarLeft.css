@@ -169,3 +169,88 @@
   color: #da9142;
   font-size: 25px;
 }
+
+
+@media (max-width: 1200px) {
+  .aside {
+    min-width: 260px;
+  }
+
+  .aside__inner {
+    padding: 30px 25px;
+  }
+
+  .aside__nav-link{
+    font-size: 20px;
+  }
+
+  .aside__user-name {
+    font-size: 15px;
+  }
+
+  .aside__copyright {
+    font-size: 11px;
+  }
+
+  .aside__user-position {
+    font-size: 14px;
+  }
+
+  .aside__nav-link:after {
+    margin-right: -25px;
+  }
+
+  .aside__user-img {
+    width: 40px;
+  }
+
+}
+
+
+@media (max-width: 1050px) {
+  .aside{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-110%);
+  }
+
+  .aside__user-img img{
+    width: 40px;
+  }
+
+  .header__search{
+    order: 10;
+    width: 100%;
+    margin-top: -8px !important;
+  }
+
+  .header__search .MuiFormControl-marginDense{
+    width: 100%;
+  }
+
+  .header .MuiGrid-container{
+    flex-wrap: wrap;
+    padding-top: 5px;
+  }
+
+  .page-title {
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+}
+
+@media (max-width: 500px) {
+  .header__notification,
+  .header__settings {
+    width: 20px;
+    height: 20px;
+  }
+
+  .date-block .aside__time-current,
+  .time-block .aside__time-current {
+    font-size: 15px;
+    display: none;
+  }
+}

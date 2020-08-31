@@ -245,7 +245,7 @@ class Settings extends Component {
             <TabPanel value={this.state.value} index={1}>
               <div className="settings-title-tab">Мастера</div>
 
-              <div className="products__btn">
+              <div className="site-filter__btn">
                 <Button variant="contained" color="primary" onClick={this.addMasterPopup}>
                   Добавить мастера
                 </Button>
@@ -360,7 +360,7 @@ class Settings extends Component {
 
               <div className="settings-title-tab">Администраторы</div>
 
-              <div className="products__btn">
+              <div className="site-filter__btn">
                 <Button variant="contained" color="primary" onClick={this.addAdminPopup}>
                   Добавить администратора
                 </Button>

@@ -39,7 +39,7 @@ class Products extends Component {
             </span>
         </div>
 
-        <div className="products__btn">
+        <div className="site-filter__btn">
           <Button variant="contained" color="primary">
             <FormattedMessage id="app.import"/>
           </Button>

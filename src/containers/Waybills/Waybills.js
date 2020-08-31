@@ -43,9 +43,9 @@ class Waybills extends Component {
             </span>
         </div>
 
-        <div className="recording-head">
+        <div className="filter-head">
 
-          <div className="recording__filter">
+          <div className="site-filter">
             <span><FormattedMessage id="app.selectDate"/></span>
             <TextField
               type="date"

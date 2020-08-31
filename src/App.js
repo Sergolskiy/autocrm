@@ -19,6 +19,7 @@ import Recording from "./containers/Recording/Recording";
 import Settings from "./containers/Settings/Settings";
 import Bills from "./containers/Bills/Bills";
 import Waybills from "./containers/Waybills/Waybills";
+import Invoice from "./containers/Invoice/Invoice";
 
 class App extends React.Component {
 
@@ -54,6 +55,7 @@ class App extends React.Component {
         <Route path='/Settings' exact render={() => <Settings/>}/>
         <Route path='/bills' exact render={() => <Bills/>}/>
         <Route path='/waybills' exact render={() => <Waybills/>}/>
+        <Route path='/invoice' exact render={() => <Invoice/>}/>
         <Route render={() => <ErrorPage/>}/>
       </Switch>
     )

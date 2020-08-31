@@ -42,7 +42,7 @@ class Clients extends Component {
             </span>
         </div>
 
-        <div className="recording-head">
+        <div className="filter-head">
           <Button variant="contained" className="yellow-btn recording__add-btn" onClick={this.addRecordingHandle}>
             {/*<FormattedMessage id="app.addProduct"/>*/}
             Добавить запись
