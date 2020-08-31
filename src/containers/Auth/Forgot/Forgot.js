@@ -14,6 +14,7 @@ import Container from '@material-ui/core/Container';
 import {connect} from "react-redux";
 import {NavLink} from "react-router-dom";
 import Logo from "../../../assets/img/new-logo-min.png";
+import {FormattedMessage} from "react-intl";
 
 class Forgot extends Component {
 
@@ -31,7 +32,7 @@ class Forgot extends Component {
           <CssBaseline />
           <div>
             <Typography component="h1" variant="h5">
-              Reset password
+              <FormattedMessage id="app.resetPassword"/>
             </Typography>
 
             <form noValidate>
@@ -41,7 +42,7 @@ class Forgot extends Component {
                 required
                 fullWidth
                 id="email"
-                label="Email Address"
+                label={<FormattedMessage id="app.emailAddress"/>}
                 name="email"
                 autoComplete="email"
                 autoFocus
@@ -53,14 +54,14 @@ class Forgot extends Component {
                 variant="contained"
                 color="primary"
               >
-                Sign In
+                <FormattedMessage id="app.reset"/>
               </Button>
 
               <Grid container className={'to-login-block'}>
                 <Grid item xs>
                   <div variant="body2">
                     <NavLink to="/auth">
-                      To login
+                      <FormattedMessage id="app.login"/>
                     </NavLink>
                   </div>
                 </Grid>

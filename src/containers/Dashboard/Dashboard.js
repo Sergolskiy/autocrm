@@ -104,7 +104,6 @@ class Dashboard extends Component {
            <span className={'header__name'}>
              <FormattedMessage id="app.dashboard"/>
             </span>
-          {/*<span className={'header__edit'}>Edit</span>*/}
         </div>
 
         <div className="task-snack">
@@ -118,53 +117,19 @@ class Dashboard extends Component {
         </div>
 
 
-        <Button color="secondary" size="small" onClick={this.handleOpenSnack}>
-          open
-        </Button>
-
-        {/*<div className="dashboard__time ">*/}
-          {/*<div className="dashboard__curent-data col-3">*/}
-
-            {/*<div className="aside__time">*/}
-              {/*<div className="aside__time-title">*/}
-                {/*<FormattedMessage id="app.currentDate"/>*/}
-              {/*</div>*/}
-              {/*<div className="aside__time-block">*/}
-                {/*<div className="aside__time-current">*/}
-                  {/*{date}*/}
-                {/*</div>*/}
-              {/*</div>*/}
-            {/*</div>*/}
-          {/*</div>*/}
-          {/*<div className="dashboard__current-time col-3">*/}
-            {/*/!*<span>*!/*/}
-              {/*/!*Current time*!/*/}
-            {/*/!*</span>*!/*/}
-            {/*<div className="aside__time">*/}
-              {/*<div className="aside__time-title">*/}
-                {/*<FormattedMessage id="app.time"/>*/}
-              {/*</div>*/}
-              {/*<div className="aside__time-block">*/}
-                {/*/!*<div className="aside__time-current">*!/*/}
-                  {/*/!*{this.state.currentCount}*!/*/}
-                {/*/!*</div>*!/*/}
-                {/*<Time/>*/}
-              {/*</div>*/}
-              {/**/}
-            {/*</div>*/}
-
-          {/*</div>*/}
-        {/*</div>*/}
+        {/*<Button color="secondary" size="small" onClick={this.handleOpenSnack}>*/}
+          {/*open*/}
+        {/*</Button>*/}
 
         <div className="dashboard-cards">
           <div className="dashboard-cards__inner row">
             <div className="col-md-3">
               <div className="dashboard-cards__item">
                 <div className="dashboard-cards__title">
-                  Сегодня
+                  <FormattedMessage id="app.today"/>
                 </div>
                 <div className="dashboard-cards__caption">
-                  Теперешний баланс
+                  <FormattedMessage id="app.currentBalance"/>
                 </div>
                 <div className="dashboard-cards__money">
                   $243.65
@@ -180,10 +145,10 @@ class Dashboard extends Component {
             <div className="col-md-3">
               <div className="dashboard-cards__item">
                 <div className="dashboard-cards__title">
-                  Вчера
+                  <FormattedMessage id="app.yesterday"/>
                 </div>
                 <div className="dashboard-cards__caption">
-                  Общай баланс
+                  <FormattedMessage id="app.overallBalance"/>
                 </div>
                 <div className="dashboard-cards__money">
                   $243
@@ -203,7 +168,7 @@ class Dashboard extends Component {
                   Сентябрь
                 </div>
                 <div className="dashboard-cards__caption">
-                  За последний месяц
+                  <FormattedMessage id="app.forLastMonth"/>
                 </div>
                 <div className="dashboard-cards__money">
                   $53 421
@@ -223,7 +188,7 @@ class Dashboard extends Component {
                   Октябрь
                 </div>
                 <div className="dashboard-cards__caption">
-                  Баланс за этот месяц
+                  <FormattedMessage id="app.balanceThisMonth"/>
                 </div>
                 <div className="dashboard-cards__money">
                   $53 421
@@ -240,7 +205,7 @@ class Dashboard extends Component {
             <div className="col-md-3">
               <div className="dashboard-cards__item">
                 <div className="dashboard-cards__title">
-                  Поточный баланс
+                  <FormattedMessage id="app.currentBalance"/>
                 </div>
                 <div className="dashboard-cards__caption">
                   Вы заработали
@@ -249,7 +214,19 @@ class Dashboard extends Component {
                   $3 526
                 </div>
               </div>
-
+            </div>
+            <div className="col-md-3">
+              <div className="dashboard-cards__item">
+                <div className="dashboard-cards__title">
+                  <FormattedMessage id="app.invoiceStatistics"/>
+                </div>
+                <div className="dashboard-cards__caption">
+                  Вы заработали за месяц
+                </div>
+                <div className="dashboard-cards__money">
+                  $3 526
+                </div>
+              </div>
             </div>
           </div>
         </div>
